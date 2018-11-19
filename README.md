@@ -30,5 +30,5 @@ A collection of curated and well maintained React Native boilerplates with vario
 * Link React Native Vector Icons `$ react-native link react-native-vector-icons`.
 * Link Custom Fonts `$ react-native link`.
 
-#### Link Commands
-<img src="./src/assets/images/RN-01-iOS" width=200px />
+#### Screenshots
+<img src="./src/assets/images/RN-01-iOS.png" width=300px />
