@@ -31,5 +31,7 @@ A collection of curated and well maintained React Native boilerplates with vario
 * Link Custom Fonts `$ react-native link`.
 
 #### Screenshots
-<img src="./src/assets/images/RN-01-iOS.png" width=300px />
-<img src="./src/assets/images/RN-01-Android.png" width=300px />
+<div style="display: flex; justifyContent: center;">
+  <img src="./src/assets/images/RN-01-iOS.png" width=300px />
+  <img src="./src/assets/images/RN-01-Android.png" width=300px />
+</div>
