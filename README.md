@@ -32,3 +32,4 @@ A collection of curated and well maintained React Native boilerplates with vario
 
 #### Screenshots
 <img src="./src/assets/images/RN-01-iOS.png" width=300px />
+<img src="./src/assets/images/RN-01-Android.png" width=300px />
