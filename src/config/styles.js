@@ -18,6 +18,7 @@ export const STYLE_CONSTANTS = {
     DARK_RED: '#8B0000',
     GRAY: '#CCCCCC',
     LIGHT_BLUE: '#8EBADB',
+    BLACK: '#000000',
     WHITE: '#FFFFFF',
     YELLOW: '#FDB92C',
     FACEBOOK: '#4267B2',
@@ -36,7 +37,7 @@ export const STYLE_CONSTANTS = {
 STYLE_CONSTANTS.H1 = {
   fontFamily: STYLE_CONSTANTS.FONT.FONTFAMILY_BOLD,
   fontSize: 16,
-  color: STYLE_CONSTANTS.COLORS.WHITE,
+  color: STYLE_CONSTANTS.COLORS.BLACK,
   textTransform: 'uppercase',
 };
 
