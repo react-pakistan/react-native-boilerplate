@@ -6,17 +6,15 @@
 
 // ########## Import Dependencies Here ##########
 import { applyMiddleware, compose, createStore } from "redux";
-import createSagaMiddleware from "redux-saga";
+import reduxThunk from 'redux-thunk';
 import reduxLogger from "redux-logger";
 
 // ########## Import Components Here ##########
 import rootReducer from "../reducers";
-import rootSaga from "../sagas";
 
 export default () => {
   // middlewares configuration
-  const sagaMiddleware = createSagaMiddleware();
-  const middlewares = [sagaMiddleware, reduxLogger];
+  const middlewares = [reduxThunk, reduxLogger];
   const applyMiddlewares = [applyMiddleware(...middlewares)];
 
   // integrate Redux DevTools if available
@@ -26,9 +24,6 @@ export default () => {
 
   // create store
   const store = createStore(rootReducer, enhancers);
-
-  // start sagas
-  sagaMiddleware.run(rootSaga);
 
   return store;
 };
