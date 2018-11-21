@@ -4,5 +4,8 @@
   Email: taimoor.m.k AT LIVE.COM 
 */
 
-// ########## Import MainScreen Actions Here ##########
-export const TEST = "TEST";
+// ########## Import Dashboard Actions Here ##########
+// export const DASHBOARD = "DASHBOARD";
+export const DASHBOARD_ATTEMPT = "DASHBOARD_ATTEMPT";
+export const DASHBOARD_SUCCESS = "DASHBOARD_SUCCESS";
+export const DASHBOARD_FAIL = "DASHBOARD_FAIL";

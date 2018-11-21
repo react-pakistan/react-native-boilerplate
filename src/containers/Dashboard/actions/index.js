@@ -10,6 +10,21 @@
 import * as types from "../constants";
 
 // ########## Import MainScreen Actions Here ##########
-export const TestAction = () => ({
-  type: types.TEST
+// export const dashboardAction = () => ({
+//   type: types.DASHBOARD
+// });
+
+export const dashboardAttemptAction = username => ({
+  type: types.DASHBOARD_ATTEMPT,
+  payload: username
+});
+
+export const dashboardSuccessAction = data => ({
+  type: types.DASHBOARD_SUCCESS,
+  payload: data
+});
+
+export const dashboardFailAction = err => ({
+  type: types.DASHBOARD_FAIL,
+  payload: err
 });

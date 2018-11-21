@@ -10,13 +10,16 @@
 import * as types from "../constants";
 
 const initial = {
-  show: false
+  data: null,
+  error: null,
 };
 
 export default (state = initial, action) => {
   switch (action.type) {
-    case types.TEST:
-      return { ...state, show: true };
+    case types.DASHBOARD_SUCCESS:
+      return { ...state, data: action.payload };
+    case types.DASHBOARD_FAIL:
+      return { ...state, error: action.payload };
     default:
       return state;
   }

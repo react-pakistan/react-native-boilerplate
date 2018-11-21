@@ -16,7 +16,10 @@
     "lint:watch": "yarn lint --clear --watch"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "change-case-object": "^2.0.0",
     "prop-types": "^15.6.2",
+    "query-string": "^6.2.0",
     "react": "16.6.1",
     "react-native": "0.57.5",
     "react-native-paper": "^2.2.5",
@@ -24,7 +27,8 @@
     "react-navigation": "^2.18.2",
     "react-redux": "^5.1.1",
     "redux": "^4.0.1",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.16.2"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

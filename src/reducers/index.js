@@ -9,9 +9,11 @@ import { combineReducers } from "redux";
 
 // ########## Import Components Here ##########
 import showAppReducer from "../containers/MainScreen/reducers";
+import dashboardReducer from "../containers/Dashboard/reducers";
 
 const rootReducer = combineReducers({
-  showAppReducer
+  showAppReducer,
+  dashboardReducer
 });
 
 export default rootReducer;
