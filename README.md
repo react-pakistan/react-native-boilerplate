@@ -3,7 +3,7 @@ A collection of curated and well maintained React Native boilerplates with vario
 
 ## List of React Native boilerplates
 * [RN-01 RN-REDUX-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN01)
-* [RN-02 RN-REDUX-THUNK-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN02) 'Comming Soon'
+* [RN-02 RN-REDUX-THUNK-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN02)
 * [RN-03 RN-REDUX-SAGA-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN03)
 * [RN-04 RN-REDUX-THUNK-RESELECT-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN04) 'Comming Soon'
 * [RN-05 RN-REDUX-SAGA-RESELECT-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN05) 'Comming Soon'
@@ -33,11 +33,11 @@ A collection of curated and well maintained React Native boilerplates with vario
 
 #### Screenshots
 <div style="display: flex; justifyContent: center;">
-  <img src="./src/assets/images/RN-01-iOS.png" width=300px alt="RN-01-iOS" />
-  <img src="./src/assets/images/RN-01-Android.png" width=300px alt="RN-01-Android" />
+  <img src="./src/assets/images/RN-iOS.png" width=300px alt="RN-iOS" />
+  <img src="./src/assets/images/RN-Android.png" width=300px alt="RN-Android" />
 </div>
 
 <div style="display: flex; justifyContent: center;">
-  <img src="./src/assets/images/RN-01-iOS-Dashboard.png" width=300px alt="RN-01-iOS-Dashboard" />
-  <img src="./src/assets/images/RN-01-Android-Dashboard.png" width=300px alt="RN-01-Android-Dashboard" />
+  <img src="./src/assets/images/RN-iOS-Dashboard.png" width=300px alt="RN-iOS-Dashboard" />
+  <img src="./src/assets/images/RN-Android-Dashboard.png" width=300px alt="RN-Android-Dashboard" />
 </div>
