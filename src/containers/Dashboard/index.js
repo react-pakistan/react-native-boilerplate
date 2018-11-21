@@ -17,6 +17,7 @@ import { TextInput, Button, Headline, Title } from "react-native-paper";
 import styles from "./styles";
 import * as actions from "./actions";
 import { STYLE_CONSTANTS } from "../../config/styles";
+import * as selectors from "./selectors";
 
 class Dashboard extends Component {
   state = {
@@ -31,7 +32,8 @@ class Dashboard extends Component {
 
   render() {
     const { textInput } = this.state;
-    const { userdata } = this.props;
+    const { name, bio, company, location } = this.props;
+    console.log('name', name)
     return (
       <Fragment>
         <View style={styles.container}>
@@ -55,21 +57,22 @@ class Dashboard extends Component {
             >
               Fetch Repos
             </Button>
-            {
-              userdata && (
-                <View style={styles.userDataContainer}>
-                  <View style={styles.avatarContainer}>
-                    <Image style={styles.userAvatar} source={{ uri: userdata.avatarUrl }} />
-                  </View>
-                  <View style={styles.userContainer}>
-                    <Headline style={styles.userData}>{userdata.name}</Headline>
-                    <Title style={styles.userData}>{userdata.bio}</Title>
-                    <Title style={styles.userData}>{userdata.company}</Title>
-                    <Title style={styles.userData}>{userdata.location}</Title>
-                  </View>
+            {name && (
+              <View style={styles.userDataContainer}>
+                <View style={styles.avatarContainer}>
+                  <Image
+                    style={styles.userAvatar}
+                    source={{ uri: userdata.avatarUrl }}
+                  />
                 </View>
-              )
-            }
+                <View style={styles.userContainer}>
+                  <Headline style={styles.userData}>{name}</Headline>
+                  <Title style={styles.userData}>{bio}</Title>
+                  <Title style={styles.userData}>{company}</Title>
+                  <Title style={styles.userData}>{location}</Title>
+                </View>
+              </View>
+            )}
           </View>
         </View>
       </Fragment>
@@ -78,21 +81,25 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  userdata: object,
-  dashboardAttempt: func.isRequired,
-}
+  // userdata: object,
+  dashboardAttempt: func.isRequired
+};
 
-const mapStateToProps = ({ dashboardReducer }) => ({
-  userdata: dashboardReducer.data,
+const mapStateToProps = store => ({
+  name: selectors.getUserName(store),
+  bio: selectors.getUserBio(store),
+  company: selectors.getUserCompany(store),
+  location: selectors.getUserLocation(store),
 });
 
 const mapDispatchToProps = dispatch => {
   return {
-    dashboardAttempt: username => dispatch(actions.dashboardAttemptAction(username))
+    dashboardAttempt: username =>
+      dispatch(actions.dashboardAttemptAction(username))
   };
-}
+};
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(Dashboard);

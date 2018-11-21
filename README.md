@@ -15,6 +15,7 @@ A collection of curated and well maintained React Native boilerplates with vario
 * [React Native](https://facebook.github.io/react-native/)
 * [Redux](https://redux.js.org/)
 * [Redux Saga](https://redux-saga.js.org/)
+* [Redux Reselect](https://github.com/reduxjs/reselect)
 * [React Navigation](https://reactnavigation.org/)
 * [JSS (JavaScript Styling)](https://cssinjs.org/?v=v9.8.7)
 * [React Native Paper UI](https://callstack.github.io/react-native-paper/)
