@@ -6,7 +6,7 @@
 
 // ########## Import Dependencies Here ##########
 import React, { Component, Fragment } from "react";
-import { object, func } from "prop-types";
+import { string, func } from "prop-types";
 import { connect } from "react-redux";
 import { View, Text, Image } from "react-native";
 import { TextInput, Button, Headline, Title } from "react-native-paper";
@@ -80,6 +80,11 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
+  name: string.isRequired,
+  bio: string.isRequired,
+  company: string.isRequired,
+  location: string.isRequired,
+  avatarUrl: string.isRequired,
   dashboardAttempt: func.isRequired
 };
 
