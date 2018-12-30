@@ -17,6 +17,7 @@ import { TextInput, Button, Headline, Title } from "react-native-paper";
 import styles from "./styles";
 import * as actions from "./actions";
 import { STYLE_CONSTANTS } from "../../config/styles";
+import * as selectors from "./selectors";
 
 class Dashboard extends Component {
   state = {
@@ -31,7 +32,7 @@ class Dashboard extends Component {
 
   render() {
     const { textInput } = this.state;
-    const { userdata } = this.props;
+    const { name, bio, company, location, avatarUrl } = this.props;
     return (
       <Fragment>
         <View style={styles.container}>
@@ -56,16 +57,16 @@ class Dashboard extends Component {
               Fetch Repos
             </Button>
             {
-              userdata && (
+              name && (
                 <View style={styles.userDataContainer}>
                   <View style={styles.avatarContainer}>
-                    <Image style={styles.userAvatar} source={{ uri: userdata.avatarUrl }} />
+                    <Image style={styles.userAvatar} source={{ uri: avatarUrl }} />
                   </View>
                   <View style={styles.userContainer}>
-                    <Headline style={styles.userData}>{userdata.name}</Headline>
-                    <Title style={styles.userData}>{userdata.bio}</Title>
-                    <Title style={styles.userData}>{userdata.company}</Title>
-                    <Title style={styles.userData}>{userdata.location}</Title>
+                    <Headline style={styles.userData}>{name}</Headline>
+                    <Title style={styles.userData}>{bio}</Title>
+                    <Title style={styles.userData}>{company}</Title>
+                    <Title style={styles.userData}>{location}</Title>
                   </View>
                 </View>
               )
@@ -78,13 +79,28 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  userdata: object,
   dashboardAttempt: func.isRequired,
 }
 
-const mapStateToProps = ({ dashboardReducer }) => ({
-  userdata: dashboardReducer.data,
-});
+const mapStateToProps = state => {
+    if (state.dashboardReducer.data) {
+    return {
+      name: selectors.getUserName(state),
+      bio: selectors.getUserBio(state),
+      company: selectors.getUserCompany(state),
+      location: selectors.getUserLocation(state),
+      avatarUrl: selectors.getUserAvatarUrl(state),
+    }
+  } else {
+    return {
+      name: null,
+      bio: null,
+      company: null,
+      location: null,
+      avatarUrl: null,
+    }
+  }
+};
 
 const mapDispatchToProps = dispatch => {
   return {
