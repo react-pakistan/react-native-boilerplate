@@ -32,8 +32,7 @@ class Dashboard extends Component {
 
   render() {
     const { textInput } = this.state;
-    const { name, bio, company, location } = this.props;
-    console.log('name', name)
+    const { name, bio, company, location, avatarUrl } = this.props;
     return (
       <Fragment>
         <View style={styles.container}>
@@ -62,7 +61,7 @@ class Dashboard extends Component {
                 <View style={styles.avatarContainer}>
                   <Image
                     style={styles.userAvatar}
-                    source={{ uri: userdata.avatarUrl }}
+                    source={{ uri: avatarUrl }}
                   />
                 </View>
                 <View style={styles.userContainer}>
@@ -81,16 +80,28 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  // userdata: object,
   dashboardAttempt: func.isRequired
 };
 
-const mapStateToProps = store => ({
-  name: selectors.getUserName(store),
-  bio: selectors.getUserBio(store),
-  company: selectors.getUserCompany(store),
-  location: selectors.getUserLocation(store),
-});
+const mapStateToProps = state => {
+  if (state.dashboardReducer.data) {
+    return {
+      name: selectors.getUserName(state),
+      bio: selectors.getUserBio(state),
+      company: selectors.getUserCompany(state),
+      location: selectors.getUserLocation(state),
+      avatarUrl: selectors.getUserAvatarUrl(state),
+    }
+  } else {
+    return {
+      name: null,
+      bio: null,
+      company: null,
+      location: null,
+      avatarUrl: null,
+    }
+  }
+};
 
 const mapDispatchToProps = dispatch => {
   return {

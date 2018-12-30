@@ -7,10 +7,29 @@
 // ########## Import Dependencies Here ##########
 import { createSelector } from 'reselect';
 
-export const getUserName = createSelector(store => store.dashboardReducer, dashboardReducer => dashboardReducer.data, data => data.name );
+export const getDashboard = state => state.dashboardReducer.data;
 
-export const getUserBio = createSelector(store => store.dashboardReducer, dashboardReducer => dashboardReducer.data, data => data.bio );
+export const getUserName = createSelector(
+  [ getDashboard ],
+  data => data.name
+);
 
-export const getUserCompany = createSelector(store => store.dashboardReducer, dashboardReducer => dashboardReducer.data, data => data.company );
+export const getUserBio = createSelector(
+  [ getDashboard ],
+  data => data.bio
+);
 
-export const getUserLocation = createSelector(store => store.dashboardReducer, dashboardReducer => dashboardReducer.data, data => data.location );
+export const getUserCompany = createSelector(
+  [ getDashboard ],
+  data => data.company
+);
+
+export const getUserLocation = createSelector(
+  [ getDashboard ],
+  data => data.location
+);
+
+export const getUserAvatarUrl = createSelector(
+  [ getDashboard ],
+  data => data.avatarUrl
+);
