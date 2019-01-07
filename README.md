@@ -8,7 +8,7 @@ A collection of curated and well maintained React Native boilerplates with vario
 * [RN-04 RN-REDUX-THUNK-RESELECT-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN04)
 * [RN-05 RN-REDUX-SAGA-RESELECT-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN05)
 
-### Documentations for RN-01 RN-REDUX-REACTNAVIGATION
+### Documentations for RN-03 RN-REDUX-SAGA-REACTNAVIGATION
 
 #### Technologies
 * [React Native](https://facebook.github.io/react-native/)
