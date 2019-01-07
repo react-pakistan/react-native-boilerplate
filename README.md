@@ -8,12 +8,13 @@ A collection of curated and well maintained React Native boilerplates with vario
 * [RN-04 RN-REDUX-THUNK-RESELECT-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN04)
 * [RN-05 RN-REDUX-SAGA-RESELECT-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN05)
 
-### Documentations for RN-01 RN-REDUX-REACTNAVIGATION
+### Documentations for RN-06 RN-REDUX-REACTNAVIGATION-STYLEDCOMPONENTS
 
 #### Technologies
 * [React Native](https://facebook.github.io/react-native/)
 * [Redux](https://redux.js.org/)
 * [React Navigation](https://reactnavigation.org/)
+* [Styled Components](https://www.styled-components.com/)
 * [JSS (JavaScript Styling)](https://cssinjs.org/?v=v9.8.7)
 * [React Native Paper UI](https://callstack.github.io/react-native-paper/)
 * [React Native Vector Icons](https://oblador.github.io/react-native-vector-icons/)
