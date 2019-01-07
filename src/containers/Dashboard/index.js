@@ -15,6 +15,10 @@ import { TextInput, Button, Headline, Title } from "react-native-paper";
 
 // ########## Import Components Here ##########
 import styles from "./styles";
+import AppCard from '../../components/AppCard';
+import AppTitle from '../../components/AppTitle';
+import AppParagraph from '../../components/AppParagraph';
+import AppButton from '../../components/AppButton';
 import * as actions from "./actions";
 import { STYLE_CONSTANTS } from "../../config/styles";
 
@@ -37,6 +41,18 @@ class Dashboard extends Component {
         <View style={styles.container}>
           <View style={styles.textWrapper}>
             <Text style={styles.heading}>Dashboard</Text>
+            <AppCard>
+            <AppCard.Content>
+              <AppTitle>Card Title</AppTitle>
+              <AppParagraph>Card Description</AppParagraph>
+            </AppCard.Content>
+            <AppCard.Cover source={{ uri: 'https://picsum.photos/700' }}>
+              <AppCard.Actions>
+                <AppButton>Ok</AppButton>
+                <AppButton>Cancel</AppButton>
+              </AppCard.Actions>
+            </AppCard.Cover>
+          </AppCard>
           </View>
           <View style={styles.form}>
             <TextInput
