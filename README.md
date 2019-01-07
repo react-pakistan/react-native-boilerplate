@@ -14,7 +14,7 @@ A collection of curated and well maintained React Native boilerplates with vario
 * [React Native](https://facebook.github.io/react-native/)
 * [Redux](https://redux.js.org/)
 * [React Navigation](https://reactnavigation.org/)
-* [Styled Components](https://www.styled-components.com/)
+* [Styled Components](https://www.yarnstyled-components.com/)
 * [JSS (JavaScript Styling)](https://cssinjs.org/?v=v9.8.7)
 * [React Native Paper UI](https://callstack.github.io/react-native-paper/)
 * [React Native Vector Icons](https://oblador.github.io/react-native-vector-icons/)

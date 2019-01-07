@@ -13,6 +13,10 @@ import { View, Text } from "react-native";
 
 // ########## Import Components Here ##########
 import styles from "./styles";
+import AppCard from '../../components/AppCard';
+import AppTitle from '../../components/AppTitle';
+import AppParagraph from '../../components/AppParagraph';
+import AppButton from '../../components/AppButton';
 
 class Dashboard extends Component {
   render() {
@@ -20,6 +24,18 @@ class Dashboard extends Component {
       <Fragment>
         <View style={styles.container}>
           <Text style={styles.heading}>Dashboard</Text>
+          <AppCard>
+            <AppCard.Content>
+              <AppTitle>Card Title</AppTitle>
+              <AppParagraph>Card Description</AppParagraph>
+            </AppCard.Content>
+            <AppCard.Cover source={{ uri: 'https://picsum.photos/700' }}>
+              <AppCard.Actions>
+                <AppButton>Ok</AppButton>
+                <AppButton>Cancel</AppButton>
+              </AppCard.Actions>
+            </AppCard.Cover>
+          </AppCard>
         </View>
       </Fragment>
     );
