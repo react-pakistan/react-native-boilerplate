@@ -1,6 +1,8 @@
 # react-native-boilerplate
 A collection of curated and well maintained React Native boilerplates with various possiblities and combinations.
 
+<img src="https://i.ibb.co/XSdwYy2/rn-boilerplates.jpg" alt="rn-boilerplates" width="100%">
+
 ## List of React Native boilerplates
 * [RN-01 RN-REDUX-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN01)
 * [RN-02 RN-REDUX-THUNK-REACTNAVIGATION](https://github.com/Taimoormk/react-native-boilerplate/tree/RN02)
