@@ -8,19 +8,21 @@
 import React, { Component, Fragment } from "react";
 import { object, func } from "prop-types";
 import { connect } from "react-redux";
-import { View, Text, Image } from "react-native";
-import { TextInput, Button, Headline, Title } from "react-native-paper";
+import { View, Text, Image, ScrollView } from "react-native";
+import { TextInput, Button } from "react-native-paper";
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
-import styles from "./styles";
-import AppCard from '../../components/AppCard';
-import AppTitle from '../../components/AppTitle';
-import AppParagraph from '../../components/AppParagraph';
-import AppButton from '../../components/AppButton';
+import { FlexContainerView, ContainerView, H1Text } from "./styles";
+import AppCard from "../../components/AppCard";
+import AppTitle from "../../components/AppTitle";
+import AppHeadline from "../../components/AppHeadline";
+import AppParagraph from "../../components/AppParagraph";
+import AppButton from "../../components/AppButton";
+import AppTextInput from "../../components/AppTextInput";
+import AppImage from "../../components/AppImage";
 import * as actions from "./actions";
-import { STYLE_CONSTANTS } from "../../config/styles";
 
 class Dashboard extends Component {
   state = {
@@ -38,56 +40,51 @@ class Dashboard extends Component {
     const { userdata } = this.props;
     return (
       <Fragment>
-        <View style={styles.container}>
-          <View style={styles.textWrapper}>
-            <Text style={styles.heading}>Dashboard</Text>
+        <ScrollView>
+            <H1Text>Dashboard</H1Text>
             <AppCard>
-            <AppCard.Content>
-              <AppTitle>Card Title</AppTitle>
-              <AppParagraph>Card Description</AppParagraph>
-            </AppCard.Content>
-            <AppCard.Cover source={{ uri: 'https://picsum.photos/700' }}>
+              <AppCard.Content>
+                <AppTitle>Card Title</AppTitle>
+                <AppParagraph>Card Description</AppParagraph>
+              </AppCard.Content>
+              <AppCard.Cover source={{ uri: "https://picsum.photos/700" }} />
               <AppCard.Actions>
                 <AppButton>Ok</AppButton>
                 <AppButton>Cancel</AppButton>
               </AppCard.Actions>
-            </AppCard.Cover>
-          </AppCard>
-          </View>
-          <View style={styles.form}>
-            <TextInput
+            </AppCard>
+          <ContainerView>
+            <AppTextInput
               mode="outlined"
               label="Enter GitHub handle"
               autoCapitalize="none"
               value={textInput}
-              style={styles.input}
               onChangeText={val => this.setState({ textInput: val })}
             />
-            <Button
+            <AppButton
               icon="add-a-photo"
               mode="contained"
-              color={STYLE_CONSTANTS.COLORS.SECONDARY}
               onPress={this.onPressHandler}
             >
               Fetch Repos
-            </Button>
-            {
-              userdata && (
-                <View style={styles.userDataContainer}>
-                  <View style={styles.avatarContainer}>
-                    <Image style={styles.userAvatar} source={{ uri: userdata.avatarUrl }} />
-                  </View>
-                  <View style={styles.userContainer}>
-                    <Headline style={styles.userData}>{userdata.name}</Headline>
-                    <Title style={styles.userData}>{userdata.bio}</Title>
-                    <Title style={styles.userData}>{userdata.company}</Title>
-                    <Title style={styles.userData}>{userdata.location}</Title>
-                  </View>
-                </View>
-              )
-            }
-          </View>
-        </View>
+            </AppButton>
+            {userdata && (
+              <FlexContainerView>
+                <ContainerView>
+                  <AppImage
+                    source={{ uri: userdata.avatarUrl }}
+                  />
+                </ContainerView>
+                <ContainerView>
+                  <AppHeadline>{userdata.name}</AppHeadline>
+                  <AppTitle>{userdata.bio}</AppTitle>
+                  <AppTitle>{userdata.company}</AppTitle>
+                  <AppTitle>{userdata.location}</AppTitle>
+                </ContainerView>
+              </FlexContainerView>
+            )}
+          </ContainerView>
+        </ScrollView>
       </Fragment>
     );
   }
@@ -95,20 +92,21 @@ class Dashboard extends Component {
 
 Dashboard.propTypes = {
   userdata: object,
-  dashboardAttempt: func.isRequired,
-}
+  dashboardAttempt: func.isRequired
+};
 
 const mapStateToProps = ({ dashboardReducer }) => ({
-  userdata: dashboardReducer.data,
+  userdata: dashboardReducer.data
 });
 
 const mapDispatchToProps = dispatch => {
   return {
-    dashboardAttempt: username => dispatch(actions.dashboardAttemptAction(username))
+    dashboardAttempt: username =>
+      dispatch(actions.dashboardAttemptAction(username))
   };
-}
+};
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(Dashboard);
