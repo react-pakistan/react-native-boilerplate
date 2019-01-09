@@ -5,17 +5,21 @@
 */
 
 // ########## Import Dependencies Here ##########
-import { StyleSheet } from "react-native";
+import styled from "styled-components";
 
 import { STYLE_CONSTANTS, width } from "../../config/styles";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  headering: STYLE_CONSTANTS.H1
-});
+export const ContainerView = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-export default styles;
+export const H1Text = styled.Text`
+  font-family: ${STYLE_CONSTANTS.H1.fontFamily};
+  font-size: ${STYLE_CONSTANTS.H1.fontSize};
+  color: ${STYLE_CONSTANTS.H1.color};
+  text-transform: ${STYLE_CONSTANTS.H1.textTransform};
+  margin-top: 10;
+  margin-bottom: 10;
+`;
