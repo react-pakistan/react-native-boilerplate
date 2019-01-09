@@ -20,4 +20,6 @@ export const H1Text = styled.Text`
   font-size: ${STYLE_CONSTANTS.H1.fontSize};
   color: ${STYLE_CONSTANTS.H1.color};
   text-transform: ${STYLE_CONSTANTS.H1.textTransform};
+  margin-top: 10;
+  margin-bottom: 10;
 `;
