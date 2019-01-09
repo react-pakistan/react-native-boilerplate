@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-  headering: STYLE_CONSTANTS.H1
+  heading: STYLE_CONSTANTS.H1
 });
 
 export default styles;
