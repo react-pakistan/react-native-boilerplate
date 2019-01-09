@@ -6,13 +6,14 @@
 
 // ########## Import Dependencies Here ##########
 import React, { Component, Fragment } from "react";
-import {} from "prop-types";
+import { } from "prop-types";
 import { View, Text } from "react-native";
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
-import styles from "./styles";
+// import styles from "./styles";
+import { ContainerView, H1Text } from './styles';
 import AppCard from '../../components/AppCard';
 import AppTitle from '../../components/AppTitle';
 import AppParagraph from '../../components/AppParagraph';
@@ -22,21 +23,20 @@ class Dashboard extends Component {
   render() {
     return (
       <Fragment>
-        <View style={styles.container}>
-          <Text style={styles.heading}>Dashboard</Text>
+        <ContainerView>
+          <H1Text>Dashboard</H1Text>
           <AppCard>
             <AppCard.Content>
               <AppTitle>Card Title</AppTitle>
               <AppParagraph>Card Description</AppParagraph>
             </AppCard.Content>
-            <AppCard.Cover source={{ uri: 'https://picsum.photos/700' }}>
-              <AppCard.Actions>
-                <AppButton>Ok</AppButton>
-                <AppButton>Cancel</AppButton>
-              </AppCard.Actions>
-            </AppCard.Cover>
+            <AppCard.Cover source={{ uri: 'https://picsum.photos/700' }} />
+            <AppCard.Actions>
+              <AppButton>Ok</AppButton>
+              <AppButton>Cancel</AppButton>
+            </AppCard.Actions>
           </AppCard>
-        </View>
+        </ContainerView>
       </Fragment>
     );
   }
