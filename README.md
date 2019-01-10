@@ -38,11 +38,11 @@ A collection of curated and well maintained React Native boilerplates with vario
 
 #### Screenshots
 <div style="display: flex; justifyContent: center;">
-  <img src="./src/assets/images/RN-01-iOS.png" width=300px alt="RN-01-iOS" />
-  <img src="./src/assets/images/RN-01-Android.png" width=300px alt="RN-01-Android" />
+  <img src="./src/assets/images/RN-iOS.png" width=300px alt="RN-iOS" />
+  <img src="./src/assets/images/RN-Android.png" width=300px alt="RN-Android" />
 </div>
 
 <div style="display: flex; justifyContent: center;">
-  <img src="./src/assets/images/RN-01-iOS-Dashboard.png" width=300px alt="RN-01-iOS-Dashboard" />
-  <img src="./src/assets/images/RN-01-Android-Dashboard.png" width=300px alt="RN-01-Android-Dashboard" />
+  <img src="./src/assets/images/RN-iOS-Dashboard.png" width=300px alt="RN-iOS-Dashboard" />
+  <img src="./src/assets/images/RN-Android-Dashboard.png" width=300px alt="RN-Android-Dashboard" />
 </div>
