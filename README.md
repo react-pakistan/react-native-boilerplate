@@ -13,7 +13,7 @@ A collection of curated and well maintained React Native boilerplates with vario
 * [RN-09 RN-REDUX-THUNK-RESELECT-REACTNAVIGATION-STYLEDCOMPONENTS](https://github.com/Taimoormk/react-native-boilerplate/tree/RN09)
 * [RN-10 RN-REDUX-SAGA-RESELECT-REACTNAVIGATION-STYLEDCOMPONENTS](https://github.com/Taimoormk/react-native-boilerplate/tree/RN10)
 
-### Documentations for RN-05 RN-REDUX-SAGA-RESELECT-REACTNAVIGATION
+### Documentations for RN-10 RN-REDUX-SAGA-RESELECT-REACTNAVIGATION-STYLEDCOMPONENTS
 
 #### Technologies
 * [React Native](https://facebook.github.io/react-native/)
@@ -21,6 +21,7 @@ A collection of curated and well maintained React Native boilerplates with vario
 * [Redux Saga](https://redux-saga.js.org/)
 * [Redux Reselect](https://github.com/reduxjs/reselect)
 * [React Navigation](https://reactnavigation.org/)
+* [Styled Components](https://www.styled-components.com/)
 * [JSS (JavaScript Styling)](https://cssinjs.org/?v=v9.8.7)
 * [React Native Paper UI](https://callstack.github.io/react-native-paper/)
 * [React Native Vector Icons](https://oblador.github.io/react-native-vector-icons/)
@@ -38,11 +39,11 @@ A collection of curated and well maintained React Native boilerplates with vario
 
 #### Screenshots
 <div style="display: flex; justifyContent: center;">
-  <img src="./src/assets/images/RN-01-iOS.png" width=300px alt="RN-01-iOS" />
-  <img src="./src/assets/images/RN-01-Android.png" width=300px alt="RN-01-Android" />
+  <img src="./src/assets/images/RN-iOS.png" width=300px alt="RN-01-iOS" />
+  <img src="./src/assets/images/RN-Android.png" width=300px alt="RN-01-Android" />
 </div>
 
 <div style="display: flex; justifyContent: center;">
-  <img src="./src/assets/images/RN-01-iOS-Dashboard.png" width=300px alt="RN-01-iOS-Dashboard" />
-  <img src="./src/assets/images/RN-01-Android-Dashboard.png" width=300px alt="RN-01-Android-Dashboard" />
+  <img src="./src/assets/images/RN-iOS-Dashboard.png" width=300px alt="RN-iOS-Dashboard" />
+  <img src="./src/assets/images/RN-Android-Dashboard.png" width=300px alt="RN-Android-Dashboard" />
 </div>
