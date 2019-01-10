@@ -5,48 +5,25 @@
 */
 
 // ########## Import Dependencies Here ##########
-import { StyleSheet } from "react-native";
+import styled from "styled-components";
 
-import { STYLE_CONSTANTS, width } from "../../config/styles";
+import { STYLE_CONSTANTS } from "../../config/styles";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center"
-  },
-  textWrapper: {
-    flex: 1,
-  },
-  headering: STYLE_CONSTANTS.HEADER,
-  form: {
-    flex: 7,
-    width: width - 50,
-  },
-  input: {
-    color: STYLE_CONSTANTS.COLORS.SECONDARY,
-    marginBottom: STYLE_CONSTANTS.SPACER.marginBottom,
-  },
-  userDataContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    marginTop: STYLE_CONSTANTS.SPACER.marginTop,
-    marginBottom: STYLE_CONSTANTS.SPACER.marginBottom,
-  },
-  avatarContainer: {
-    flex: 1,    
-  },
-  userAvatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-  },
-  userContainer: {
-    flex: 3
-  },
-  userData: STYLE_CONSTANTS.H1,
-  userData: {
-    textAlign: 'right',
-  }
-});
+export const ContainerView = styled.View`
+  padding: 10px;
+`;
 
-export default styles;
+export const FlexContainerView = styled.View`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const H1Text = styled.Text`
+  font-family: ${STYLE_CONSTANTS.H1.fontFamily};
+  font-size: ${STYLE_CONSTANTS.H1.fontSize};
+  color: ${STYLE_CONSTANTS.H1.color};
+  text-transform: ${STYLE_CONSTANTS.H1.textTransform};
+  margin-top: 10;
+  margin-bottom: 10;
+`;
