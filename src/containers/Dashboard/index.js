@@ -47,12 +47,12 @@ class Dashboard extends Component {
             <AppCard.Content>
               <AppTitle>Card Title</AppTitle>
               <AppParagraph>Card Description</AppParagraph>
-              <AppCard.Cover source={{ uri: "https://picsum.photos/700" }} />
-              <AppCard.Actions>
-                <AppButton>Ok</AppButton>
-                <AppButton>Cancel</AppButton>
-              </AppCard.Actions>
             </AppCard.Content>
+            <AppCard.Cover source={{ uri: "https://picsum.photos/700" }} />
+            <AppCard.Actions>
+              <AppButton>Ok</AppButton>
+              <AppButton>Cancel</AppButton>
+            </AppCard.Actions>
           </AppCard>
           <ContainerView>
             <AppTextInput
