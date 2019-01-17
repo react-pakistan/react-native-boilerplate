@@ -47,12 +47,12 @@ class Dashboard extends Component {
             <AppCard.Content>
               <AppTitle>Card Title</AppTitle>
               <AppParagraph>Card Description</AppParagraph>
-              <AppCard.Cover source={{ uri: "https://picsum.photos/700" }} />
-              <AppCard.Actions>
-                <AppButton>Ok</AppButton>
-                <AppButton>Cancel</AppButton>
-              </AppCard.Actions>
             </AppCard.Content>
+            <AppCard.Cover source={{ uri: "https://picsum.photos/700" }} />
+            <AppCard.Actions>
+              <AppButton>Ok</AppButton>
+              <AppButton>Cancel</AppButton>
+            </AppCard.Actions>
           </AppCard>
           <ContainerView>
             <AppTextInput
@@ -62,13 +62,13 @@ class Dashboard extends Component {
               value={textInput}
               onChangeText={val => this.setState({ textInput: val })}
             />
-            <AppvButton
+            <AppButton
               icon="add-a-photo"
               mode="contained"
               onPress={this.onPressHandler}
             >
               Fetch Repos
-            </AppvButton>
+            </AppButton>
             {name && (
               <FlexContainerView>
                 <ContainerView>
@@ -90,11 +90,11 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  name: string.isRequired,
-  bio: string.isRequired,
-  company: string.isRequired,
-  location: string.isRequired,
-  avatarUrl: string.isRequired,
+  name: string,
+  bio: string,
+  company: string,
+  location: string,
+  avatarUrl: string,
   dashboardAttempt: func.isRequired
 };
 
