@@ -90,11 +90,11 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  name: string.isRequired,
-  bio: string.isRequired,
-  company: string.isRequired,
-  location: string.isRequired,
-  avatarUrl: string.isRequired,
+  name: string,
+  bio: string,
+  company: string,
+  location: string,
+  avatarUrl: string,
   dashboardAttempt: func.isRequired
 };
 

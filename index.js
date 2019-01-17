@@ -20,7 +20,7 @@ XMLHttpRequest = GLOBAL.originalXMLHttpRequest ? GLOBAL.originalXMLHttpRequest :
 // get store and middleware configured
 const store = configureStore();
 
-class RN03 extends Component {
+class RN10 extends Component {
   render() {
     return (
       <Provider store={store}>
@@ -30,4 +30,4 @@ class RN03 extends Component {
   }
 }
 
-AppRegistry.registerComponent(appName, () => RN03);
+AppRegistry.registerComponent(appName, () => RN10);
