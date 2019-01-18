@@ -17,7 +17,7 @@ import configureStore from "./src/config/store";
 // get store and middleware configured
 const store = configureStore();
 
-class RN01 extends Component {
+class RN06 extends Component {
   render() {
     return (
       <Provider store={store}>
@@ -27,4 +27,4 @@ class RN01 extends Component {
   }
 }
 
-AppRegistry.registerComponent(appName, () => RN01);
+AppRegistry.registerComponent(appName, () => RN06);
