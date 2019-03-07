@@ -4,6 +4,8 @@ A collection of curated and well maintained React Native boilerplates with vario
 [![License](https://img.shields.io/github/license/taimoormk/react-native-boilerplate.svg)](https://github.com/taimoormk/react-native-boilerplate/blob/master/LICENSE)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b6b3519042d8450e81704512dfd72941)](https://www.codacy.com/app/Taimoormk/react-native-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Taimoormk/react-native-boilerplate&amp;utm_campaign=Badge_Grade)
 [![Followers](https://img.shields.io/github/followers/taimoormk.svg?style=social)](https://github.com/taimoormk)
+[![Forks](https://img.shields.io/github/forks/taimoormk/react-native-boilerplate.svg?style=social)](https://github.com/taimoormk/react-native-boilerplate)
+[![Stars](https://img.shields.io/github/stars/taimoormk/react-native-boilerplate.svg?style=social)](https://github.com/taimoormk/react-native-boilerplate)
 
 <img src="https://i.ibb.co/nn2X1wR/RNBoilerplates.jpg" alt="react native boilerplate" width="100%">
 
