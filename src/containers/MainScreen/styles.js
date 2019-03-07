@@ -5,9 +5,9 @@
 */
 
 // ########## Import Dependencies Here ##########
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
-import { STYLE_CONSTANTS, width } from '../../config/styles';
+import { STYLE_CONSTANTS, width } from "../../config/styles";
 
 const styles = StyleSheet.create({
 
