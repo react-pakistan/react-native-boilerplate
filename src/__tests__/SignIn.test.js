@@ -21,7 +21,7 @@ const fakeInitialState = {
 
 const mockStore = configureStore();
 
-test('renders SignIn compomenent correctly', () => {
+test("renders SignIn compomenent correctly", () => {
   const renderer = new ShallowRenderer();
   const showApp = false;
   const store = mockStore(fakeInitialState);

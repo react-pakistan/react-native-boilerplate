@@ -21,7 +21,7 @@ const fakeInitialState = {
 
 const mockStore = configureStore();
 
-test('renders MainScreen compomenent correctly', () => {
+test("renders MainScreen compomenent correctly", () => {
   const renderer = new ShallowRenderer();
   const showApp = false;
   const store = mockStore(fakeInitialState);
