@@ -11,7 +11,7 @@ import ShallowRenderer from "react-test-renderer/shallow";
 // ########## Import Components Here ##########
 import Dashboard from "../containers/Dashboard";
 
-test('renders Dashboard compomenent correctly', () => {
+test("renders Dashboard compomenent correctly", () => {
   const renderer = new ShallowRenderer();
   renderer.render(<Dashboard />);
   const wrapper = renderer.getRenderOutput();
