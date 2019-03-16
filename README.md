@@ -1,5 +1,5 @@
 # react-native-boilerplate
-A collection of curated and well maintained React Native boilerplates with various possiblities and combinations.
+A collection of curated and well maintained React Native boilerplates with various possibilities and combinations.
 
 [![License](https://img.shields.io/github/license/react-pakistan/react-native-boilerplate.svg)](https://github.com/react-pakistan/react-native-boilerplate/blob/master/LICENSE)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b40bb064f95f4077ba0fbf7fcb91ab55)](https://www.codacy.com/app/Taimoormk/react-native-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=react-pakistan/react-native-boilerplate&amp;utm_campaign=Badge_Grade)
