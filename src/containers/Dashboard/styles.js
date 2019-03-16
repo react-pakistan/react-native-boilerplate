@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
   userDataContainer: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: STYLE_CONSTANTS.SPACER.marginTop,
     marginBottom: STYLE_CONSTANTS.SPACER.marginBottom,
   },
@@ -43,9 +43,9 @@ const styles = StyleSheet.create({
   userContainer: {
     flex: 3
   },
-  userData: STYLE_CONSTANTS.H1,
   userData: {
-    textAlign: 'right',
+    ...STYLE_CONSTANTS.H1,
+    textAlign: "right",
   }
 });
 
