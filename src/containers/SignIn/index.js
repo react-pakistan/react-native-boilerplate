@@ -6,7 +6,7 @@
 
 // ########## Import Dependencies Here ##########
 import React, { Component, Fragment } from "react";
-import { func } from 'prop-types';
+import { func } from "prop-types";
 import { View, Text } from "react-native";
 import { TextInput, Button } from "react-native-paper";
 
