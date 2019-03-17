@@ -24,9 +24,14 @@ const mockStore = configureStore();
 
 test("renders Dashboard componenent correctly", () => {
   const renderer = new ShallowRenderer();
+  const name = "testName";
+  const bio = "textBio";
+  const company = "testCompany";
+  const location = "testLocation";
+  const avatarUrl = "testAvatarUrl";
   const store = mockStore(fakeInitialState);
   const dashboardAttempt = () => null;
-  renderer.render(<Dashboard store={store} dashboardAttempt={dashboardAttempt} />);
+  renderer.render(<Dashboard store={store} name={name} bio={bio} company={company} location={location} avatarUrl={avatarUrl} dashboardAttempt={dashboardAttempt} />);
   const wrapper = renderer.getRenderOutput();
   expect(wrapper).toMatchSnapshot();
 });
