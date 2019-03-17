@@ -5,7 +5,7 @@
 */
 
 // ########## Import Dependencies Here ##########
-import { createSelector } from 'reselect';
+import { createSelector } from "reselect";
 
 export const getDashboard = state => state.dashboardReducer.data;
 

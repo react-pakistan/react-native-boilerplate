@@ -126,7 +126,7 @@ const mapDispatchToProps = dispatch => {
   return {
     dashboardAttempt: username => dispatch(actions.dashboardAttemptAction(username))
   };
-}
+};
 
 export default connect(
   mapStateToProps,
