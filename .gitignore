@@ -444,3 +444,6 @@ cmake-build-*/
 
 .idea
 build/Build
+
+### 
+__coverage__
