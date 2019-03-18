@@ -5,10 +5,10 @@
 */
 
 // ########## Import Dependencies Here ##########
-import { takeEvery, takeLatest, all, fork } from 'redux-saga/effects';
+import { takeEvery, takeLatest, all, fork } from "redux-saga/effects";
 
 // ########## Import Components Here ##########
-import { watchDashboard } from '../containers/Dashboard/sagas/watchDashboard';
+import { watchDashboard } from "../containers/Dashboard/sagas/watchDashboard";
 
 export default function* rootSaga() {
   yield all([

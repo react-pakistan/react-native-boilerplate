@@ -119,7 +119,7 @@ const mapStateToProps = state => {
       company: null,
       location: null,
       avatarUrl: null,
-    }
+    };
   }
 };
 
