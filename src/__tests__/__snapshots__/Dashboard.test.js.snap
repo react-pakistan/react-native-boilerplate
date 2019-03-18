@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Dashboard compomenent correctly 1`] = `
+<React.Fragment>
+  <ForwardRef>
+    <ForwardRef>
+      Dashboard
+    </ForwardRef>
+    <ForwardRef>
+      <Card.Content>
+        <ForwardRef>
+          Card Title
+        </ForwardRef>
+        <ForwardRef>
+          Card Description
+        </ForwardRef>
+      </Card.Content>
+      <withTheme(Card.Cover)
+        source={
+          Object {
+            "uri": "https://picsum.photos/700",
+          }
+        }
+      />
+      <Card.Actions>
+        <ForwardRef>
+          Ok
+        </ForwardRef>
+        <ForwardRef>
+          Cancel
+        </ForwardRef>
+      </Card.Actions>
+    </ForwardRef>
+  </ForwardRef>
+</React.Fragment>
+`;
