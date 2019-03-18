@@ -43,11 +43,6 @@
     "preset": "react-native",
     "collectCoverage": true,
     "coverageDirectory": "__coverage__",
-    "coverageReporters": [
-      "json-summary",
-      "text",
-      "lcov"
-    ],
     "transform": {
       "^.+\\.js$": "<rootDir>/jest.preprocessor.js"
     },
