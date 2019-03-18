@@ -9,11 +9,11 @@ import React from "react";
 import ShallowRenderer from "react-test-renderer/shallow";
 
 // ########## Import Components Here ##########
-import Dashboard from "../containers/Dashboard";
+import Profile from "../containers/Profile";
 
-test("renders Dashboard compomenent correctly", () => {
+test("renders Profile compomenent correctly", () => {
   const renderer = new ShallowRenderer();
-  renderer.render(<Dashboard />);
+  renderer.render(<Profile />);
   const wrapper = renderer.getRenderOutput();
   expect(wrapper).toMatchSnapshot();
 });
