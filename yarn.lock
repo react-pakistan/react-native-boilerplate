@@ -796,6 +796,11 @@
     "@types/istanbul-lib-coverage" "^1.1.0"
     "@types/yargs" "^12.0.9"
 
+"@olavoparno/jest-badges-readme@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@olavoparno/jest-badges-readme/-/jest-badges-readme-1.2.7.tgz#2ab4f482fbc6b913b00a78c0fb96e37f6d88fdf0"
+  integrity sha512-NuJ36raraWHlC5hyamB81ms9SOJGXiA1dTsdbXCgk1i6S7GNKDdRkwB0XXdGIyFshwu3giatAjeP+of0agwhvg==
+
 "@types/babel__core@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.0.tgz#710f2487dda4dcfd010ca6abb2b4dc7394365c51"

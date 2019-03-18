@@ -13,7 +13,9 @@
     "clean": "rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*",
     "remetro": "watchman watch-del-all && yarn start --reset-cache",
     "lint": "esw src --color",
-    "lint:watch": "yarn lint --clear --watch"
+    "lint:watch": "yarn lint --clear --watch",
+    "prebuild": "echo false > .buildstatus",
+    "postbuild": "echo true > .buildstatus"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -33,6 +35,7 @@
     "reselect": "^4.0.0"
   },
   "devDependencies": {
+    "@olavoparno/jest-badges-readme": "^1.2.7",
     "babel-jest": "^24.5.0",
     "jest": "^24.5.0",
     "metro-react-native-babel-preset": "0.49.2",
@@ -43,6 +46,11 @@
     "preset": "react-native",
     "collectCoverage": true,
     "coverageDirectory": "__coverage__",
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ],
     "transform": {
       "^.+\\.js$": "<rootDir>/jest.preprocessor.js"
     },
