@@ -22,14 +22,14 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   oAuthHeading: STYLE_CONSTANTS.H1,
-  facebookButton: STYLE_CONSTANTS.BUTTON_TITLE,
   facebookButton: {
+    ...STYLE_CONSTANTS.BUTTON_TITLE,
     width: width - 50,
     borderRadius: 7,
     padding: 10
   },
-  googleButton: STYLE_CONSTANTS.BUTTON_TITLE,
   googleButton: {
+    ...STYLE_CONSTANTS.BUTTON_TITLE,
     width: width - 50,
     borderRadius: 7,
     padding: 10

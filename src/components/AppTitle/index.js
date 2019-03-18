@@ -4,8 +4,8 @@
   Email: taimoor.m.k AT LIVE.COM 
 */
 
-import styled from 'styled-components';
-import { Title } from 'react-native-paper';
+import styled from "styled-components";
+import { Title } from "react-native-paper";
 
 const AppTitle = styled(Title)``;
 
