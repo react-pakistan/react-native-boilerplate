@@ -45,7 +45,11 @@ exports[`renders SignIn compomenent correctly 1`] = `
       style={
         Object {
           "borderRadius": 7,
+          "color": "#FFFFFF",
+          "fontFamily": "Quicksand-Regular",
+          "fontSize": 12,
           "padding": 10,
+          "textTransform": "uppercase",
           "width": 700,
         }
       }
@@ -73,7 +77,11 @@ exports[`renders SignIn compomenent correctly 1`] = `
       style={
         Object {
           "borderRadius": 7,
+          "color": "#FFFFFF",
+          "fontFamily": "Quicksand-Regular",
+          "fontSize": 12,
           "padding": 10,
+          "textTransform": "uppercase",
           "width": 700,
         }
       }
