@@ -8,8 +8,8 @@
 
 // ########## Import Components Here ##########
 import * as types from "../constants";
-import apiCaller from '../../../config/apiCaller';
-import ENDPOINTS, { REQUEST_TYPES } from '../../../config/endpoints';
+import apiCaller from "../../../config/apiCaller";
+import ENDPOINTS, { REQUEST_TYPES } from "../../../config/endpoints";
 
 // ########## Import MainScreen Actions Here ##########
 export const dashboardSuccessAction = data => ({
