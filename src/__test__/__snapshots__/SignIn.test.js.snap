@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders SignIn compomenent correctly 1`] = `
+<React.Fragment>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#CCCCCC",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#000000",
+          "fontFamily": "Quicksand-Bold",
+          "fontSize": 16,
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      Continue with Facebook or Google
+    </Text>
+    <View
+      style={
+        Object {
+          "marginBottom": 10,
+          "marginTop": 10,
+        }
+      }
+    />
+    <withTheme(Button)
+      color="#4267B2"
+      icon={
+        Object {
+          "testUri": "../../../src/assets/images/facebook.png",
+        }
+      }
+      loading={false}
+      mode="contained"
+      onPress={[Function]}
+      style={
+        Object {
+          "borderRadius": 7,
+          "padding": 10,
+          "width": 700,
+        }
+      }
+    >
+      Continue with Facebook
+    </withTheme(Button)>
+    <View
+      style={
+        Object {
+          "marginBottom": 10,
+          "marginTop": 10,
+        }
+      }
+    />
+    <withTheme(Button)
+      color="#4285F4"
+      icon={
+        Object {
+          "testUri": "../../../src/assets/images/google.png",
+        }
+      }
+      loading={false}
+      mode="contained"
+      onPress={[Function]}
+      style={
+        Object {
+          "borderRadius": 7,
+          "padding": 10,
+          "width": 700,
+        }
+      }
+    >
+      Continue with Google
+    </withTheme(Button)>
+  </View>
+</React.Fragment>
+`;
