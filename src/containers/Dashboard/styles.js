@@ -5,7 +5,7 @@
 */
 
 // ########## Import Dependencies Here ##########
-import styled from "styled-components";
+import styled from "styled-components/native";
 
 import { STYLE_CONSTANTS } from "../../config/styles";
 
