@@ -6,7 +6,7 @@
 
 // ########## Import Dependencies Here ##########
 import { applyMiddleware, compose, createStore } from "redux";
-import reduxThunk from 'redux-thunk';
+import reduxThunk from "redux-thunk";
 import reduxLogger from "redux-logger";
 
 // ########## Import Components Here ##########
