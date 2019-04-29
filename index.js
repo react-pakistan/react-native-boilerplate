@@ -5,26 +5,11 @@
 */
 
 // ########## Import Dependencies Here ##########
-import { AppRegistry } from "react-native";
-import React, { Component } from "react";
-import { Provider } from "react-redux";
+import React from "react";
 
-// ########## Import Components Here ##########
-import App from "./App";
-import { name as appName } from "./app.json";
-import configureStore from "./src/config/store";
+// ########## Import Containers Here ##########
+import MainScreen from "./src/containers/MainScreen";
 
-// get store and middleware configured
-const store = configureStore();
+const App = () => <MainScreen />;
 
-class RN01 extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
-  }
-}
-
-AppRegistry.registerComponent(appName, () => RN01);
+export default App;
