@@ -12,13 +12,13 @@ import configureStore from "redux-mock-store";
 // ########## Import Components Here ##########
 import MainScreen from "../containers/MainScreen";
 
-jest.mock('react-native-gesture-handler', () => { });
-jest.mock('react-navigation', () => {
+jest.mock("react-native-gesture-handler", () => { });
+jest.mock("react-navigation", () => {
   return {
     createAppContainer: jest.fn().mockReturnValue(function NavigationContainer(props) {return null;}),
     createStackNavigator: jest.fn(),
     createDrawerNavigator: jest.fn(),
-  }
+  };
 });
 
 // ########## Create Initial State ##########
