@@ -42,10 +42,9 @@
     "collectCoverage": true,
     "coverageDirectory": "__coverage__",
     "transform": {
-      "^.+\\.js$": "<rootDir>/jest.preprocessor.js"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|native-base|react-navigation|react-native-fabric|react-native-paper)"
+      "node_modules/(?!(jest-)?react-native|native-base|react-navigation|react-native-fabric|react-native-paper)"
     ]
   },
   "pre-commit": [
