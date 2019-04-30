@@ -7,7 +7,7 @@
 // ########## Import Dependencies Here ##########
 import React from "react";
 import {
-  createBottomTabNavigator,
+  createAppContainer,
   createStackNavigator,
   createDrawerNavigator
 } from "react-navigation";
@@ -37,4 +37,6 @@ const AppDrawer = createDrawerNavigator({
   }
 });
 
-export default AppDrawer;
+const AppContainer = createAppContainer(AppDrawer);
+
+export default AppContainer;
