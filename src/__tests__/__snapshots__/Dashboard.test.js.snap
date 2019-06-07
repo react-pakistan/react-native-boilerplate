@@ -1,36 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Dashboard componenent correctly 1`] = `
-<Dashboard
-  dashboardAttempt={[Function]}
-  store={
-    Object {
-      "clearActions": [Function],
-      "dispatch": [Function],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-    }
-  }
-  storeSubscription={
-    Subscription {
-      "listeners": Object {
-        "notify": [Function],
-      },
-      "onStateChange": [Function],
-      "parentSub": undefined,
-      "store": Object {
+<Context.Provider
+  value={null}
+>
+  <Dashboard
+    dashboardAttempt={[Function]}
+    store={
+      Object {
         "clearActions": [Function],
         "dispatch": [Function],
         "getActions": [Function],
         "getState": [Function],
         "replaceReducer": [Function],
         "subscribe": [Function],
-      },
-      "unsubscribe": null,
+      }
     }
-  }
-  userdata={null}
-/>
+    userdata={null}
+  />
+</Context.Provider>
 `;
