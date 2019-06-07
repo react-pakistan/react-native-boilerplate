@@ -5,36 +5,32 @@
 */
 
 // ########## Import Dependencies Here ##########
-import React from "react";
-import {
-  createAppContainer,
-  createStackNavigator,
-  createDrawerNavigator
-} from "react-navigation";
+// import React from "react";
+import { createAppContainer, createStackNavigator, createDrawerNavigator } from 'react-navigation';
 
 // ########## Import Containers Here ##########
-import Dashboard from "../containers/Dashboard";
-import Profile from "../containers/Profile";
+import Dashboard from '../containers/Dashboard';
+import Profile from '../containers/Profile';
 
 const DashboardStack = createStackNavigator({
   Dashboard: {
-    screen: Dashboard
-  }
+    screen: Dashboard,
+  },
 });
 
 const ProfileStack = createStackNavigator({
   Profile: {
-    screen: Profile
-  }
+    screen: Profile,
+  },
 });
 
 const AppDrawer = createDrawerNavigator({
   Dashboard: {
-    screen: DashboardStack
+    screen: DashboardStack,
   },
   Profile: {
-    screen: ProfileStack
-  }
+    screen: ProfileStack,
+  },
 });
 
 const AppContainer = createAppContainer(AppDrawer);
