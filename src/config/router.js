@@ -5,7 +5,6 @@
 */
 
 // ########## Import Dependencies Here ##########
-// import React from "react";
 import { createAppContainer, createStackNavigator, createDrawerNavigator } from 'react-navigation';
 
 // ########## Import Containers Here ##########
