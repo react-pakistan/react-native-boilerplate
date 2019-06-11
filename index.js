@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-global-assign */
 /*
   Author: Taimoor Khan
   GitHub: https://github.com/Taimoormk
@@ -5,14 +7,14 @@
 */
 
 // ########## Import Dependencies Here ##########
-import { AppRegistry } from "react-native";
-import React, { Component } from "react";
-import { Provider } from "react-redux";
+import { AppRegistry } from 'react-native';
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 
 // ########## Import Components Here ##########
-import App from "./App";
-import { name as appName } from "./app.json";
-import configureStore from "./src/config/store";
+import App from './App';
+import { name as appName } from './app.json';
+import configureStore from './src/config/store';
 
 // configuration to debug network requests in RN
 XMLHttpRequest = GLOBAL.originalXMLHttpRequest ? GLOBAL.originalXMLHttpRequest : GLOBAL.XMLHttpRequest;
