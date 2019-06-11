@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /*
   Author: Taimoor Khan
   GitHub: https://github.com/Taimoormk
@@ -5,13 +6,13 @@
 */
 
 // ########## Import Dependencies Here ##########
-import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import React from 'react';
+import ShallowRenderer from 'react-test-renderer/shallow';
 
 // ########## Import Components Here ##########
-import Profile from "../containers/Profile";
+import Profile from '../containers/Profile';
 
-test("renders Profile compomenent correctly", () => {
+test('renders Profile compomenent correctly', () => {
   const renderer = new ShallowRenderer();
   renderer.render(<Profile />);
   const wrapper = renderer.getRenderOutput();
