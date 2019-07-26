@@ -16,7 +16,7 @@
     "lint:watch": "yarn lint --clear --watch"
   },
   "dependencies": {
-    "lint-staged": "^9.2.0",
+    "lint-staged": "^9.2.1",
     "pre-commit": "^1.2.2",
     "prop-types": "^15.7.2",
     "react": "16.8.6",
