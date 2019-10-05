@@ -1,23 +1,17 @@
-/*
-  Author: Taimoor Khan
-  GitHub: https://github.com/Taimoormk
-  Email: taimoor.m.k AT LIVE.COM 
-*/
-
 // ########## Import Dependencies Here ##########
-import React, { Component, Fragment } from "react";
-import { func } from "prop-types";
-import { View, Text } from "react-native";
-import { TextInput, Button } from "react-native-paper";
+import React, { Component, Fragment } from 'react';
+import { func } from 'prop-types';
+import { View, Text } from 'react-native';
+import { Button } from 'react-native-paper';
 
 // ########## Import Components Here ##########
-import { STYLE_CONSTANTS } from "../../config/styles";
-import styles from "./styles";
-import { loginScreenText } from "./helpers";
+import { STYLE_CONSTANTS } from '../../config/styles';
+import styles from './styles';
+import { loginScreenText } from './helpers';
 
 class SignIn extends Component {
   state = {
-    isLoading: false
+    isLoading: false,
   };
 
   render() {
@@ -31,23 +25,23 @@ class SignIn extends Component {
           </Text>
           <View style={styles.spacer} />
           <Button
-            icon={require("../../assets/images/facebook.png")}
+            icon={require('../../assets/images/facebook.png')}
             mode="contained"
             loading={isLoading}
             color={STYLE_CONSTANTS.COLORS.FACEBOOK}
             style={styles.facebookButton}
-            onPress={() => showAppAction()}
+            onPress={showAppAction}
           >
             {loginScreenText.facebookButton}
           </Button>
           <View style={styles.spacer} />
           <Button
-            icon={require("../../assets/images/google.png")}
+            icon={require('../../assets/images/google.png')}
             mode="contained"
             loading={isLoading}
             color={STYLE_CONSTANTS.COLORS.GOOGLE}
             style={styles.googleButton}
-            onPress={() => showAppAction()}
+            onPress={showAppAction}
           >
             {loginScreenText.googleButton}
           </Button>
@@ -58,7 +52,7 @@ class SignIn extends Component {
 }
 
 SignIn.propTypes = {
-  showAppAction: func
+  showAppAction: func,
 };
 
 export default SignIn;

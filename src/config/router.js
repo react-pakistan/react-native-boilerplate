@@ -1,11 +1,7 @@
-/*
-  Author: Taimoor Khan
-  GitHub: https://github.com/Taimoormk
-  Email: taimoor.m.k AT LIVE.COM 
-*/
-
 // ########## Import Dependencies Here ##########
-import { createAppContainer, createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 
 // ########## Import Containers Here ##########
 import Dashboard from '../containers/Dashboard';

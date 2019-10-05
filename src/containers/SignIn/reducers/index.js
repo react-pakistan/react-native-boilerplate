@@ -1,16 +1,10 @@
-/*
-  Author: Taimoor Khan
-  GitHub: https://github.com/Taimoormk
-  Email: taimoor.m.k AT LIVE.COM 
-*/
-
 // ########## Import Dependencies Here ##########
 
 // ########## Import Components Here ##########
-import * as types from "../constants";
+import * as types from '../constants';
 
 const initial = {
-  show: false
+  show: false,
 };
 
 export default (state = initial, action) => {
