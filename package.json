@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest --passWithNoTests",
+    "test": "jest",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
     "format": "prettier --config .prettierrc --write 'src/**/*.{js,jsx}'",
@@ -56,7 +56,10 @@
     "coverageDirectory": "__coverage__",
     "transform": {},
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation|react-native-paper)"
+      "node_modules/(?!(jest-)?react-native|react-navigation|react-native-paper|@react-navigation/.*)"
+    ],
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
     ]
   },
   "pre-commit": [
