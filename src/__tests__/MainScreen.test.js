@@ -22,7 +22,7 @@ jest.mock('react-navigation', () => ({
     },
   },
 }));
-// jest.mock('react-native-reanimated', () => {});
+jest.mock('react-native-animated', () => {});
 
 // ########## Create Initial State ##########
 const fakeInitialState = {
