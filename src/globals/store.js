@@ -1,7 +1,7 @@
 // ########## Import Dependencies Here ##########
 import { applyMiddleware, compose, createStore } from 'redux';
 import reduxLogger from 'redux-logger';
-import rootReducer from '../reducers';
+import { rootReducer } from '../reducers';
 
 export default () => {
   // middlewares configuration

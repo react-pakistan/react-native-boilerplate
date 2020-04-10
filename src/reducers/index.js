@@ -2,10 +2,8 @@
 import { combineReducers } from 'redux';
 
 // ########## Import Components Here ##########
-import showAppReducer from '../containers/MainScreen/reducers';
+import { mainScreenReducer } from '../screens/main-screen/reducers';
 
-const rootReducer = combineReducers({
-  showAppReducer,
+export const rootReducer = combineReducers({
+  mainScreenReducer,
 });
-
-export default rootReducer;
