@@ -35,6 +35,13 @@ STYLE_CONSTANTS.H1 = {
   textTransform: 'uppercase',
 };
 
+STYLE_CONSTANTS.H2 = {
+  fontFamily: STYLE_CONSTANTS.FONT.FONTFAMILY_BOLD,
+  color: STYLE_CONSTANTS.COLORS.BLACK,
+  fontSize: 13,
+  textTransform: 'uppercase',
+};
+
 STYLE_CONSTANTS.BUTTON_TITLE = {
   fontFamily: STYLE_CONSTANTS.FONT.FONTFAMILY_REGULAR,
   color: STYLE_CONSTANTS.COLORS.WHITE,

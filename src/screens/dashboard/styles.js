@@ -10,4 +10,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   heading: STYLE_CONSTANTS.H1,
+  subHeading: STYLE_CONSTANTS.H2,
+  buttonTitle: STYLE_CONSTANTS.BUTTON_TITLE,
 });
