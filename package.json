@@ -21,13 +21,14 @@
     "@react-navigation/drawer": "^5.5.0",
     "@react-navigation/native": "^5.1.6",
     "@react-navigation/stack": "^5.2.13",
-    "@taimoormk/react-native-commons-collection": "^1.0.5",
+    "@taimoormk/react-native-commons-collection": "^1.0.10",
     "@taimoormk/react-native-icon-collection": "^1.0.2",
     "lint-staged": "^10.1.7",
     "pre-commit": "^1.2.2",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-native": "0.62.2",
+    "react-native-device-info": "^5.5.6",
     "react-native-elements": "^1.2.7",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-onboarding-swiper": "^1.1.1",
@@ -43,7 +44,8 @@
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-mock-store": "^1.5.4"
+    "redux-mock-store": "^1.5.4",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

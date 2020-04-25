@@ -1,11 +1,8 @@
-import {
-  TextInput,
-} from '@taimoormk/react-native-commons-collection/text-input';
-import {
-  Image,
-} from '@taimoormk/react-native-commons-collection/image';
+import { Image } from '@taimoormk/react-native-commons-collection/image';
+import { Text } from '@taimoormk/react-native-commons-collection/text';
+import { TextInput } from '@taimoormk/react-native-commons-collection/text-input';
+import { View } from '@taimoormk/react-native-commons-collection/view';
 import React from 'react';
-import { View, Text } from 'react-native';
 import { Button } from 'react-native-paper';
 import { styles } from './styles';
 import { STYLE_CONSTANTS } from '../../globals/styles';
