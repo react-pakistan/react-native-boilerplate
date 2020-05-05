@@ -1,31 +1,28 @@
 import { FlatList } from '@taimoormk/react-native-commons-collection/flat-list';
-import { Image } from '@taimoormk/react-native-commons-collection/image';
-import { Text } from '@taimoormk/react-native-commons-collection/text';
-// import { TextInput } from '@taimoormk/react-native-commons-collection/text-input';
-import { View } from '@taimoormk/react-native-commons-collection/view';
 import React from 'react';
-// import { Button } from 'react-native-paper';
-// import { STYLE_CONSTANTS } from '../../globals/styles';
-import { openSourceProjects } from './helpers';
-import { styles } from './styles';
+import { dashboardScreenText, openSourceProjects } from './helpers';
+import {
+  DashboardHeading,
+  DashboardWrapper,
+  LabelText,
+  ListItemBanner,
+  ListItemWrapper,
+} from './styled';
 
 export const Dashboard = () => (
-  <View style={styles.container}>
-    <Text style={styles.heading}>React Pakistan Open Source Projects</Text>
+  <DashboardWrapper>
+    <DashboardHeading>{dashboardScreenText.mainHeading}</DashboardHeading>
     <FlatList
       data={openSourceProjects}
       keyExtractor={({ id }) => id}
       renderItem={({ item: { banner, label } }) => (
-        <View
-          style={styles.listItemWrapper}
-        >
-          <Image
+        <ListItemWrapper>
+          <ListItemBanner
             source={{ uri: banner }}
-            style={styles.listItemBanner}
           />
-          <Text>{label}</Text>
-        </View>
+          <LabelText>{label}</LabelText>
+        </ListItemWrapper>
       )}
     />
-  </View>
+  </DashboardWrapper>
 );

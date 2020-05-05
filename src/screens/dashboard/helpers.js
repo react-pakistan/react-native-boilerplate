@@ -1,3 +1,7 @@
+export const dashboardScreenText = {
+  mainHeading: 'React Pakistan Open Source Projects',
+};
+
 export const openSourceProjects = [
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1565548545/GitHub/React_Pakistan_Storybook_Logo.jpg',
