@@ -1,7 +1,7 @@
 // ########## Import Dependencies Here ##########
+import { Spacer } from '@taimoormk/react-native-commons-collection/spacer';
 import React from 'react';
 import { func } from 'prop-types';
-import { View, Text } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { Button } from 'react-native-paper';
 
@@ -9,6 +9,7 @@ import { Button } from 'react-native-paper';
 import { STYLE_CONSTANTS } from '../../globals/styles';
 import { styles } from './styles';
 import { loginScreenText } from './helpers';
+import { SignInWrapper, OAuthHeading } from './styled';
 
 export const SignIn = ({
   showAppAction,
@@ -17,11 +18,11 @@ export const SignIn = ({
   const dispatch = useDispatch();
 
   return (
-    <View style={styles.signInContainer}>
-      <Text style={styles.oAuthHeading}>
+    <SignInWrapper>
+      <OAuthHeading style={styles.oAuthHeading}>
         {loginScreenText.oAuthHeading}
-      </Text>
-      <View style={styles.spacer} />
+      </OAuthHeading>
+      <Spacer />
       <Button
         icon={require('../../assets/images/facebook.png')}
         mode="contained"
@@ -31,7 +32,7 @@ export const SignIn = ({
       >
         {loginScreenText.facebookButton}
       </Button>
-      <View style={styles.spacer} />
+      <Spacer />
       <Button
         icon={require('../../assets/images/google.png')}
         mode="contained"
@@ -41,7 +42,7 @@ export const SignIn = ({
       >
         {loginScreenText.googleButton}
       </Button>
-    </View>
+    </SignInWrapper>
   );
 };
 
