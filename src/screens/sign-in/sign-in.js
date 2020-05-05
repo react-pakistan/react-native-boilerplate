@@ -1,15 +1,16 @@
 // ########## Import Dependencies Here ##########
 import { Spacer } from '@taimoormk/react-native-commons-collection/spacer';
+import { Button } from '@taimoormk/react-native-commons-collection/button';
 import React from 'react';
-import { func } from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { Button } from 'react-native-paper';
+import { func } from 'prop-types';
 
 // ########## Import Components Here ##########
-import { STYLE_CONSTANTS } from '../../globals/styles';
-import { styles } from './styles';
 import { loginScreenText } from './helpers';
-import { SignInWrapper, OAuthHeading } from './styled';
+import {
+  OAuthHeading,
+  SignInWrapper,
+} from './styled';
 
 export const SignIn = ({
   showAppAction,
@@ -19,29 +20,19 @@ export const SignIn = ({
 
   return (
     <SignInWrapper>
-      <OAuthHeading style={styles.oAuthHeading}>
+      <OAuthHeading>
         {loginScreenText.oAuthHeading}
       </OAuthHeading>
-      <Spacer />
+      <Spacer margin={2} />
       <Button
-        icon={require('../../assets/images/facebook.png')}
-        mode="contained"
-        color={STYLE_CONSTANTS.COLORS.FACEBOOK}
-        style={styles.facebookButton}
         onPress={() => dispatch(showAppAction())}
-      >
-        {loginScreenText.facebookButton}
-      </Button>
-      <Spacer />
+        title={loginScreenText.facebookButton}
+      />
+      <Spacer margin={2} />
       <Button
-        icon={require('../../assets/images/google.png')}
-        mode="contained"
-        color={STYLE_CONSTANTS.COLORS.GOOGLE}
-        style={styles.googleButton}
         onPress={() => dispatch(showAppAction())}
-      >
-        {loginScreenText.googleButton}
-      </Button>
+        title={loginScreenText.googleButton}
+      />
     </SignInWrapper>
   );
 };

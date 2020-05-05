@@ -21,7 +21,7 @@
     "@react-navigation/drawer": "^5.6.3",
     "@react-navigation/native": "^5.2.3",
     "@react-navigation/stack": "^5.2.18",
-    "@taimoormk/react-native-commons-collection": "^1.0.16",
+    "@taimoormk/react-native-commons-collection": "^1.0.17",
     "@taimoormk/react-native-icon-collection": "^1.0.2",
     "lint-staged": "^10.2.2",
     "pre-commit": "^1.2.2",

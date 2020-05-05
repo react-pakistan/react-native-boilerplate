@@ -10,7 +10,7 @@ export const SignInWrapper = styled(View)`
 `;
 
 export const OAuthHeading = styled(Text)`
-  font-family: 'Roboto-Regular';
+  font-family: 'Roboto-Bold';
   color: #000000;
   font-size: 16px;
   text-transform: uppercase;

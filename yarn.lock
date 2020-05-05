@@ -1314,10 +1314,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@taimoormk/react-native-commons-collection@^1.0.16":
-  version "1.0.16"
-  resolved "https://npm.pkg.github.com/download/@taimoormk/react-native-commons-collection/1.0.16/37f60ad53e58c0a99722085e302d60210dd187b03d9af64a88528df61e072ddc#844bc0976107740a6978f8ed9adbafbf4279dff8"
-  integrity sha512-eY9/hbOG7qPl936urKts2JGpAbJ4BCR8ajdhvGV3QymRm3MYwRa+gvsa6v6/PPmz4I4fw03+yCrILKg/4yG4Fg==
+"@taimoormk/react-native-commons-collection@^1.0.17":
+  version "1.0.17"
+  resolved "https://npm.pkg.github.com/download/@taimoormk/react-native-commons-collection/1.0.17/4baf8222555558b533998c16ddbdb44563b04001c649d403b6b31e92b585fd86#5895bb706dbeb9952fc7fab57fed0eb2d1b0a3f3"
+  integrity sha512-sPvzX/2lT3TSITN0x0OumTQM0LtKXuUYecEMwXx/NY9V/PGt8Y+y/A+YtIpBCi7RtKBmMMaI1NGAlMzl4gUlOA==
   dependencies:
     "@react-native-community/datetimepicker" "2.2.3"
     "@react-native-community/segmented-control" "^1.5.0"
