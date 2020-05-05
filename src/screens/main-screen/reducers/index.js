@@ -8,7 +8,7 @@ const initial = {
   showApp: false,
 };
 
-export const mainScreenReducer = (state = initial, action) => {
+export const mainScreen = (state = initial, action) => {
   switch (action.type) {
     case types.HIDE_INTRO:
       return { ...state, hideIntro: false };

@@ -3,7 +3,7 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 
 // ########## Import Components Here ##########
-import Dashboard from '../containers/Dashboard';
+import { Dashboard } from '../screens/dashboard';
 
 test('renders Dashboard compomenent correctly', () => {
   const renderer = new ShallowRenderer();

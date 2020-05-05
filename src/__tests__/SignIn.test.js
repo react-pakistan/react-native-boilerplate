@@ -4,7 +4,7 @@ import ShallowRenderer from 'react-test-renderer/shallow';
 import configureStore from 'redux-mock-store';
 
 // ########## Import Components Here ##########
-import SignIn from '../containers/SignIn';
+import { SignIn } from '../screens/sign-in';
 
 // ########## Create Initial State ##########
 const fakeInitialState = {

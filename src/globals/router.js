@@ -26,7 +26,7 @@ const DashboardStack = ({ navigation }) => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Dashboard"
+        name='Dashboard'
         component={DashboardScreen}
         options={{
           headerRight: () => (
@@ -35,7 +35,7 @@ const DashboardStack = ({ navigation }) => {
               style={headerStyles.iconRight}
             >
               <Icon
-                icon="mobileuigrey9"
+                icon='mobileuigrey9'
               />
             </TouchableOpacity>
           ),
@@ -45,7 +45,7 @@ const DashboardStack = ({ navigation }) => {
               style={headerStyles.iconLeft}
             >
               <Icon
-                icon="mobileuigrey15"
+                icon='mobileuigrey15'
               />
             </TouchableOpacity>
           ),
@@ -67,7 +67,7 @@ const ProfileStack = ({ navigation }) => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Profile"
+        name='Profile'
         component={ProfileScreen}
         options={{
           headerRight: () => (
@@ -76,7 +76,7 @@ const ProfileStack = ({ navigation }) => {
               style={headerStyles.iconRight}
             >
               <Icon
-                icon="mobileuigrey9"
+                icon='mobileuigrey9'
               />
             </TouchableOpacity>
           ),
@@ -86,7 +86,7 @@ const ProfileStack = ({ navigation }) => {
               style={headerStyles.iconLeft}
             >
               <Icon
-                icon="mobileuigrey15"
+                icon='mobileuigrey15'
               />
             </TouchableOpacity>
           ),
@@ -104,9 +104,9 @@ ProfileStack.propTypes = {
 
 const DrawerRoutes = () => (
   <NavigationContainer>
-    <Drawer.Navigator initialRouteName="Dashboard">
-      <Drawer.Screen name="Dashboard" component={DashboardStack} />
-      <Drawer.Screen name="Profile" component={ProfileStack} />
+    <Drawer.Navigator initialRouteName='Dashboard'>
+      <Drawer.Screen name='Dashboard' component={DashboardStack} />
+      <Drawer.Screen name='Profile' component={ProfileStack} />
     </Drawer.Navigator>
   </NavigationContainer>
 );

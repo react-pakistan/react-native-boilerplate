@@ -1,11 +1,12 @@
 // ########## Import Dependencies Here ##########
 import { applyMiddleware, compose, createStore } from 'redux';
+import reduxThunk from 'redux-thunk';
 import reduxLogger from 'redux-logger';
 import { rootReducer } from '../reducers';
 
 export default () => {
   // middlewares configuration
-  const middlewares = [reduxLogger];
+  const middlewares = [reduxThunk, reduxLogger];
   const applyMiddlewares = [applyMiddleware(...middlewares)];
 
   // integrate Redux DevTools if available

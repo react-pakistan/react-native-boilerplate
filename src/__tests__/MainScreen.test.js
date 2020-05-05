@@ -4,7 +4,7 @@ import ShallowRenderer from 'react-test-renderer/shallow';
 import configureStore from 'redux-mock-store';
 
 // ########## Import Components Here ##########
-import MainScreen from '../containers/MainScreen';
+import { MainScreen } from '../screens/main-screen';
 
 jest.mock('react-native-gesture-handler', () => ({
   BaseButton: () => {},
