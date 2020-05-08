@@ -1,8 +1,11 @@
+// ########## Import Dependencies Here ##########
 import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
-import { MainScreen } from './src/screens/main-screen';
-import { OnBoarding } from './src/screens/on-boarding';
+
+// ########## Import Components Here ##########
 import { getHideIntro } from './src/screens/main-screen/selectors';
+import { OnBoarding } from './src/screens/on-boarding';
+import { MainScreen } from './src/screens/main-screen';
 
 export const App = () => {
   const hideIntro = useSelector(getHideIntro);

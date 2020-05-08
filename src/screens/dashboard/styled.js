@@ -1,7 +1,10 @@
+// ########## Import Dependencies Here ##########
 import { Image } from '@taimoormk/react-native-commons-collection/image';
 import { Text } from '@taimoormk/react-native-commons-collection/text';
 import { View } from '@taimoormk/react-native-commons-collection/view';
 import styled from 'styled-components/native';
+
+// ########## Import Components Here ##########
 import { width } from '../../globals/styles';
 
 export const DashboardWrapper = styled(View)`

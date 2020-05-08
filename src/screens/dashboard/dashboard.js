@@ -1,5 +1,8 @@
+// ########## Import Dependencies Here ##########
 import { FlatList } from '@taimoormk/react-native-commons-collection/flat-list';
 import React from 'react';
+
+// ########## Import Components Here ##########
 import { dashboardScreenText, openSourceProjects } from './helpers';
 import {
   DashboardHeading,
