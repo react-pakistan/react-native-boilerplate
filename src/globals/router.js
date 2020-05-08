@@ -104,7 +104,24 @@ ProfileStack.propTypes = {
 
 const DrawerRoutes = () => (
   <NavigationContainer>
-    <Drawer.Navigator initialRouteName='Dashboard'>
+    <Drawer.Navigator
+      initialRouteName='Dashboard'
+      // screenOptions={}
+      lazy
+      drawerType='front'
+      edgeWidth={20}
+      hideStatusBar
+      statusBarAnimation='fade'
+      keyboardDismissMode='on-drag'
+      minSwipeDistance={100}
+      overlayColor='#9E9E9E'
+      // gestureHandlerProps={}
+      // sceneContainerStyle={}
+      drawerStyle={{
+        backgroundColor: '#c6cbef',
+        width: 240,
+      }}
+    >
       <Drawer.Screen name='Dashboard' component={DashboardStack} />
       <Drawer.Screen name='Profile' component={ProfileStack} />
     </Drawer.Navigator>
