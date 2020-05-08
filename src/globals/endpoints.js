@@ -1,4 +1,3 @@
-// ########## Import Dependencies Here ##########
 export const REQUEST_TYPES = {
   DELETE: 'DELETE',
   GET: 'GET',
@@ -6,7 +5,6 @@ export const REQUEST_TYPES = {
   PUT: 'PUT',
 };
 
-// ########## Import Components Here ##########
 export const BASE_URL = 'https://api.github.com';
 
 export const ENDPOINTS = {

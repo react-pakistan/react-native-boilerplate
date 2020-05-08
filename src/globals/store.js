@@ -2,6 +2,8 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 import reduxThunk from 'redux-thunk';
 import reduxLogger from 'redux-logger';
+
+// ########## Import Components Here ##########
 import { rootReducer } from '../reducers';
 
 export default () => {

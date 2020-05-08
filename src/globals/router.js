@@ -4,12 +4,12 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Icon } from '@taimoormk/react-native-icon-collection/icon';
-import React from 'react';
 import { shape, func } from 'prop-types';
 import { TouchableOpacity } from 'react-native';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 
-// ########## Import Containers Here ##########
+// ########## Import Screens Here ##########
 import { Dashboard as DashboardScreen } from '../screens/dashboard';
 import { Profile as ProfileScreen } from '../screens/profile';
 
