@@ -1,6 +1,8 @@
-import React from 'react';
+// ########## Import Dependencies Here ##########
+import { Text } from '@taimoormk/react-native-commons-collection/text';
+import { TouchableOpacity } from '@taimoormk/react-native-commons-collection/touchable-opacity';
 import { bool, string } from 'prop-types';
-import { TouchableOpacity, Text } from 'react-native';
+import React from 'react';
 
 const backgroundColor = (isLight) => (isLight ? 'black' : 'white');
 const color = (isLight) => backgroundColor(!isLight);
