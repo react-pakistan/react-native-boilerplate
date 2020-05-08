@@ -1,4 +1,4 @@
-// ########## Import MainScreen Actions Here ##########
+// ########## Import Contants Here ##########
 export const FETCH_PROFILE_DATA = 'FETCH_PROFILE_DATA';
 export const FETCH_DATA_PROFILE_ATTEMPT = 'FETCH_DATA_PROFILE_ATTEMPT';
 export const FETCH_DATA_PROFILE_SUCCESS = 'FETCH_DATA_PROFILE_SUCCESS';
