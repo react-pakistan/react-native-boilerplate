@@ -1,4 +1,3 @@
-// ########## Helper Text Goes Here ##########
 export const loginScreenText = {
   oAuthHeading: 'Continue with Facebook or Google',
   facebookButton: 'Continue with Facebook',

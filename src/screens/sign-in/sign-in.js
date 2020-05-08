@@ -1,9 +1,9 @@
 // ########## Import Dependencies Here ##########
 import { Button } from '@taimoormk/react-native-commons-collection/button';
 import { Spacer } from '@taimoormk/react-native-commons-collection/spacer';
+import { func } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { func } from 'prop-types';
 
 // ########## Import Components Here ##########
 import { loginScreenText } from './helpers';
