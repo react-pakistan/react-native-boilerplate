@@ -9,7 +9,7 @@ export const openSourceProjects = [
     label: 'React Pakistan',
   },
   {
-    banner: 'https://camo.githubusercontent.com/b3338a9d26ce4dbe5b5e4025c27f4761adafa058/68747470733a2f2f692e6962622e636f2f6e6e32583177522f524e426f696c6572706c617465732e6a7067',
+    banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1548862588/react-native-boilerplate.jpg',
     id: 'react-pakistan-open-source-project-2',
     label: 'React Native Boilerplates',
   },
