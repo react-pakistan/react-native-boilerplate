@@ -3,6 +3,7 @@ import 'react-native-gesture-handler';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { theme } from '@react-pakistan/react-native-commons-collection/theme';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import { shape, func } from 'prop-types';
@@ -19,8 +20,21 @@ import { DrawerContent } from '../components/drawer-content';
 import * as actions from '../screens/main-screen/actions';
 import { headerStyles } from './styles';
 
-const Stack = createStackNavigator();
+export const ROUTE_PATHS = {
+  DASHBOARD: {
+    DEFAULT: 'dashboard',
+    TABS: {
+      MAIN: 'main',
+      MOBILE: 'mobile',
+      WEB: 'web',
+    },
+  },
+  PORFILE: 'profile',
+};
+
 const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const DashboardStack = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -28,7 +42,7 @@ const DashboardStack = ({ navigation }) => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name='Dashboard'
+        name={ROUTE_PATHS.DASHBOARD.DEFAULT}
         component={DashboardScreen}
         options={{
           headerRight: () => (
@@ -51,6 +65,7 @@ const DashboardStack = ({ navigation }) => {
               />
             </TouchableOpacity>
           ),
+          headerTitle: `${ROUTE_PATHS.DASHBOARD.DEFAULT.charAt(0).toUpperCase()}${ROUTE_PATHS.DASHBOARD.DEFAULT.slice(1).toLowerCase()}`,
         }}
       />
     </Stack.Navigator>
@@ -69,7 +84,7 @@ const ProfileStack = ({ navigation }) => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name='Profile'
+        name={ROUTE_PATHS.PORFILE}
         component={ProfileScreen}
         options={{
           headerRight: () => (
@@ -92,6 +107,7 @@ const ProfileStack = ({ navigation }) => {
               />
             </TouchableOpacity>
           ),
+          headerTitle: `${ROUTE_PATHS.PROFILE.charAt(0).toUpperCase()}${ROUTE_PATHS.PROFILE.slice(1).toLowerCase()}`,
         }}
       />
     </Stack.Navigator>
@@ -103,6 +119,23 @@ ProfileStack.propTypes = {
     toggleDrawer: func.isRequired,
   }).isRequired,
 };
+
+const TabRoutes = () => (
+  <Tab.Navigator>
+    <Tab.Screen
+      component={DashboardStack}
+      name={ROUTE_PATHS.DASHBOARD.TABS.MAIN}
+    />
+    <Tab.Screen
+      component={DashboardStack}
+      name={ROUTE_PATHS.DASHBOARD.TABS.MOBILE}
+    />
+    <Tab.Screen
+      component={DashboardStack}
+      name={ROUTE_PATHS.DASHBOARD.TABS.WEB}
+    />
+  </Tab.Navigator>
+);
 
 const DrawerRoutes = () => (
   <NavigationContainer>
@@ -148,8 +181,14 @@ const DrawerRoutes = () => (
       // screenOptions={}
       statusBarAnimation='fade'
     >
-      <Drawer.Screen name='Dashboard' component={DashboardStack} />
-      <Drawer.Screen name='Profile' component={ProfileStack} />
+      <Drawer.Screen
+        component={TabRoutes}
+        name={ROUTE_PATHS.DASHBOARD.DEFAULT}
+      />
+      <Drawer.Screen
+        component={ProfileStack}
+        name={ROUTE_PATHS.PORFILE}
+      />
     </Drawer.Navigator>
   </NavigationContainer>
 );

@@ -26,7 +26,7 @@ export const DrawerContent = ({
           key={item}
           onPress={() => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
         >
-          {item.split('-')[0]}
+          {(item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()).split('-')[0]}
         </Text>
       )}
       keyExtractor={({ id }) => id}

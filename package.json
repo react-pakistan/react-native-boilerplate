@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.4.1",
     "@react-navigation/drawer": "^5.6.3",
     "@react-navigation/native": "^5.2.3",
     "@react-navigation/stack": "^5.2.18",
@@ -25,8 +26,6 @@
     "@react-pakistan/react-native-icon-collection": "^1.0.0",
     "@react-pakistan/react-native-ui-collection": "^1.0.0",
     "axios": "^0.18.0",
-    "lint-staged": "^10.2.2",
-    "pre-commit": "^1.2.2",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-native": "0.62.2",
@@ -43,7 +42,6 @@
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.0"
   },
@@ -59,8 +57,11 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "jest": "^26.0.1",
+    "lint-staged": "^10.2.2",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.13.1"
+    "pre-commit": "^1.2.2",
+    "react-test-renderer": "16.13.1",
+    "redux-mock-store": "^1.5.4"
   },
   "jest": {
     "preset": "react-native",
