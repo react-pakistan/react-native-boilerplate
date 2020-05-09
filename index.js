@@ -1,5 +1,5 @@
 // ########## Import Dependencies Here ##########
-import { theme } from '@taimoormk/react-native-commons-collection/theme';
+import { theme } from '@react-pakistan/react-native-commons-collection/theme';
 import React from 'react';
 import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';

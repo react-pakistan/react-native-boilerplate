@@ -1236,10 +1236,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.10.tgz#5dda643e19e587793bc2034dd9bf7398ad43d401"
   integrity sha512-rk4sWFsmtOw8oyx8SD3KSvawwaK7gRBSEIy2TAwURyGt+3TizssXP1r8nx3zY+R7v2vYYHXZ+k2/GULAT/bcaQ==
 
-"@react-native-community/segmented-control@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/segmented-control/-/segmented-control-1.5.0.tgz#aac4a3a8a61d98ae0bf3434522dfba6d8b74a96a"
-  integrity sha512-0ma3XzipIKvCwWr7iqKBBEgoUGCrQTU5JIofOb5s3Mhvn2YC3i4LrhJY2Rb3ll/1OOPhKBfnAs5GA7t77ZUHCw==
+"@react-native-community/segmented-control@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/segmented-control/-/segmented-control-1.6.0.tgz#7e4f9935e458b312fda26986adf98c573cf08b63"
+  integrity sha512-g/AhBriSvMOyom6mTcVu6QBC7OOk0t9HB7T3DDE0LBY0eHDRR/nOKVf/Mf5XvN/eQZmh8wfbcr5h6cQpEVvqsw==
 
 "@react-native-community/slider@^2.0.9":
   version "2.0.9"
@@ -1293,6 +1293,39 @@
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
 
+"@react-pakistan/react-native-commons-collection@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@react-pakistan/react-native-commons-collection/-/react-native-commons-collection-1.0.0.tgz#c5595d99f0de4b72f8cbe0d88449299dc8181341"
+  integrity sha512-sQlyHud8nk9XW9bGq3vAtqjU9tqC73CoKWM5zPEpCNJ/ZXCzQ2NxIl2rhjSQhchLy6giqgX2dqzYUJhZY/DE2w==
+  dependencies:
+    "@react-native-community/datetimepicker" "2.2.3"
+    "@react-native-community/segmented-control" "^1.6.0"
+    "@react-native-community/slider" "^2.0.9"
+    "@react-native-community/viewpager" "^4.0.0"
+    react-native-device-info "^5.5.7"
+    styled-components "^5.1.0"
+
+"@react-pakistan/react-native-icon-collection@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@react-pakistan/react-native-icon-collection/-/react-native-icon-collection-1.0.0.tgz#c6c9a11b2e699402c79bc04887426ed7b7ff40d5"
+  integrity sha512-HguvA+qEMXq3K0QeZ19RfGLODWb7CSvU2kdgk8GEyIR20PQlpBeP5on4IprevwlGXrzPEhXyYXtOCy+o8zA5GQ==
+  dependencies:
+    react-native-device-info "^5.5.7"
+    react-native-svg "^11.0.1"
+    styled-components "^5.1.0"
+
+"@react-pakistan/react-native-ui-collection@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@react-pakistan/react-native-ui-collection/-/react-native-ui-collection-1.0.0.tgz#102c24795aea8e1f9221868a14950cc175d4edb4"
+  integrity sha512-dsBeGt6KUNcnsAc6OB/UYJdLe9YvT4EQ4oD53J3alEjN/fO0euHYn7UCLEWGQyaMGFm74IOQqe+Et1eefBbYRQ==
+  dependencies:
+    prop-types "^15.7.2"
+    react "^16.13.1"
+    react-native "0.62.2"
+    react-native-device-info "^5.5.6"
+    react-native-svg "^12.1.0"
+    styled-components "^5.1.0"
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
@@ -1313,26 +1346,6 @@
   integrity sha512-MZPUxrmFubI36XS1DI3qmI0YdN1gks62JtFZvxR67ljjSNCeK6U08Zx4msEWOXuofgqUt6zPHSi1H9fbjR/NRA==
   dependencies:
     "@sinonjs/commons" "^1.7.0"
-
-"@taimoormk/react-native-commons-collection@^1.0.17":
-  version "1.0.17"
-  resolved "https://npm.pkg.github.com/download/@taimoormk/react-native-commons-collection/1.0.17/4baf8222555558b533998c16ddbdb44563b04001c649d403b6b31e92b585fd86#5895bb706dbeb9952fc7fab57fed0eb2d1b0a3f3"
-  integrity sha512-sPvzX/2lT3TSITN0x0OumTQM0LtKXuUYecEMwXx/NY9V/PGt8Y+y/A+YtIpBCi7RtKBmMMaI1NGAlMzl4gUlOA==
-  dependencies:
-    "@react-native-community/datetimepicker" "2.2.3"
-    "@react-native-community/segmented-control" "^1.5.0"
-    "@react-native-community/slider" "^2.0.9"
-    "@react-native-community/viewpager" "^4.0.0"
-    react-native-device-info "^5.5.6"
-    styled-components "^5.1.0"
-
-"@taimoormk/react-native-icon-collection@^1.0.2":
-  version "1.0.2"
-  resolved "https://npm.pkg.github.com/download/@taimoormk/react-native-icon-collection/1.0.2/cf8f4b4c702a46a7fe2cdf7620f79f606dbd1ffce5d3cef68c822bd27b27f315#9f5869f68f31e7c0f924bd0aac6532dcc12caae8"
-  integrity sha512-7EYwpmJNEe/q6KRPdV+1jPmzs3a7o4Oco8Sc+w8qRl9ayMbLaVsB7/laLun8LkoAHsZ83Mraz5D7392cMjQpAw==
-  dependencies:
-    react-native-svg "^11.0.1"
-    styled-components "^5.0.1"
 
 "@types/babel__core@^7.1.7":
   version "7.1.7"
@@ -6302,6 +6315,11 @@ react-native-device-info@^5.5.6:
   resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-5.5.6.tgz#139466e6e995e512bb03d5bdeef59bd4cfe21dcf"
   integrity sha512-3slUaygctIs1UqsTeZIMpskOWm1FC9SouBxyX7rp6PbOmokZiSCO/c5noUx+ihGNRfUDTbyjZDrJBYEfRNXoZg==
 
+react-native-device-info@^5.5.7:
+  version "5.5.7"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-5.5.7.tgz#aafe2581a702637a66fc04f333052980a4f9e8c5"
+  integrity sha512-0021blhx/N1+mWQPOW3QAMWhOjYdG0uC5n+P6sMXZD3pF9aiIeCKuw4JpBpfNXXpUmDmQ7qWgHZUZO7JBMRijw==
+
 react-native-elements@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-2.0.0.tgz#eebe36c3250808ebd4a7e9dcf97a666fb7a20930"
@@ -6472,7 +6490,7 @@ react-test-renderer@16.13.1:
     react-is "^16.8.6"
     scheduler "^0.19.1"
 
-react@16.13.1:
+react@16.13.1, react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
@@ -7437,7 +7455,7 @@ strip-json-comments@^3.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.0.tgz#7638d31422129ecf4457440009fba03f9f9ac180"
   integrity sha512-e6/d0eBu7gHtdCqFt0xJr642LdToM5/cN4Qb9DbHjVx1CP5RyeM+zH7pbecEmDv/lBqb0QH+6Uqq75rxFPkM0w==
 
-styled-components@^5.0.1, styled-components@^5.1.0:
+styled-components@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.1.0.tgz#2e3985b54f461027e1c91af3229e1c2530872a4e"
   integrity sha512-0Qs2wEkFBXHFlysz6CV831VG6HedcrFUwChjnWylNivsx14MtmqQsohi21rMHZxzuTba063dEyoe/SR6VGJI7Q==

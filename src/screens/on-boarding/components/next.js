@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
-import { Text } from '@taimoormk/react-native-commons-collection/text';
-import { TouchableOpacity } from '@taimoormk/react-native-commons-collection/touchable-opacity';
+import { Text } from '@react-pakistan/react-native-commons-collection/text';
+import { TouchableOpacity } from '@react-pakistan/react-native-commons-collection/touchable-opacity';
 import { bool, string } from 'prop-types';
 import React from 'react';
 

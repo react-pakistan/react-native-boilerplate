@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
-import { Button } from '@taimoormk/react-native-commons-collection/button';
-import { Spacer } from '@taimoormk/react-native-commons-collection/spacer';
+import { Button } from '@react-pakistan/react-native-commons-collection/button';
+import { Spacer } from '@react-pakistan/react-native-commons-collection/spacer';
 import { func } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';

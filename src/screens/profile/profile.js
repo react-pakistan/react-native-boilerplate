@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
-import { ActivityIndicator } from '@taimoormk/react-native-commons-collection/activity-indicator';
-import { Text } from '@taimoormk/react-native-commons-collection/text';
+import { ActivityIndicator } from '@react-pakistan/react-native-commons-collection/activity-indicator';
+import { Text } from '@react-pakistan/react-native-commons-collection/text';
 import React, { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 

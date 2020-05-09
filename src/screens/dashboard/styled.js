@@ -1,7 +1,7 @@
 // ########## Import Dependencies Here ##########
-import { Image } from '@taimoormk/react-native-commons-collection/image';
-import { Text } from '@taimoormk/react-native-commons-collection/text';
-import { View } from '@taimoormk/react-native-commons-collection/view';
+import { Image } from '@react-pakistan/react-native-commons-collection/image';
+import { Text } from '@react-pakistan/react-native-commons-collection/text';
+import { View } from '@react-pakistan/react-native-commons-collection/view';
 import styled from 'styled-components/native';
 
 // ########## Import Components Here ##########
