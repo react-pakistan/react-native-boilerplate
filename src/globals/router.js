@@ -107,7 +107,7 @@ const ProfileStack = ({ navigation }) => {
               />
             </TouchableOpacity>
           ),
-          headerTitle: `${ROUTE_PATHS.PROFILE.charAt(0).toUpperCase()}${ROUTE_PATHS.PROFILE.slice(1).toLowerCase()}`,
+          headerTitle: `${ROUTE_PATHS.PORFILE.charAt(0).toUpperCase()}${ROUTE_PATHS.PORFILE.slice(1).toLowerCase()}`,
         }}
       />
     </Stack.Navigator>
