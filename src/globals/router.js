@@ -3,6 +3,7 @@ import 'react-native-gesture-handler';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { theme } from '@react-pakistan/react-native-commons-collection/theme';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import { shape, func } from 'prop-types';
 import { TouchableOpacity } from 'react-native';
@@ -14,6 +15,7 @@ import { Dashboard as DashboardScreen } from '../screens/dashboard';
 import { Profile as ProfileScreen } from '../screens/profile';
 
 // ########## Import Components Here ##########
+import { DrawerContent } from '../components/drawer-content';
 import * as actions from '../screens/main-screen/actions';
 import { headerStyles } from './styles';
 
@@ -107,20 +109,34 @@ const DrawerRoutes = () => (
     <Drawer.Navigator
       initialRouteName='Dashboard'
       // screenOptions={}
-      lazy
+      backBehavior='initialRoute'
       drawerType='front'
+      openByDefault={false}
+      drawerPosition='left'
       edgeWidth={20}
       hideStatusBar
-      statusBarAnimation='fade'
       keyboardDismissMode='on-drag'
+      lazy
       minSwipeDistance={100}
-      overlayColor='#9E9E9E'
+      overlayColor={theme.colors.lightBlack}
+      statusBarAnimation='fade'
       // gestureHandlerProps={}
       // sceneContainerStyle={}
       drawerStyle={{
-        backgroundColor: '#c6cbef',
+        backgroundColor: theme.colors.lightGrey,
         width: 240,
       }}
+      drawerContent={({
+        state,
+        navigation,
+        descriptors,
+        progress,
+      }) => <DrawerContent
+        descriptors={descriptors}
+        navigation={navigation}
+        progress={progress}
+        state={state}
+      />}
     >
       <Drawer.Screen name='Dashboard' component={DashboardStack} />
       <Drawer.Screen name='Profile' component={ProfileStack} />
