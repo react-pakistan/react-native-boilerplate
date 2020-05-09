@@ -296,7 +296,7 @@ PODS:
     - ReactCommon/callinvoker (= 0.62.2)
   - RNCMaskedView (0.1.10):
     - React
-  - RNDeviceInfo (5.5.6):
+  - RNDeviceInfo (5.5.7):
     - React
   - RNGestureHandler (1.6.1):
     - React
@@ -476,7 +476,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: 4356114dbcba4ce66991096e51a66e61eda51256
   ReactCommon: ed4e11d27609d571e7eee8b65548efc191116eb3
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNDeviceInfo: 722dc13c269b9dbf305aa4b790d36731602e99b7
+  RNDeviceInfo: e2102056bde3ad5d137fd029d8d431510a00486a
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
   RNReanimated: 955cf4068714003d2f1a6e2bae3fb1118f359aff
   RNScreens: cf198f915f8a2bf163de94ca9f5bfc8d326c3706

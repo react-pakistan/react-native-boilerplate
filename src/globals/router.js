@@ -7,7 +7,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { theme } from '@react-pakistan/react-native-commons-collection/theme';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import { shape, func } from 'prop-types';
-import { TouchableOpacity } from 'react-native';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -18,7 +17,7 @@ import { Profile as ProfileScreen } from '../screens/profile';
 // ########## Import Components Here ##########
 import { DrawerContent } from '../components/drawer-content';
 import * as actions from '../screens/main-screen/actions';
-import { headerStyles } from './styles';
+import { HeaderIcon } from './styled';
 
 export const ROUTE_PATHS = {
   DASHBOARD: {
@@ -46,24 +45,22 @@ const DashboardStack = ({ navigation }) => {
         component={DashboardScreen}
         options={{
           headerRight: () => (
-            <TouchableOpacity
+            <HeaderIcon
               onPress={() => dispatch(actions.hideAppAction())}
-              style={headerStyles.iconRight}
             >
               <Icon
                 icon='mobileuigrey9'
               />
-            </TouchableOpacity>
+            </HeaderIcon>
           ),
           headerLeft: () => (
-            <TouchableOpacity
+            <HeaderIcon
               onPress={() => navigation.toggleDrawer()}
-              style={headerStyles.iconLeft}
             >
               <Icon
                 icon='mobileuigrey15'
               />
-            </TouchableOpacity>
+            </HeaderIcon>
           ),
           headerTitle: `${ROUTE_PATHS.DASHBOARD.DEFAULT.charAt(0).toUpperCase()}${ROUTE_PATHS.DASHBOARD.DEFAULT.slice(1).toLowerCase()}`,
         }}
@@ -88,24 +85,22 @@ const ProfileStack = ({ navigation }) => {
         component={ProfileScreen}
         options={{
           headerRight: () => (
-            <TouchableOpacity
+            <HeaderIcon
               onPress={() => dispatch(actions.hideAppAction())}
-              style={headerStyles.iconRight}
             >
               <Icon
                 icon='mobileuigrey9'
               />
-            </TouchableOpacity>
+            </HeaderIcon>
           ),
           headerLeft: () => (
-            <TouchableOpacity
+            <HeaderIcon
               onPress={() => navigation.toggleDrawer()}
-              style={headerStyles.iconLeft}
             >
               <Icon
                 icon='mobileuigrey15'
               />
-            </TouchableOpacity>
+            </HeaderIcon>
           ),
           headerTitle: `${ROUTE_PATHS.PORFILE.charAt(0).toUpperCase()}${ROUTE_PATHS.PORFILE.slice(1).toLowerCase()}`,
         }}
@@ -121,7 +116,29 @@ ProfileStack.propTypes = {
 };
 
 const TabRoutes = () => (
-  <Tab.Navigator>
+  <Tab.Navigator
+    // screenOptions={}
+    backBehavior='initialRoute'
+    initialRouteName={ROUTE_PATHS.DASHBOARD.TABS.MAIN}
+    lazy
+    // tabBar={}
+    tabBarOptions={{
+      activeBackgroundColor: theme.colors.lightGrey,
+      activeTintColor: theme.colors.cherryRed,
+      adaptive: true,
+      allowFontScaling: true,
+      inactiveBackgroundColor: theme.colors.lightGrey,
+      inactiveTintColor: theme.colors.lightBlack,
+      keyboardHidesTabBar: false,
+      labelPosition: 'below-icon',
+      labelStyle: {},
+      safeAreaInset: { bottom: 'always', top: 'never' },
+      showIcon: true,
+      showLabel: true,
+      style: {},
+      tabStyle: {},
+    }}
+  >
     <Tab.Screen
       component={DashboardStack}
       name={ROUTE_PATHS.DASHBOARD.TABS.MAIN}

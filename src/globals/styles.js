@@ -1,5 +1,5 @@
 // ########## Import Dependencies Here ##########
-import { Dimensions, StyleSheet } from 'react-native';
+import { Dimensions } from 'react-native';
 
 export const { width, height } = Dimensions.get('window');
 
@@ -48,16 +48,3 @@ STYLE_CONSTANTS.BUTTON_TITLE = {
   fontSize: 12,
   textTransform: 'uppercase',
 };
-
-export const headerStyles = StyleSheet.create({
-  iconLeft: {
-    height: 32,
-    marginLeft: 16,
-    width: 32,
-  },
-  iconRight: {
-    height: 32,
-    marginRight: 16,
-    width: 32,
-  },
-});
