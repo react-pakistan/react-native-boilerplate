@@ -3,20 +3,20 @@ import { FlatList } from '@react-pakistan/react-native-commons-collection/flat-l
 import React from 'react';
 
 // ########## Import Components Here ##########
-import { dashboardScreenText, openSourceMainProjects } from './helpers';
+import { dashboardScreenText, openSourceWebProjects } from '../helpers';
 import {
   DashboardHeading,
   DashboardWrapper,
   LabelText,
   ListItemBanner,
   ListItemWrapper,
-} from './styled';
+} from '../styled';
 
-export const Dashboard = () => (
+export const DashboardWeb = () => (
   <DashboardWrapper>
     <DashboardHeading>{dashboardScreenText.mainHeading}</DashboardHeading>
     <FlatList
-      data={openSourceMainProjects}
+      data={openSourceWebProjects}
       keyExtractor={({ id }) => id}
       renderItem={({ item: { banner, label } }) => (
         <ListItemWrapper>

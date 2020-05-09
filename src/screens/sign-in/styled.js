@@ -11,13 +11,13 @@ export const SignInWrapper = styled(View)`
 `;
 
 export const OAuthHeading = styled(Text)`
-  font-family: 'Roboto-Bold';
-  color: #000000;
-  font-size: 16px;
+  color: ${({ theme }) => theme.colors.black};
+  font-family: ${({ theme }) => theme.typography.fontFamily};
+  font-size: ${({ theme }) => theme.spacing.default}px;
   text-transform: uppercase;
 `;
 
 export const Spacer = styled(View)`
   flex: 0;
-  margin-vertical: 10px;
+  margin-vertical: ${({ theme }) => theme.spacing.small}px;
 `;

@@ -11,7 +11,11 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 // ########## Import Screens Here ##########
-import { Dashboard as DashboardScreen } from '../screens/dashboard';
+import {
+  Dashboard as DashboardScreen,
+  DashboardMobile as DashboardMobileScreen,
+  DashboardWeb as DashboardWebScreen,
+} from '../screens/dashboard';
 import { Profile as ProfileScreen } from '../screens/profile';
 
 // ########## Import Components Here ##########
@@ -70,6 +74,86 @@ const DashboardStack = ({ navigation }) => {
 };
 
 DashboardStack.propTypes = {
+  navigation: shape({
+    toggleDrawer: func.isRequired,
+  }).isRequired,
+};
+
+const DashboardMobileStack = ({ navigation }) => {
+  const dispatch = useDispatch();
+
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name={ROUTE_PATHS.DASHBOARD.TABS.MOBILE}
+        component={DashboardMobileScreen}
+        options={{
+          headerRight: () => (
+            <HeaderIcon
+              onPress={() => dispatch(actions.hideAppAction())}
+            >
+              <Icon
+                icon='mobileuigrey9'
+              />
+            </HeaderIcon>
+          ),
+          headerLeft: () => (
+            <HeaderIcon
+              onPress={() => navigation.toggleDrawer()}
+            >
+              <Icon
+                icon='mobileuigrey15'
+              />
+            </HeaderIcon>
+          ),
+          headerTitle: `${ROUTE_PATHS.DASHBOARD.TABS.MOBILE.charAt(0).toUpperCase()}${ROUTE_PATHS.DASHBOARD.TABS.MOBILE.slice(1).toLowerCase()}`,
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+DashboardMobileStack.propTypes = {
+  navigation: shape({
+    toggleDrawer: func.isRequired,
+  }).isRequired,
+};
+
+const DashboardWebStack = ({ navigation }) => {
+  const dispatch = useDispatch();
+
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name={ROUTE_PATHS.DASHBOARD.TABS.WEB}
+        component={DashboardWebScreen}
+        options={{
+          headerRight: () => (
+            <HeaderIcon
+              onPress={() => dispatch(actions.hideAppAction())}
+            >
+              <Icon
+                icon='mobileuigrey9'
+              />
+            </HeaderIcon>
+          ),
+          headerLeft: () => (
+            <HeaderIcon
+              onPress={() => navigation.toggleDrawer()}
+            >
+              <Icon
+                icon='mobileuigrey15'
+              />
+            </HeaderIcon>
+          ),
+          headerTitle: `${ROUTE_PATHS.DASHBOARD.TABS.WEB.charAt(0).toUpperCase()}${ROUTE_PATHS.DASHBOARD.TABS.WEB.slice(1).toLowerCase()}`,
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+DashboardWebStack.propTypes = {
   navigation: shape({
     toggleDrawer: func.isRequired,
   }).isRequired,
@@ -144,11 +228,11 @@ const TabRoutes = () => (
       name={ROUTE_PATHS.DASHBOARD.TABS.MAIN}
     />
     <Tab.Screen
-      component={DashboardStack}
+      component={DashboardMobileStack}
       name={ROUTE_PATHS.DASHBOARD.TABS.MOBILE}
     />
     <Tab.Screen
-      component={DashboardStack}
+      component={DashboardWebStack}
       name={ROUTE_PATHS.DASHBOARD.TABS.WEB}
     />
   </Tab.Navigator>

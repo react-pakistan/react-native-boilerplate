@@ -13,9 +13,9 @@ export const DashboardWrapper = styled(View)`
 `;
 
 export const DashboardHeading = styled(Text)`
-  font-family: 'Roboto-Bold';
-  color: #000000;
-  font-size: 16px;
+  color: ${({ theme }) => theme.colors.black};
+  font-family: ${({ theme }) => theme.typography.fontFamily};
+  font-size: ${({ theme }) => theme.spacing.default}px;
   text-transform: uppercase;
 `;
 
@@ -24,7 +24,7 @@ export const ListItemWrapper = styled(View)`
 `;
 
 export const ListItemBanner = styled(Image)`
-  height: 200px;
+  height: ${({ theme }) => theme.spacing.huge * 4}px;
   width: ${width}px;
 `;
 

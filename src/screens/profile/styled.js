@@ -10,8 +10,8 @@ export const ProfileWrapper = styled(View)`
 `;
 
 export const ProfileHeading = styled(Text)`
-  font-family: 'Roboto-Bold';
-  color: #000000;
-  font-size: 16px;
+  color: ${({ theme }) => theme.colors.black};
+  font-family: ${({ theme }) => theme.typography.fontFamily};
+  font-size: ${({ theme }) => theme.spacing.default}px;
   text-transform: uppercase;
 `;
