@@ -107,36 +107,46 @@ ProfileStack.propTypes = {
 const DrawerRoutes = () => (
   <NavigationContainer>
     <Drawer.Navigator
-      initialRouteName='Dashboard'
-      // screenOptions={}
       backBehavior='initialRoute'
-      drawerType='front'
-      openByDefault={false}
-      drawerPosition='left'
-      edgeWidth={20}
-      hideStatusBar
-      keyboardDismissMode='on-drag'
-      lazy
-      minSwipeDistance={100}
-      overlayColor={theme.colors.lightBlack}
-      statusBarAnimation='fade'
-      // gestureHandlerProps={}
-      // sceneContainerStyle={}
-      drawerStyle={{
-        backgroundColor: theme.colors.lightGrey,
-        width: 240,
-      }}
       drawerContent={({
-        state,
-        navigation,
         descriptors,
+        navigation,
         progress,
+        state,
       }) => <DrawerContent
         descriptors={descriptors}
         navigation={navigation}
         progress={progress}
         state={state}
       />}
+      drawerContentOptions={{
+        activeTintColor: theme.colors.cherryRed,
+        activeBackgroundColor: theme.colors.cherryRed,
+        inactiveTintColor: theme.colors.cherryRed,
+        inactiveBackgroundColor: theme.colors.cherryRed,
+        itemStyle: {},
+        labelStyle: {},
+        contentContainerStyle: {},
+        style: {},
+      }}
+      drawerPosition='left'
+      drawerStyle={{
+        backgroundColor: theme.colors.lightGrey,
+        width: 240,
+      }}
+      drawerType='front'
+      edgeWidth={20}
+      // gestureHandlerProps={}
+      hideStatusBar
+      initialRouteName='Dashboard'
+      keyboardDismissMode='on-drag'
+      lazy
+      minSwipeDistance={100}
+      openByDefault={false}
+      overlayColor={theme.colors.lightBlack}
+      // sceneContainerStyle={}
+      // screenOptions={}
+      statusBarAnimation='fade'
     >
       <Drawer.Screen name='Dashboard' component={DashboardStack} />
       <Drawer.Screen name='Profile' component={ProfileStack} />

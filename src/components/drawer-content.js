@@ -21,13 +21,14 @@ export const DrawerContent = ({
     </DrawerContentHeader>
     <FlatList
       data={Object.keys(descriptors)}
-      renderItem={({ item, index }) => <Text
+      renderItem={({ item, index }) => (
+        <Text
           key={item}
           onPress={() => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
         >
           {item.split('-')[0]}
         </Text>
-      }
+      )}
       keyExtractor={({ id }) => id}
     />
   </DrawerContentWrapper>
