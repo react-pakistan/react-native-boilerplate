@@ -28,4 +28,10 @@ export const ListItemBanner = styled(Image)`
   width: ${width}px;
 `;
 
+export const ListHeadingWrapper = styled.View`
+  align-items: center;
+  justify-content: center;
+  padding: ${({ theme }) => theme.spacing.default}px;
+`;
+
 export const LabelText = styled(Text)``;

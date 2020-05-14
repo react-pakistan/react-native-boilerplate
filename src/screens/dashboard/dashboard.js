@@ -8,16 +8,21 @@ import {
   DashboardHeading,
   DashboardWrapper,
   LabelText,
+  ListHeadingWrapper,
   ListItemBanner,
   ListItemWrapper,
 } from './styled';
 
 export const Dashboard = () => (
   <DashboardWrapper>
-    <DashboardHeading>{dashboardScreenText.mainHeading}</DashboardHeading>
     <FlatList
-      data={openSourceMainProjects}
       keyExtractor={({ id }) => id}
+      data={openSourceMainProjects}
+      ListHeaderComponent={
+        <ListHeadingWrapper>
+          <DashboardHeading>{dashboardScreenText.mainHeading}</DashboardHeading>
+        </ListHeadingWrapper>
+      }
       renderItem={({ item: { banner, label } }) => (
         <ListItemWrapper>
           <ListItemBanner
