@@ -8,22 +8,31 @@ import {
   DashboardHeading,
   DashboardWrapper,
   LabelText,
+  ListHeadingWrapper,
   ListItemBanner,
   ListItemWrapper,
+  TextWrapper,
 } from '../styled';
 
 export const DashboardMobile = () => (
   <DashboardWrapper>
-    <DashboardHeading>{dashboardScreenText.mainHeading}</DashboardHeading>
     <FlatList
       data={openSourceMobileProjects}
       keyExtractor={({ id }) => id}
-      renderItem={({ item: { banner, label } }) => (
+      ListHeaderComponent={
+        <ListHeadingWrapper>
+          <DashboardHeading>{dashboardScreenText.mainHeading}</DashboardHeading>
+        </ListHeadingWrapper>
+      }
+      renderItem={({ item: { banner, description, label } }) => (
         <ListItemWrapper>
           <ListItemBanner
             source={{ uri: banner }}
           />
-          <LabelText>{label}</LabelText>
+          <TextWrapper>
+            <LabelText>{label}</LabelText>
+            <LabelText>{description}</LabelText>
+          </TextWrapper>
         </ListItemWrapper>
       )}
     />

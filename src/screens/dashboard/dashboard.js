@@ -11,6 +11,7 @@ import {
   ListHeadingWrapper,
   ListItemBanner,
   ListItemWrapper,
+  TextWrapper,
 } from './styled';
 
 export const Dashboard = () => (
@@ -28,8 +29,10 @@ export const Dashboard = () => (
           <ListItemBanner
             source={{ uri: banner }}
           />
-          <LabelText>{label}</LabelText>
-          <LabelText>{description}</LabelText>
+          <TextWrapper>
+            <LabelText>{label}</LabelText>
+            <LabelText>{description}</LabelText>
+          </TextWrapper>
         </ListItemWrapper>
       )}
     />
