@@ -47,26 +47,31 @@ export const openSourceMobileProjects = [
 export const openSourceWebProjects = [
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1566355017/GitHub/react-commons-collection.jpg',
+    description: 'A generic, Commons library for React web apps, following modern approach by building your project\'s UI in isolation using state of the art Storybook along with React.',
     id: 'react-pakistan-open-source-web-project-1',
     label: 'React Commons Collection',
   },
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1566355010/GitHub/react-ui-collection.jpg',
+    description: 'A generic, UI library for React web apps, following modern approach by building your project\'s UI in isolation using state of the art Storybook along with React.',
     id: 'react-pakistan-open-source-web-project-2',
     label: 'React UI Collection',
   },
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1567499955/GitHub/react-icons-collection.jpg',
+    description: 'A generic, Icon library for React web apps, following modern approach by building your project\'s UI in isolation using state of the art Storybook along with React.',
     id: 'react-pakistan-open-source-web-project-3',
     label: 'React Icon Collection',
   },
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1567499957/GitHub/react-logo-collection.jpg',
+    description: 'A generic, Logo library for React web apps, following modern approach by building your project\'s UI in isolation using state of the art Storybook along with React.',
     id: 'react-pakistan-open-source-web-project-4',
     label: 'React Logo Collection',
   },
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1567499950/GitHub/react-design-collection.jpg',
+    description: 'A generic, Design library for React web apps, following modern approach by building your project\'s UI in isolation using state of the art Storybook along with React.',
     id: 'react-pakistan-open-source-web-project-5',
     label: 'React Design Collection',
   },
