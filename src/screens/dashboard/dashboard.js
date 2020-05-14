@@ -23,12 +23,13 @@ export const Dashboard = () => (
           <DashboardHeading>{dashboardScreenText.mainHeading}</DashboardHeading>
         </ListHeadingWrapper>
       }
-      renderItem={({ item: { banner, label } }) => (
+      renderItem={({ item: { banner, description, label } }) => (
         <ListItemWrapper>
           <ListItemBanner
             source={{ uri: banner }}
           />
           <LabelText>{label}</LabelText>
+          <LabelText>{description}</LabelText>
         </ListItemWrapper>
       )}
     />

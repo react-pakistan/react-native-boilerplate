@@ -5,6 +5,7 @@ export const dashboardScreenText = {
 export const openSourceMainProjects = [
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1565548545/GitHub/React_Pakistan_Storybook_Logo.jpg',
+    description: 'React Pakistan is an OpenSource & Free Software (FOSS) platform, creating React software solutions for the global community.',
     id: 'react-pakistan-open-source-main-project-1',
     label: 'React Pakistan',
   },
