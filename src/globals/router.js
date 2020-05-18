@@ -226,14 +226,23 @@ const TabRoutes = () => (
     <Tab.Screen
       component={DashboardStack}
       name={ROUTE_PATHS.DASHBOARD.TABS.MAIN}
+      options={() => ({
+        tabBarIcon: () => <Icon icon='mobileuigrey19' />,
+      })}
     />
     <Tab.Screen
       component={DashboardMobileStack}
       name={ROUTE_PATHS.DASHBOARD.TABS.MOBILE}
+      options={() => ({
+        tabBarIcon: () => <Icon icon='mobileuigrey19' />,
+      })}
     />
     <Tab.Screen
       component={DashboardWebStack}
       name={ROUTE_PATHS.DASHBOARD.TABS.WEB}
+      options={() => ({
+        tabBarIcon: () => <Icon icon='mobileuigrey19' />,
+      })}
     />
   </Tab.Navigator>
 );
