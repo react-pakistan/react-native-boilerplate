@@ -10,8 +10,7 @@ import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './style
 export const DrawerContent = ({
   navigation,
   descriptors,
-}) => {
-  console.log('des', descriptors); return (
+}) => (
   <DrawerContentWrapper>
     <DrawerContentHeader>
       <DrawerBanner
@@ -32,8 +31,7 @@ export const DrawerContent = ({
       keyExtractor={(item) => item}
     />
   </DrawerContentWrapper>
-  );
-};
+);
 
 DrawerContent.propTypes = {
   navigation: shape({
