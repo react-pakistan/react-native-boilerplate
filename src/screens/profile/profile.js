@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProfileData } from './actions';
 import { profileScreenText } from './helpers';
 import { getUserDataFromState, getUserIsLoadingFromState } from './selectors';
-import { ProfileWrapper, ProfileHeading } from './styled';
+import { ProfileWrapper, ProfileHeading, Avatar } from './styled';
 
 export const Profile = () => {
   // dispatch
@@ -34,6 +34,7 @@ export const Profile = () => {
       {isLoading && <ActivityIndicator />}
       {userData && (
         <Fragment>
+          <Avatar source={{ uri: userData.avatar_url }} />
           <Text>{userData.name}</Text>
           <Text>{userData.bio}</Text>
           <Text>{userData.company}</Text>

@@ -1,3 +1,3 @@
 export const profileScreenText = {
-  mainHeading: 'Profile',
+  mainHeading: 'Author Profile',
 };
