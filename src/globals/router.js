@@ -27,9 +27,9 @@ export const ROUTE_PATHS = {
   DASHBOARD: {
     DEFAULT: 'dashboard',
     TABS: {
-      MAIN: 'main',
-      MOBILE: 'mobile',
-      WEB: 'web',
+      MAIN: 'Main',
+      MOBILE: 'Mobile',
+      WEB: 'Web',
     },
   },
   PORFILE: 'profile',
@@ -211,7 +211,7 @@ const TabRoutes = () => (
       activeTintColor: theme.colors.cherryRed,
       adaptive: true,
       allowFontScaling: true,
-      inactiveBackgroundColor: theme.colors.lightGrey,
+      inactiveBackgroundColor: theme.colors.white,
       inactiveTintColor: theme.colors.lightBlack,
       keyboardHidesTabBar: false,
       labelPosition: 'below-icon',

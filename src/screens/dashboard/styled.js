@@ -5,7 +5,7 @@ import { View } from '@react-pakistan/react-native-commons-collection/view';
 import styled from 'styled-components/native';
 
 // ########## Import Components Here ##########
-import { width } from '../../globals/styles';
+import { width } from '@react-pakistan/react-native-commons-collection/utils';
 
 export const DashboardWrapper = styled(View)`
   align-items: center;
