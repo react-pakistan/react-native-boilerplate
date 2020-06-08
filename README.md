@@ -20,34 +20,24 @@ A collection of curated and well maintained React Native boilerplates with vario
 * [RN-09 RN-REDUX-THUNK-RESELECT-REACTNAVIGATION-STYLEDCOMPONENTS](https://github.com/Taimoormk/react-native-boilerplate/tree/RN09) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b40bb064f95f4077ba0fbf7fcb91ab55)](https://www.codacy.com/app/Taimoormk/react-native-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=react-pakistan/react-native-boilerplate&amp;utm_campaign=Badge_Grade) [![Build Status](https://app.bitrise.io/app/6ffe266405736e5a/status.svg?token=_giyzRcYfh65hOw2Pv01Ug&branch=RN09)](https://app.bitrise.io/app/6ffe266405736e5a)
 * [RN-10 RN-REDUX-SAGA-RESELECT-REACTNAVIGATION-STYLEDCOMPONENTS](https://github.com/Taimoormk/react-native-boilerplate/tree/RN10) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b40bb064f95f4077ba0fbf7fcb91ab55)](https://www.codacy.com/app/Taimoormk/react-native-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=react-pakistan/react-native-boilerplate&amp;utm_campaign=Badge_Grade) [![Build Status](https://app.bitrise.io/app/6ffe266405736e5a/status.svg?token=_giyzRcYfh65hOw2Pv01Ug&branch=RN10)](https://app.bitrise.io/app/6ffe266405736e5a)
 
-### Documentations for RN-01 RN-REDUX-REACTNAVIGATION
+### Documentation for RN-01 RN-REDUX-THUNK-REACTNAVIGATION-STYLEDCOMPONENTS
 
 #### Technologies
 * [React Native](https://facebook.github.io/react-native/)
 * [Redux](https://redux.js.org/)
 * [React Navigation](https://reactnavigation.org/)
-* [JSS (JavaScript Styling)](https://cssinjs.org/?v=v9.8.7)
-* [React Native Paper UI](https://callstack.github.io/react-native-paper/)
-* [React Native Vector Icons](https://oblador.github.io/react-native-vector-icons/)
+* [React Native Commons Collection](https://www.npmjs.com/package/@react-pakistan/react-native-commons-collection)
+* [React Native UI Collection](https://www.npmjs.com/package/@react-pakistan/react-native-ui-collection)
+* [React Native Icon Collection](https://www.npmjs.com/package/@react-pakistan/react-native-icon-collection)
+* [React Native Logo Collection](https://www.npmjs.com/package/@react-pakistan/react-logo-collection)
+* [Styled Components](https://styled-components.com/)
 
 #### Project Setup
 * Note: Use ReactNativeDebugger app to properly debug the React/Redux parts of the application.
 * For iOS build, run `yarn ios`.
 * For Android build, run Android Emulator first, once it's fully loaded, run `yarn android`.
 * This project uses ESLint to maintain code consistency.
-* This project uses Prettier to automatically format the code on the pre-commit hook level,
 
 #### Link Commands
-* Link React Native Vector Icons `$ react-native link react-native-vector-icons`.
+* Pod Install `$ yarn pod:install`.
 * Link Custom Fonts `$ react-native link`.
-
-#### Screenshots
-<div style="display: flex; justifyContent: center;">
-  <img src="./src/assets/images/RN-iOS.png" width=300px alt="RN-iOS" />
-  <img src="./src/assets/images/RN-Android.png" width=300px alt="RN-Android" />
-</div>
-
-<div style="display: flex; justifyContent: center;">
-  <img src="./src/assets/images/RN-iOS-Dashboard.png" width=300px alt="RN-iOS-Dashboard" />
-  <img src="./src/assets/images/RN-Android-Dashboard.png" width=300px alt="RN-Android-Dashboard" />
-</div>
