@@ -1,16 +1,9 @@
-/* eslint-disable no-undef */
-/*
-  Author: Taimoor Khan
-  GitHub: https://github.com/Taimoormk
-  Email: taimoor.m.k AT LIVE.COM 
-*/
-
 // ########## Import Dependencies Here ##########
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 
 // ########## Import Components Here ##########
-import Dashboard from '../containers/Dashboard';
+import { Dashboard } from '../screens/dashboard';
 
 test('renders Dashboard compomenent correctly', () => {
   const renderer = new ShallowRenderer();

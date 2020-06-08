@@ -1,15 +1,18 @@
-/*
-  Author: Taimoor Khan
-  GitHub: https://github.com/Taimoormk
-  Email: taimoor.m.k AT LIVE.COM 
-*/
-
 // ########## Import Dependencies Here ##########
-import React from "react";
+import React, { Fragment } from 'react';
+import { useSelector } from 'react-redux';
 
-// ########## Import Containers Here ##########
-import MainScreen from "./src/containers/MainScreen";
+// ########## Import Components Here ##########
+import { getHideIntro } from './src/screens/main-screen/selectors';
+import { OnBoarding } from './src/screens/on-boarding';
+import { MainScreen } from './src/screens/main-screen';
 
-const App = () => <MainScreen />;
+export const App = () => {
+  const hideIntro = useSelector(getHideIntro);
 
-export default App;
+  return (
+    <Fragment>
+      {hideIntro ? <OnBoarding /> : <MainScreen />}
+    </Fragment>
+  );
+};

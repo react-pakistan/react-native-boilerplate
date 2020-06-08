@@ -11,7 +11,16 @@ exports[`renders Profile compomenent correctly 1`] = `
       }
     }
   >
-    <Text>
+    <Text
+      style={
+        Object {
+          "color": "#000000",
+          "fontFamily": "Quicksand-Bold",
+          "fontSize": 16,
+          "textTransform": "uppercase",
+        }
+      }
+    >
       Profile
     </Text>
   </View>

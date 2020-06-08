@@ -32,7 +32,7 @@ exports[`renders SignIn compomenent correctly 1`] = `
         }
       }
     />
-    <withTheme(Button)
+    <ForwardRef
       color="#4267B2"
       icon={
         Object {
@@ -55,7 +55,7 @@ exports[`renders SignIn compomenent correctly 1`] = `
       }
     >
       Continue with Facebook
-    </withTheme(Button)>
+    </ForwardRef>
     <View
       style={
         Object {
@@ -64,7 +64,7 @@ exports[`renders SignIn compomenent correctly 1`] = `
         }
       }
     />
-    <withTheme(Button)
+    <ForwardRef
       color="#4285F4"
       icon={
         Object {
@@ -87,7 +87,7 @@ exports[`renders SignIn compomenent correctly 1`] = `
       }
     >
       Continue with Google
-    </withTheme(Button)>
+    </ForwardRef>
   </View>
 </React.Fragment>
 `;

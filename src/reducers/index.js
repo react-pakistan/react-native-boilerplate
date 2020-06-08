@@ -1,17 +1,11 @@
-/*
-  Author: Taimoor Khan
-  GitHub: https://github.com/Taimoormk
-  Email: taimoor.m.k AT LIVE.COM 
-*/
-
 // ########## Import Dependencies Here ##########
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
 // ########## Import Components Here ##########
-import showAppReducer from "../containers/MainScreen/reducers";
+import { mainScreen } from '../screens/main-screen/reducers';
+import { profileScreen } from '../screens/profile/reducers';
 
-const rootReducer = combineReducers({
-  showAppReducer
+export const rootReducer = combineReducers({
+  mainScreen,
+  profileScreen,
 });
-
-export default rootReducer;

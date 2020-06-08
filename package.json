@@ -1,56 +1,66 @@
 {
-  "name": "reactNativeBoilerplate",
-  "version": "0.0.1",
+  "name": "@react-pakistan/react-native-boilerplate",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
+    "android": "react-native run-android",
+    "clean": "rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*",
+    "format": "prettier --config .prettierrc --write 'src/**/*.{js,jsx}'",
+    "ios": "react-native run-ios",
+    "lint": "esw src --color",
+    "lint-staged": "lint-staged",
+    "lint:watch": "yarn lint --clear --watch",
+    "preclean": "watchman watch-del-all && rm -rf node_modules && yarn",
+    "remetro": "watchman watch-del-all && yarn start --reset-cache",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "ios": "react-native run-ios",
-    "android": "react-native run-android",
-    "format": "prettier --config .prettierrc --write 'src/**/*.{js,jsx}'",
-    "lint-staged": "lint-staged",
-    "preclean": "watchman watch-del-all && rm -rf node_modules && yarn",
-    "clean": "rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*",
-    "remetro": "watchman watch-del-all && yarn start --reset-cache",
-    "lint": "esw src --color",
-    "lint:watch": "yarn lint --clear --watch"
+    "upgrade": "ncu -u"
   },
   "dependencies": {
-    "lint-staged": "^9.2.1",
-    "pre-commit": "^1.2.2",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.5.2",
+    "@react-navigation/drawer": "^5.8.2",
+    "@react-navigation/native": "^5.5.1",
+    "@react-navigation/stack": "^5.5.1",
+    "@react-pakistan/react-native-commons-collection": "^1.0.1",
+    "@react-pakistan/react-native-icon-collection": "^1.0.0",
+    "@react-pakistan/react-native-ui-collection": "^1.0.0",
+    "axios": "^0.19.2",
     "prop-types": "^15.7.2",
-    "react": "16.8.6",
-    "react-native": "0.60.4",
-    "react-native-gesture-handler": "^1.3.0",
-    "react-native-paper": "^2.16.0",
+    "react": "16.13.1",
+    "react-native": "0.62.2",
+    "react-native-device-info": "^5.6.1",
+    "react-native-elements": "^2.0.2",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-onboarding-swiper": "^1.1.1",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area-context": "^3.0.2",
+    "react-native-screens": "^2.8.0",
+    "react-native-svg": "^12.1.0",
     "react-native-vector-icons": "^6.6.0",
-    "react-navigation": "^3.11.1",
-    "react-redux": "^7.1.0",
-    "redux": "^4.0.4",
-    "redux-logger": "^3.0.6"
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/runtime": "^7.5.5",
-    "babel-eslint": "^10.0.2",
-    "babel-jest": "^24.8.0",
-    "babel-preset-react-native": "^4.0.1",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "@babel/core": "^7.10.2",
+    "@babel/runtime": "^7.10.2",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.21.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-native": "^3.7.0",
-    "eslint-watch": "^6.0.0",
-    "jest": "^24.8.0",
-    "metro-react-native-babel-preset": "^0.55.0",
-    "prettier": "^1.18.2",
-    "react-test-renderer": "16.8.6",
-    "redux-mock-store": "^1.5.3"
+    "eslint-plugin-react": "^7.20.0",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.9",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "pre-commit": "^1.2.2",
+    "react-test-renderer": "16.13.1",
+    "redux-mock-store": "^1.5.4"
   },
   "jest": {
     "preset": "react-native",
@@ -58,7 +68,10 @@
     "coverageDirectory": "__coverage__",
     "transform": {},
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|native-base|react-navigation|react-native-fabric|react-native-paper)"
+      "node_modules/(?!(jest-)?react-native|react-navigation|react-native-paper|@react-native-community/masked-view|@react-navigation/.*)"
+    ],
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
     ]
   },
   "pre-commit": [
@@ -67,17 +80,7 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --fix",
-      "prettier --config .prettierrc --write",
       "git add"
-    ]
-  },
-  "*.json": [
-    "prettier --parser json --write",
-    "git add"
-  ],
-  "rnpm": {
-    "assets": [
-      "./assets/fonts"
     ]
   }
 }

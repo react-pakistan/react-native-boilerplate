@@ -1,28 +1,28 @@
-/* eslint-disable no-undef */
-/*
-  Author: Taimoor Khan
-  GitHub: https://github.com/Taimoormk
-  Email: taimoor.m.k AT LIVE.COM 
-*/
-
 // ########## Import Dependencies Here ##########
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import configureStore from 'redux-mock-store';
 
 // ########## Import Components Here ##########
-import MainScreen from '../containers/MainScreen';
+import { MainScreen } from '../screens/main-screen';
 
-jest.mock('react-native-gesture-handler', () => {});
-jest.mock('react-navigation', () => {
-  return {
-    createAppContainer: jest.fn().mockReturnValue(function NavigationContainer() {
-      return null;
-    }),
-    createStackNavigator: jest.fn(),
-    createDrawerNavigator: jest.fn(),
-  };
-});
+jest.mock('react-native-gesture-handler', () => ({
+  BaseButton: () => {},
+}));
+jest.mock('react-navigation', () => ({
+  createAppContainer: jest.fn().mockReturnValue(() => ({})),
+  createDrawerNavigator: jest.fn().mockImplementation(() => ({})),
+  createStackNavigator: jest.fn().mockImplementation(() => ({})),
+  ThemeColors: {
+    light: {
+      bodyContent: '',
+    },
+    dark: {
+      bodyContent: '',
+    },
+  },
+}));
+jest.mock('react-native-animated', () => {});
 
 // ########## Create Initial State ##########
 const fakeInitialState = {
