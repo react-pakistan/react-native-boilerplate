@@ -65,7 +65,7 @@
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
-    "coverageDirectory": "__coverage__",
+    "coverageDirectory": "coverage",
     "transform": {},
     "transformIgnorePatterns": [
       "node_modules/(?!(jest-)?react-native|react-navigation|react-native-paper|@react-native-community/masked-view|@react-navigation/.*)"
