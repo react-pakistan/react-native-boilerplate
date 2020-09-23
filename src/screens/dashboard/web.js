@@ -4,14 +4,14 @@ import React from 'react';
 
 // ########## Import Components Here ##########
 import { BannerItem } from './banner-item';
-import { dashboardScreenText, openSourceMainProjects } from './helpers';
+import { dashboardScreenText, openSourceWebProjects } from './helpers';
 import {
   DashboardHeading,
   DashboardWrapper,
   ListHeadingWrapper,
 } from './styled';
 
-export const Dashboard = () => {
+export const DashboardWeb = () => {
   const renderItem = ({ item: { banner, description, label } }) => (
     <BannerItem
       banner={banner}
@@ -23,7 +23,7 @@ export const Dashboard = () => {
   return (
     <DashboardWrapper>
       <FlatList
-        data={openSourceMainProjects}
+        data={openSourceWebProjects}
         keyExtractor={({ id }) => id}
         ListHeaderComponent={
           <ListHeadingWrapper>

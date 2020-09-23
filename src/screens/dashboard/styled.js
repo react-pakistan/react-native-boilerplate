@@ -14,8 +14,9 @@ export const DashboardWrapper = styled(View)`
 
 export const DashboardHeading = styled(Text)`
   color: ${({ theme }) => theme.colors.black};
-  font-family: ${({ theme }) => theme.typography.fontFamily};
-  font-size: ${({ theme }) => theme.spacing.default}px;
+  font-family: ${({ theme }) => theme.typography.h1.fontFamily};
+  font-size: ${({ theme }) => theme.typography.h1.fontSize}px;
+  text-align: ${({ theme }) => theme.typography.h1.textAlign};
   text-transform: uppercase;
 `;
 
@@ -36,6 +37,14 @@ export const ListHeadingWrapper = styled(View)`
 
 export const TextWrapper = styled(View)`
   padding: ${({ theme }) => theme.spacing.default}px;
+`;
+
+export const LabelHeading = styled(Text)`
+  color: ${({ theme }) => theme.colors.black};
+  font-family: ${({ theme }) => theme.typography.h2.fontFamily};
+  font-size: ${({ theme }) => theme.typography.h2.fontSize}px;
+  text-align: ${({ theme }) => theme.typography.h2.textAlign};
+  text-transform: uppercase;
 `;
 
 export const LabelText = styled(Text)``;

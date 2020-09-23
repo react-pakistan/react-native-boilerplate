@@ -1,3 +1,3 @@
 export { Dashboard } from './dashboard';
-export { DashboardMobile } from './components/mobile';
-export { DashboardWeb } from './components/web';
+export { DashboardMobile } from './mobile';
+export { DashboardWeb } from './web';
