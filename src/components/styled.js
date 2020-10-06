@@ -10,6 +10,6 @@ export const DrawerContentHeader = styled.View`
 `;
 
 export const DrawerBanner = styled(Image)`
-  width: 100%;
   height: 150px;
+  width: 100%;
 `;
