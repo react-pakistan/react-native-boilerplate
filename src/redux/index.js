@@ -2,8 +2,7 @@
 import { combineReducers } from 'redux';
 
 // ########## Import Components Here ##########
-import { mainScreen } from '../screens/main-screen/reducers';
-import { profileScreen } from '../screens/profile/reducers';
+import { mainScreen, profileScreen } from './reducers';
 
 export const rootReducer = combineReducers({
   mainScreen,

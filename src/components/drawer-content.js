@@ -1,6 +1,5 @@
 // ########## Import Dependencies Here ##########
-import { FlatList } from '@react-pakistan/react-native-commons-collection/flat-list';
-import { Text } from '@react-pakistan/react-native-commons-collection/text';
+import { FlatList, Text } from '@react-pakistan/react-native-commons-collection';
 import { func, object, shape } from 'prop-types';
 import React from 'react';
 
