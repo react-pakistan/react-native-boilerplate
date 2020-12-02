@@ -20,7 +20,7 @@ import { Profile as ProfileScreen } from '../screens/profile';
 
 // ########## Import Components Here ##########
 import { DrawerContent } from '../components/drawer-content';
-import * as actions from '../screens/main-screen/actions';
+import * as actions from '../redux/actions';
 import { HeaderIcon } from './styled';
 
 export const ROUTE_PATHS = {

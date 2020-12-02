@@ -5,7 +5,7 @@ import React, { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // ########## Import Components Here ##########
-import { fetchProfileData } from './actions';
+import { fetchProfileData } from '../../redux/actions';
 import { profileScreenText } from './helpers';
 import { getUserDataFromState, getUserIsLoadingFromState } from './selectors';
 import { ProfileWrapper, ProfileHeading, Avatar } from './styled';

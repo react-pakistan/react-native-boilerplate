@@ -1,8 +1,8 @@
 // ########## Import Dependencies Here ##########
 
 // ########## Import Components Here ##########
-import apiCaller from '../../../globals/api-caller';
-import { ENDPOINTS, REQUEST_TYPES, BASE_URL } from '../../../globals/endpoints';
+import apiCaller from '../../globals/api-caller';
+import { ENDPOINTS, REQUEST_TYPES, BASE_URL } from '../../globals/endpoints';
 import * as types from '../constants';
 
 export const fetchProfileDataAttempt = () => ({

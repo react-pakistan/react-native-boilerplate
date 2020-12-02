@@ -11,10 +11,9 @@ import {
 
 // ########## Import Components Here ##########
 import { loginScreenText } from './helpers';
+import { showAppAction } from '../../redux/actions';
 
-export const SignIn = ({
-  showAppAction,
-}) => {
+export const SignIn = () => {
   // dispatch
   const dispatch = useDispatch();
 
