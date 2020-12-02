@@ -3,23 +3,25 @@ import { Button } from '@react-pakistan/react-native-commons-collection';
 import { Spacer } from '@react-pakistan/react-native-commons-collection/spacer';
 import { theme as defaultTheme } from '@react-pakistan/util-react-native-functions';
 import { object } from 'prop-types';
-import React from 'react';
+import React, { memo } from 'react';
 import { useDispatch } from 'react-redux';
 import { withTheme } from 'styled-components';
+
+// ########## Import Components Here ##########
+import { showAppAction } from '../../redux/actions';
+import { loginScreenText } from './helpers';
 import {
   OAuthHeading,
   SignInWrapper,
 } from './styled';
 
-// ########## Import Components Here ##########
-import { loginScreenText } from './helpers';
-import { showAppAction } from '../../redux/actions';
-
-export const SignIn = withTheme(({
+export const SignIn = memo(withTheme(({
   theme,
 }) => {
   // dispatch
   const dispatch = useDispatch();
+
+  const onPressHandler = () => dispatch(showAppAction());
 
   return (
     <SignInWrapper>
@@ -28,17 +30,17 @@ export const SignIn = withTheme(({
       </OAuthHeading>
       <Spacer margin={theme.spacing.default} />
       <Button
-        onPress={() => dispatch(showAppAction())}
+        onPress={onPressHandler}
         title={loginScreenText.facebookButton}
       />
       <Spacer margin={theme.spacing.default} />
       <Button
-        onPress={() => dispatch(showAppAction())}
+        onPress={onPressHandler}
         title={loginScreenText.googleButton}
       />
     </SignInWrapper>
   );
-});
+}));
 
 SignIn.propTypes = {
   theme: object,
