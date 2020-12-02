@@ -1,6 +1,5 @@
 // ########## Import Dependencies Here ##########
-import { Text } from '@react-pakistan/react-native-commons-collection/text';
-import { View } from '@react-pakistan/react-native-commons-collection/view';
+import { Text, View } from '@react-pakistan/react-native-commons-collection';
 import styled from 'styled-components/native';
 
 export const SignInWrapper = styled(View)`

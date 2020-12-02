@@ -1,16 +1,16 @@
 // ########## Import Dependencies Here ##########
-import { Button } from '@react-pakistan/react-native-commons-collection/button';
-import { Spacer } from '@react-pakistan/react-native-commons-collection/spacer';
+import { Button } from '@react-pakistan/react-native-commons-collection';
 import { func } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-
-// ########## Import Components Here ##########
-import { loginScreenText } from './helpers';
 import {
+  Spacer,
   OAuthHeading,
   SignInWrapper,
 } from './styled';
+
+// ########## Import Components Here ##########
+import { loginScreenText } from './helpers';
 
 export const SignIn = ({
   showAppAction,
