@@ -8,7 +8,7 @@ import { SignIn } from '../sign-in';
 import { showAppAction } from '../../redux/actions';
 import {
   getShowApp,
-} from './selectors';
+} from '../../redux/selectors';
 
 export const MainScreen = () => {
   // selector
