@@ -7,13 +7,12 @@ import React from 'react';
 import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './styled';
 
 export const DrawerContent = ({
-  navigation,
   descriptors,
+  navigation,
 }) => (
   <DrawerContentWrapper>
     <DrawerContentHeader>
       <DrawerBanner
-        loadingIndicatorSource
         resizeMode='contain'
         source={{ uri: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1565548545/GitHub/React_Pakistan_Storybook_Logo.jpg' }}
       />
