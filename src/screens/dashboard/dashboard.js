@@ -1,5 +1,5 @@
 // ########## Import Dependencies Here ##########
-import { FlatList } from '@react-pakistan/react-native-commons-collection/flat-list';
+import { FlatList } from '@react-pakistan/react-native-commons-collection';
 import React from 'react';
 
 // ########## Import Components Here ##########
