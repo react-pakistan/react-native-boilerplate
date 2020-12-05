@@ -1,5 +1,5 @@
 // ########## Import Dependencies Here ##########
-import { FlatList, Text } from '@react-pakistan/react-native-commons-collection';
+import { FlatList, Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
 import { func, object, shape } from 'prop-types';
 import React from 'react';
 
@@ -9,27 +9,33 @@ import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './style
 export const DrawerContent = ({
   descriptors,
   navigation,
-}) => (
-  <DrawerContentWrapper>
-    <DrawerContentHeader>
-      <DrawerBanner
-        resizeMode='contain'
-        source={{ uri: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1565548545/GitHub/React_Pakistan_Storybook_Logo.jpg' }}
+}) => {
+  const renderItem = ({ item, index }) => (
+    <TouchableOpacity
+      onPress={() => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
+    >
+      <Text>
+        {(item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()).split('-')[0]}
+      </Text>
+    </TouchableOpacity>
+  );
+
+  return (
+    <DrawerContentWrapper>
+      <DrawerContentHeader>
+        <DrawerBanner
+          resizeMode='contain'
+          source={{ uri: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1565548545/GitHub/React_Pakistan_Storybook_Logo.jpg' }}
+        />
+      </DrawerContentHeader>
+      <FlatList
+        data={Object.keys(descriptors)}
+        renderItem={renderItem}
+        keyExtractor={(item) => item}
       />
-    </DrawerContentHeader>
-    <FlatList
-      data={Object.keys(descriptors)}
-      renderItem={({ item, index }) => (
-        <Text
-          onPress={() => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
-        >
-          {(item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()).split('-')[0]}
-        </Text>
-      )}
-      keyExtractor={(item) => item}
-    />
-  </DrawerContentWrapper>
-);
+    </DrawerContentWrapper>
+  );
+};
 
 DrawerContent.propTypes = {
   navigation: shape({
