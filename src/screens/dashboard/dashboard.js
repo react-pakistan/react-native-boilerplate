@@ -3,7 +3,7 @@ import { FlatList } from '@react-pakistan/react-native-commons-collection';
 import React from 'react';
 
 // ########## Import Components Here ##########
-import { BannerItem } from './banner-item';
+import { BannerItem } from '../../components/banner-item';
 import { dashboardScreenText, openSourceMainProjects } from './helpers';
 import {
   DashboardHeading,
