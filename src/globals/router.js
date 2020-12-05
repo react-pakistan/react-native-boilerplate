@@ -21,7 +21,7 @@ import { Profile as ProfileScreen } from '../screens/profile';
 // ########## Import Components Here ##########
 import { DrawerContent } from '../components/drawer-content';
 import * as actions from '../redux/actions';
-import { HeaderIcon } from './styled';
+import { HeaderIcon } from '../navigation/styled';
 
 export const ROUTE_PATHS = {
   DASHBOARD: {
