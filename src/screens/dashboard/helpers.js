@@ -42,6 +42,12 @@ export const openSourceMobileProjects = [
     id: 'react-pakistan-open-source-mobile-project-5',
     label: 'React Native Logo Collection',
   },
+  {
+    banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1583650647/GitHub/react-native-icon-collection.jpg',
+    description: 'A generic, Logo library for React Native apps, following modern approach by building your project\'s UI in isolation using state of the art Storybook along with React Native.',
+    id: 'react-pakistan-open-source-mobile-project-6',
+    label: 'React Native Emoji Collection',
+  },
 ];
 
 export const openSourceWebProjects = [
@@ -70,9 +76,15 @@ export const openSourceWebProjects = [
     label: 'React Logo Collection',
   },
   {
+    banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1567499957/GitHub/react-emoji-collection.jpg',
+    description: 'A generic, Logo library for React web apps, following modern approach by building your project\'s UI in isolation using state of the art Storybook along with React.',
+    id: 'react-pakistan-open-source-web-project-5',
+    label: 'React Emoji Collection',
+  },
+  {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1567499950/GitHub/react-design-collection.jpg',
     description: 'A generic, Design library for React web apps, following modern approach by building your project\'s UI in isolation using state of the art Storybook along with React.',
-    id: 'react-pakistan-open-source-web-project-5',
+    id: 'react-pakistan-open-source-web-project-6',
     label: 'React Design Collection',
   },
 ];
