@@ -30,8 +30,8 @@ export const DrawerContent = ({
       </DrawerContentHeader>
       <FlatList
         data={Object.keys(descriptors)}
-        renderItem={renderItem}
         keyExtractor={(item) => item}
+        renderItem={renderItem}
       />
     </DrawerContentWrapper>
   );

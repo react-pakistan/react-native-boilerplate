@@ -2,7 +2,7 @@ import { Image, View } from '@react-pakistan/react-native-commons-collection';
 import styled from 'styled-components/native';
 
 export const DrawerContentWrapper = styled(View)`
-  padding: 16px;
+  padding: ${({ theme }) => theme.spacing.default}px;
 `;
 
 export const DrawerContentHeader = styled(View)`
