@@ -1,12 +1,12 @@
 // ########## Import Dependencies Here ##########
 import { FlatList, Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
 import { func, object, shape } from 'prop-types';
-import React from 'react';
+import React, { memo } from 'react';
 
 // ########## Import Components Here ##########
 import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './styled';
 
-export const DrawerContent = ({
+export const DrawerContent = memo(({
   descriptors,
   navigation,
 }) => {
@@ -35,7 +35,7 @@ export const DrawerContent = ({
       />
     </DrawerContentWrapper>
   );
-};
+});
 
 DrawerContent.propTypes = {
   navigation: shape({

@@ -9,6 +9,7 @@ import { Next, Skip } from './components';
 import { onBoardingData } from './helpers';
 
 export const OnBoarding = () => {
+  // dispatch
   const dispatch = useDispatch();
 
   return (
