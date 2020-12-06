@@ -4,7 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { theme } from '@react-pakistan/react-native-commons-collection/theme';
+import { theme } from '@react-pakistan/util-react-native-functions';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import { shape, func } from 'prop-types';
 import React from 'react';
@@ -20,8 +20,8 @@ import { Profile as ProfileScreen } from '../screens/profile';
 
 // ########## Import Components Here ##########
 import { DrawerContent } from '../components/drawer-content';
-import * as actions from '../screens/main-screen/actions';
-import { HeaderIcon } from './styled';
+import * as actions from '../redux/actions';
+import { HeaderIcon } from '../navigation/styled';
 
 export const ROUTE_PATHS = {
   DASHBOARD: {
@@ -53,7 +53,7 @@ const DashboardStack = ({ navigation }) => {
               onPress={() => dispatch(actions.hideAppAction())}
             >
               <Icon
-                icon='mobileuigrey9'
+                icon='MobileUiGrey9'
               />
             </HeaderIcon>
           ),
@@ -62,7 +62,7 @@ const DashboardStack = ({ navigation }) => {
               onPress={() => navigation.toggleDrawer()}
             >
               <Icon
-                icon='mobileuigrey15'
+                icon='MobileUiGrey15'
               />
             </HeaderIcon>
           ),
@@ -93,7 +93,7 @@ const DashboardMobileStack = ({ navigation }) => {
               onPress={() => dispatch(actions.hideAppAction())}
             >
               <Icon
-                icon='mobileuigrey9'
+                icon='MobileUiGrey9'
               />
             </HeaderIcon>
           ),
@@ -102,7 +102,7 @@ const DashboardMobileStack = ({ navigation }) => {
               onPress={() => navigation.toggleDrawer()}
             >
               <Icon
-                icon='mobileuigrey15'
+                icon='MobileUiGrey15'
               />
             </HeaderIcon>
           ),
@@ -133,7 +133,7 @@ const DashboardWebStack = ({ navigation }) => {
               onPress={() => dispatch(actions.hideAppAction())}
             >
               <Icon
-                icon='mobileuigrey9'
+                icon='MobileUiGrey9'
               />
             </HeaderIcon>
           ),
@@ -142,7 +142,7 @@ const DashboardWebStack = ({ navigation }) => {
               onPress={() => navigation.toggleDrawer()}
             >
               <Icon
-                icon='mobileuigrey15'
+                icon='MobileUiGrey15'
               />
             </HeaderIcon>
           ),
@@ -173,7 +173,7 @@ const ProfileStack = ({ navigation }) => {
               onPress={() => dispatch(actions.hideAppAction())}
             >
               <Icon
-                icon='mobileuigrey9'
+                icon='MobileUiGrey9'
               />
             </HeaderIcon>
           ),
@@ -182,7 +182,7 @@ const ProfileStack = ({ navigation }) => {
               onPress={() => navigation.toggleDrawer()}
             >
               <Icon
-                icon='mobileuigrey15'
+                icon='MobileUiGrey15'
               />
             </HeaderIcon>
           ),
@@ -227,21 +227,21 @@ const TabRoutes = () => (
       component={DashboardStack}
       name={ROUTE_PATHS.DASHBOARD.TABS.MAIN}
       options={() => ({
-        tabBarIcon: () => <Icon icon='mobileuigrey19' />,
+        tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
       })}
     />
     <Tab.Screen
       component={DashboardMobileStack}
       name={ROUTE_PATHS.DASHBOARD.TABS.MOBILE}
       options={() => ({
-        tabBarIcon: () => <Icon icon='mobileuigrey19' />,
+        tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
       })}
     />
     <Tab.Screen
       component={DashboardWebStack}
       name={ROUTE_PATHS.DASHBOARD.TABS.WEB}
       options={() => ({
-        tabBarIcon: () => <Icon icon='mobileuigrey19' />,
+        tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
       })}
     />
   </Tab.Navigator>

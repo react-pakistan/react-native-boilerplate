@@ -1,40 +1,37 @@
 // ########## Import Dependencies Here ##########
-import { FlatList } from '@react-pakistan/react-native-commons-collection/flat-list';
+import { FlatList } from '@react-pakistan/react-native-commons-collection';
 import React from 'react';
 
 // ########## Import Components Here ##########
+import { BannerItem } from '../../components/banner-item';
 import { dashboardScreenText, openSourceMainProjects } from './helpers';
 import {
   DashboardHeading,
   DashboardWrapper,
-  LabelText,
   ListHeadingWrapper,
-  ListItemBanner,
-  ListItemWrapper,
-  TextWrapper,
 } from './styled';
 
-export const Dashboard = () => (
-  <DashboardWrapper>
-    <FlatList
-      keyExtractor={({ id }) => id}
-      data={openSourceMainProjects}
-      ListHeaderComponent={
-        <ListHeadingWrapper>
-          <DashboardHeading>{dashboardScreenText.mainHeading}</DashboardHeading>
-        </ListHeadingWrapper>
-      }
-      renderItem={({ item: { banner, description, label } }) => (
-        <ListItemWrapper>
-          <ListItemBanner
-            source={{ uri: banner }}
-          />
-          <TextWrapper>
-            <LabelText>{label}</LabelText>
-            <LabelText>{description}</LabelText>
-          </TextWrapper>
-        </ListItemWrapper>
-      )}
+export const Dashboard = () => {
+  const renderItem = ({ item: { banner, description, label } }) => (
+    <BannerItem
+      banner={banner}
+      description={description}
+      label={label}
     />
-  </DashboardWrapper>
-);
+  );
+
+  return (
+    <DashboardWrapper>
+      <FlatList
+        data={openSourceMainProjects}
+        keyExtractor={({ id }) => id}
+        ListHeaderComponent={
+          <ListHeadingWrapper>
+            <DashboardHeading>{dashboardScreenText.mainHeading}</DashboardHeading>
+          </ListHeadingWrapper>
+        }
+        renderItem={renderItem}
+      />
+    </DashboardWrapper>
+  );
+};

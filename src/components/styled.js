@@ -1,15 +1,15 @@
-import { Image } from '@react-pakistan/react-native-commons-collection/image';
+import { Image, View } from '@react-pakistan/react-native-commons-collection';
 import styled from 'styled-components/native';
 
-export const DrawerContentWrapper = styled.View`
-  padding: 16px;
+export const DrawerContentWrapper = styled(View)`
+  padding: ${({ theme }) => theme.spacing.default}px;
 `;
 
-export const DrawerContentHeader = styled.View`
+export const DrawerContentHeader = styled(View)`
   align-items: center;
 `;
 
 export const DrawerBanner = styled(Image)`
-  width: 100%;
   height: 150px;
+  width: 100%;
 `;

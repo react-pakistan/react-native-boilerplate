@@ -1,14 +1,13 @@
 // ########## Import Dependencies Here ##########
-import { ActivityIndicator } from '@react-pakistan/react-native-commons-collection/activity-indicator';
-import { Text } from '@react-pakistan/react-native-commons-collection/text';
+import { ActivityIndicator, Text } from '@react-pakistan/react-native-commons-collection';
 import React, { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // ########## Import Components Here ##########
-import { fetchProfileData } from './actions';
+import { fetchProfileData } from '../../redux/actions';
 import { profileScreenText } from './helpers';
-import { getUserDataFromState, getUserIsLoadingFromState } from './selectors';
-import { ProfileWrapper, ProfileHeading, Avatar } from './styled';
+import { getUserDataFromState, getUserIsLoadingFromState } from '../../redux/selectors';
+import { Avatar, ProfileHeading, ProfileWrapper } from './styled';
 
 export const Profile = () => {
   // dispatch

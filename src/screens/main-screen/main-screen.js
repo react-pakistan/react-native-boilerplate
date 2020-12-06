@@ -5,10 +5,10 @@ import { useSelector } from 'react-redux';
 // ########## Import Components Here ##########
 import { AppRouter } from '../../globals/router';
 import { SignIn } from '../sign-in';
-import { showAppAction } from './actions';
+import { showAppAction } from '../../redux/actions';
 import {
   getShowApp,
-} from './selectors';
+} from '../../redux/selectors';
 
 export const MainScreen = () => {
   // selector
