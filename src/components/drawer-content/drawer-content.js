@@ -2,19 +2,22 @@
 import { FlatList, Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
 import { func, object, shape } from 'prop-types';
 import React, { memo } from 'react';
+import { withTheme } from 'styled-components';
 
 // ########## Import Components Here ##########
+import { appTheme } from '../../theme';
 import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './styled';
 
-export const DrawerContent = memo(({
+export const DrawerContent = memo(withTheme(({
   descriptors,
   navigation,
+  theme,
 }) => {
   const renderItem = ({ item, index }) => (
     <TouchableOpacity
       onPress={() => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
     >
-      <Text>
+      <Text {...theme.typography.text}>
         {(item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()).split('-')[0]}
       </Text>
     </TouchableOpacity>
@@ -35,11 +38,15 @@ export const DrawerContent = memo(({
       />
     </DrawerContentWrapper>
   );
-});
+}));
 
 DrawerContent.propTypes = {
+  descriptors: object.isRequired,
   navigation: shape({
     navigate: func.isRequired,
   }).isRequired,
-  descriptors: object.isRequired,
+  theme: object,
+};
+DrawerContent.defaultProps = {
+  theme: appTheme,
 };

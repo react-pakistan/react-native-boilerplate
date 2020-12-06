@@ -1,5 +1,8 @@
 import React, { memo } from 'react';
-import { string } from 'prop-types';
+import { object, string } from 'prop-types';
+import { withTheme } from 'styled-components';
+import { appTheme } from '../../theme';
+
 import {
   LabelHeading,
   LabelText,
@@ -8,25 +11,37 @@ import {
   TextWrapper,
 } from './styled';
 
-export const BannerItem = memo(({
+export const BannerItem = memo(withTheme(({
   banner,
   description,
   label,
+  theme,
 }) => (
   <ListItemWrapper>
     <ListItemBanner
       source={{ uri: banner }}
     />
     <TextWrapper>
-      <LabelHeading>{label}</LabelHeading>
-      <LabelText>{description}</LabelText>
+      <LabelHeading
+        {...theme.typography.h2}
+      >
+        {label}
+      </LabelHeading>
+      <LabelText
+        {...theme.typography.text}
+      >
+        {description}
+      </LabelText>
     </TextWrapper>
   </ListItemWrapper>
-));
+)));
 
 BannerItem.propTypes = {
   banner: string.isRequired,
   description: string.isRequired,
   label: string.isRequired,
+  theme: object,
 };
-BannerItem.defaultProps = {};
+BannerItem.defaultProps = {
+  theme: appTheme,
+};
