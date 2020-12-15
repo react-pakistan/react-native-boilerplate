@@ -75,9 +75,9 @@ exports[`renders Dashboard component correctly 1`] = `
         },
         "text": Object {
           "fontFamily": "Roboto-Regular",
-          "fontSize": 24,
+          "fontSize": 28,
           "letterSpacing": 0,
-          "lineHeight": 36,
+          "lineHeight": 40,
           "textAlign": "left",
           "textTransform": "none",
         },
