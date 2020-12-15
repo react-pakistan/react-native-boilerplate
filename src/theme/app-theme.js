@@ -31,9 +31,9 @@ appTheme.typography.h3 = {
 appTheme.typography.text = {
   ...appTheme.typography.text,
   fontFamily: 'Roboto-Regular',
-  fontSize: isTablet() ? scale(12) : scale(12),
+  fontSize: isTablet() ? scale(14) : scale(14),
   letterSpacing: 0,
-  lineHeight: isTablet() ? scale(30) : scale(18),
+  lineHeight: isTablet() ? scale(32) : scale(20),
   textAlign: 'left',
   textTransform: 'none',
 };

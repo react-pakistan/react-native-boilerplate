@@ -22,18 +22,7 @@ import { Profile as ProfileScreen } from '../screens/profile';
 import { DrawerContent } from '../components/drawer-content';
 import * as actions from '../redux/actions';
 import { HeaderIcon } from '../navigation/styled';
-
-export const ROUTE_PATHS = {
-  DASHBOARD: {
-    DEFAULT: 'dashboard',
-    TABS: {
-      MAIN: 'Main',
-      MOBILE: 'Mobile',
-      WEB: 'Web',
-    },
-  },
-  PORFILE: 'profile',
-};
+import { NAVIGATION_ROUTES } from '../navigation/navigation-routes';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -45,7 +34,7 @@ const DashboardStack = ({ navigation }) => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={ROUTE_PATHS.DASHBOARD.DEFAULT}
+        name={NAVIGATION_ROUTES.DASHBOARD.DEFAULT}
         component={DashboardScreen}
         options={{
           headerRight: () => (
@@ -66,7 +55,7 @@ const DashboardStack = ({ navigation }) => {
               />
             </HeaderIcon>
           ),
-          headerTitle: `${ROUTE_PATHS.DASHBOARD.DEFAULT.charAt(0).toUpperCase()}${ROUTE_PATHS.DASHBOARD.DEFAULT.slice(1).toLowerCase()}`,
+          headerTitle: `${NAVIGATION_ROUTES.DASHBOARD.DEFAULT.charAt(0).toUpperCase()}${NAVIGATION_ROUTES.DASHBOARD.DEFAULT.slice(1).toLowerCase()}`,
         }}
       />
     </Stack.Navigator>
@@ -85,7 +74,7 @@ const DashboardMobileStack = ({ navigation }) => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={ROUTE_PATHS.DASHBOARD.TABS.MOBILE}
+        name={NAVIGATION_ROUTES.DASHBOARD.TABS.MOBILE}
         component={DashboardMobileScreen}
         options={{
           headerRight: () => (
@@ -106,7 +95,7 @@ const DashboardMobileStack = ({ navigation }) => {
               />
             </HeaderIcon>
           ),
-          headerTitle: `${ROUTE_PATHS.DASHBOARD.TABS.MOBILE.charAt(0).toUpperCase()}${ROUTE_PATHS.DASHBOARD.TABS.MOBILE.slice(1).toLowerCase()}`,
+          headerTitle: `${NAVIGATION_ROUTES.DASHBOARD.TABS.MOBILE.charAt(0).toUpperCase()}${NAVIGATION_ROUTES.DASHBOARD.TABS.MOBILE.slice(1).toLowerCase()}`,
         }}
       />
     </Stack.Navigator>
@@ -125,7 +114,7 @@ const DashboardWebStack = ({ navigation }) => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={ROUTE_PATHS.DASHBOARD.TABS.WEB}
+        name={NAVIGATION_ROUTES.DASHBOARD.TABS.WEB}
         component={DashboardWebScreen}
         options={{
           headerRight: () => (
@@ -146,7 +135,7 @@ const DashboardWebStack = ({ navigation }) => {
               />
             </HeaderIcon>
           ),
-          headerTitle: `${ROUTE_PATHS.DASHBOARD.TABS.WEB.charAt(0).toUpperCase()}${ROUTE_PATHS.DASHBOARD.TABS.WEB.slice(1).toLowerCase()}`,
+          headerTitle: `${NAVIGATION_ROUTES.DASHBOARD.TABS.WEB.charAt(0).toUpperCase()}${NAVIGATION_ROUTES.DASHBOARD.TABS.WEB.slice(1).toLowerCase()}`,
         }}
       />
     </Stack.Navigator>
@@ -165,7 +154,7 @@ const ProfileStack = ({ navigation }) => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={ROUTE_PATHS.PORFILE}
+        name={NAVIGATION_ROUTES.PROFILE}
         component={ProfileScreen}
         options={{
           headerRight: () => (
@@ -186,7 +175,7 @@ const ProfileStack = ({ navigation }) => {
               />
             </HeaderIcon>
           ),
-          headerTitle: `${ROUTE_PATHS.PORFILE.charAt(0).toUpperCase()}${ROUTE_PATHS.PORFILE.slice(1).toLowerCase()}`,
+          headerTitle: `${NAVIGATION_ROUTES.PROFILE.charAt(0).toUpperCase()}${NAVIGATION_ROUTES.PROFILE.slice(1).toLowerCase()}`,
         }}
       />
     </Stack.Navigator>
@@ -203,7 +192,7 @@ const TabRoutes = () => (
   <Tab.Navigator
     // screenOptions={}
     backBehavior='initialRoute'
-    initialRouteName={ROUTE_PATHS.DASHBOARD.TABS.MAIN}
+    initialRouteName={NAVIGATION_ROUTES.DASHBOARD.TABS.MAIN}
     lazy
     // tabBar={}
     tabBarOptions={{
@@ -225,21 +214,21 @@ const TabRoutes = () => (
   >
     <Tab.Screen
       component={DashboardStack}
-      name={ROUTE_PATHS.DASHBOARD.TABS.MAIN}
+      name={NAVIGATION_ROUTES.DASHBOARD.TABS.MAIN}
       options={() => ({
         tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
       })}
     />
     <Tab.Screen
       component={DashboardMobileStack}
-      name={ROUTE_PATHS.DASHBOARD.TABS.MOBILE}
+      name={NAVIGATION_ROUTES.DASHBOARD.TABS.MOBILE}
       options={() => ({
         tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
       })}
     />
     <Tab.Screen
       component={DashboardWebStack}
-      name={ROUTE_PATHS.DASHBOARD.TABS.WEB}
+      name={NAVIGATION_ROUTES.DASHBOARD.TABS.WEB}
       options={() => ({
         tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
       })}
@@ -293,11 +282,11 @@ const DrawerRoutes = () => (
     >
       <Drawer.Screen
         component={TabRoutes}
-        name={ROUTE_PATHS.DASHBOARD.DEFAULT}
+        name={NAVIGATION_ROUTES.DASHBOARD.DEFAULT}
       />
       <Drawer.Screen
         component={ProfileStack}
-        name={ROUTE_PATHS.PORFILE}
+        name={NAVIGATION_ROUTES.PROFILE}
       />
     </Drawer.Navigator>
   </NavigationContainer>
