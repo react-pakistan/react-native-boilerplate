@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
 
 // ########## Import Components Here ##########
-import { AppRouter } from '../../globals/router';
+import { AppNavigation } from '../../navigation';
 import { SignIn } from '../sign-in';
 import { showAppAction } from '../../redux/actions';
 import {
@@ -16,7 +16,7 @@ export const MainScreen = () => {
 
   return (
     <Fragment>
-      {showApp ? <AppRouter /> : <SignIn showAppAction={showAppAction} />}
+      {showApp ? <AppNavigation /> : <SignIn showAppAction={showAppAction} />}
     </Fragment>
   );
 };
