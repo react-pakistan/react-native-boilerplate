@@ -1,0 +1,22 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "configurations": {
+    "ios-debug": {
+      "type": "ios.simulator",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/reactNativeBoilerplate.app",
+      "build": "xcodebuild -workspace ios/reactNativeBoilerplate.xcworkspace -scheme reactNativeBoilerplate -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+      "device": {
+        "type": "iPhone 11"
+      }
+    },
+    "android-debug": {
+      "type": "android.emulator",
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "build": "cd android && RN_SRC_EXT=e2e.js ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
+      "device": {
+        "avdName": "Pixel_2_API_29"
+      }
+    }
+  }
+}

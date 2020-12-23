@@ -1,6 +1,5 @@
 // ########## Import Dependencies Here ##########
-import { Text } from '@react-pakistan/react-native-commons-collection/text';
-import { TouchableOpacity } from '@react-pakistan/react-native-commons-collection/touchable-opacity';
+import { Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
 import { bool, string } from 'prop-types';
 import React from 'react';
 
@@ -13,6 +12,7 @@ export const Next = ({
   ...rest
 }) => (
   <TouchableOpacity
+    testID='onboarding-next-button'
     title={'Next'}
     buttonStyle={{
       backgroundColor: backgroundColor(isLight),
