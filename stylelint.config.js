@@ -38,5 +38,10 @@ module.exports = {
         'resize-mode',
       ],
     }],
+    'react-native/css-property-no-unknown': [true, {
+      ignoreProperties: ['textAlignVertical', 'elevation'],
+    }],                                          // https://github.com/kristerkari/stylelint-react-native/tree/master/src/rules/css-property-no-unknown
+    'shorthand-property-no-redundant-values': true,               // https://github.com/stylelint/stylelint/blob/master/lib/rules/shorthand-property-no-redundant-values/README.md
+    'unit-no-unknown': true, 
   },
 };

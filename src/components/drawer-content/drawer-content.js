@@ -1,6 +1,11 @@
 // ########## Import Dependencies Here ##########
 import { FlatList, Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
-import { func, object, shape } from 'prop-types';
+import {
+  func,
+  object,
+  shape,
+  string,
+} from 'prop-types';
 import React, { memo } from 'react';
 import { withTheme } from 'styled-components';
 
@@ -9,6 +14,7 @@ import { appTheme } from '../../theme';
 import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './styled';
 
 export const DrawerContent = memo(withTheme(({
+  banner,
   descriptors,
   navigation,
   theme,
@@ -28,7 +34,9 @@ export const DrawerContent = memo(withTheme(({
       <DrawerContentHeader>
         <DrawerBanner
           resizeMode='contain'
-          source={{ uri: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1565548545/GitHub/React_Pakistan_Storybook_Logo.jpg' }}
+          source={{
+            uri: banner,
+          }}
         />
       </DrawerContentHeader>
       <FlatList
@@ -41,6 +49,7 @@ export const DrawerContent = memo(withTheme(({
 }));
 
 DrawerContent.propTypes = {
+  banner: string.isRequired,
   descriptors: object.isRequired,
   navigation: shape({
     navigate: func.isRequired,

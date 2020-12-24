@@ -1,8 +1,8 @@
-import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
-import { NAVIGATION_ROUTES } from '../navigation-routes';
 import { theme } from '@react-pakistan/util-react-native-functions';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
+import { NAVIGATION_ROUTES } from '../navigation-routes';
 
 // ########## Import Screens Here ##########
 import { DashboardStack, DashboardMobileStack, DashboardWebStack } from '../stacks';

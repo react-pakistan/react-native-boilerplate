@@ -1,5 +1,4 @@
 describe('OnBoarding flow', () => {
-
   beforeEach(async () => {
     await device.reloadReactNative();
   });

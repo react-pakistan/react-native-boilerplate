@@ -1,12 +1,13 @@
-import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { NAVIGATION_ROUTES } from '../navigation-routes';
+import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
+import { shape, func } from 'prop-types';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import * as actions from '../../redux/actions';
 import { Profile as ProfileScreen } from '../../screens/profile';
-import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
+import { resolveToSentenceCase } from '../../utils';
+import { NAVIGATION_ROUTES } from '../navigation-routes';
 import { HeaderIcon } from '../styled';
-import { shape, func } from 'prop-types';
 
 const Stack = createStackNavigator();
 
@@ -39,7 +40,7 @@ export const ProfileStack = ({
               />
             </HeaderIcon>
           ),
-          headerTitle: `${NAVIGATION_ROUTES.PROFILE.charAt(0).toUpperCase()}${NAVIGATION_ROUTES.PROFILE.slice(1).toLowerCase()}`,
+          headerTitle: resolveToSentenceCase(NAVIGATION_ROUTES.PROFILE),
         }}
       />
     </Stack.Navigator>

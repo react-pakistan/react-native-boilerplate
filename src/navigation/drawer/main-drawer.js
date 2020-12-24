@@ -5,7 +5,7 @@ import React from 'react';
 import { DrawerContent } from '../../components/drawer-content';
 import { NAVIGATION_ROUTES } from '../navigation-routes';
 import { ProfileStack } from '../stacks';
-import { MainTab   } from '../tabs';
+import { MainTab } from '../tabs';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,6 +20,8 @@ export const MainDrawer = () => (
         state,
       }) => (
         <DrawerContent
+          banner=
+            'https://res.cloudinary.com/dq6hflqwx/image/upload/v1565548545/GitHub/React_Pakistan_Storybook_Logo.jpg'
           descriptors={descriptors}
           navigation={navigation}
           progress={progress}
