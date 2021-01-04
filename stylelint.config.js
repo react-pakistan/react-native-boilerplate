@@ -1,5 +1,3 @@
-/* eslint-disable no-multi-spaces, max-len */
-
 module.exports = {
   processors: [
     'stylelint-processor-styled-components',
