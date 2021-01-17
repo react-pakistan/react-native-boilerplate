@@ -5,7 +5,6 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import * as actions from '../../redux/actions';
 import { Dashboard as DashboardScreen } from '../../screens/dashboard';
-import { resolveToSentenceCase } from '../../utils';
 import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';
 import { HeaderIcon } from '../styled';
 
@@ -40,7 +39,7 @@ export const DashboardStack = ({
               />
             </HeaderIcon>
           ),
-          headerTitle: resolveToSentenceCase(NAVIGATION_TITLES.TAB_MAIN),
+          headerTitle: NAVIGATION_TITLES.TAB_MAIN,
         }}
       />
     </Stack.Navigator>
