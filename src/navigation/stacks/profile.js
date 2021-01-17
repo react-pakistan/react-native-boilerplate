@@ -1,9 +1,12 @@
-import { createStackNavigator } from '@react-navigation/stack';
+// ########## Import Dependencies Here ##########
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
+import { createStackNavigator } from '@react-navigation/stack';
 import { shape, func } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import * as actions from '../../redux/actions';
+
+// ########## Import Components Here ##########
+import { hideAppAction } from '../../redux/actions';
 import { Profile as ProfileScreen } from '../../screens/profile';
 import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';
 import { HeaderIcon } from '../styled';
@@ -24,7 +27,7 @@ export const ProfileStack = ({
         options={{
           headerRight: () => (
             <HeaderIcon
-              onPress={() => dispatch(actions.hideAppAction())}
+              onPress={() => dispatch(hideAppAction())}
             >
               <Icon
                 icon='MobileUiGrey9'

@@ -1,9 +1,12 @@
+// ########## Import Dependencies Here ##########
 import { createStackNavigator } from '@react-navigation/stack';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import { shape, func } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import * as actions from '../../redux/actions';
+
+// ########## Import Components Here ##########
+import { hideAppAction } from '../../redux/actions';
 import { Dashboard as DashboardScreen } from '../../screens/dashboard';
 import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';
 import { HeaderIcon } from '../styled';
@@ -23,7 +26,7 @@ export const DashboardStack = ({
         options={{
           headerRight: () => (
             <HeaderIcon
-              onPress={() => dispatch(actions.hideAppAction())}
+              onPress={() => dispatch(hideAppAction())}
             >
               <Icon
                 icon='MobileUiGrey9'

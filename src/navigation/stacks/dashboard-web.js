@@ -1,8 +1,11 @@
-import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
+// ########## Import Dependencies Here ##########
 import { createStackNavigator } from '@react-navigation/stack';
+import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import { shape, func } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
+
+// ########## Import Components Here ##########
 import * as actions from '../../redux/actions';
 import { DashboardWeb as DashboardWebScreen } from '../../screens/dashboard';
 import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';

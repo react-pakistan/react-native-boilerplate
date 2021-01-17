@@ -1,9 +1,9 @@
-import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
-import { theme } from '@react-pakistan/util-react-native-functions';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import React from 'react';
 
 // ########## Import Screens Here ##########
+import { appTheme } from '../../theme';
 import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';
 import { DashboardStack, DashboardMobileStack, DashboardWebStack } from '../stacks';
 
@@ -17,12 +17,12 @@ export const MainTab = () => (
     lazy
     // tabBar={}
     tabBarOptions={{
-      activeBackgroundColor: theme.colors.lightGrey,
-      activeTintColor: theme.colors.cherryRed,
+      activeBackgroundColor: appTheme.colors.lightGrey,
+      activeTintColor: appTheme.colors.cherryRed,
       adaptive: true,
       allowFontScaling: true,
-      inactiveBackgroundColor: theme.colors.white,
-      inactiveTintColor: theme.colors.lightBlack,
+      inactiveBackgroundColor: appTheme.colors.white,
+      inactiveTintColor: appTheme.colors.lightBlack,
       keyboardHidesTabBar: false,
       labelPosition: 'below-icon',
       labelStyle: {},
