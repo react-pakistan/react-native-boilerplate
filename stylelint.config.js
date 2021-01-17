@@ -5,7 +5,7 @@ module.exports = {
   extends: [
     'stylelint-config-recommended',
     'stylelint-config-styled-components',
-    'stylelint-config-react-native-styled-components',
+    '@react-pakistan/eslint-config-shared/stylelint',
   ],
   rules: {
     'comment-no-empty': true,                     // https://github.com/stylelint/stylelint/blob/master/lib/rules/comment-no-empty/README.md
