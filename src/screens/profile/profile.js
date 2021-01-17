@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // ########## Import Components Here ##########
 import { fetchProfileData } from '../../redux/actions';
-import { profileScreenText } from './helpers';
 import { getUserDataFromState, getUserIsLoadingFromState } from '../../redux/selectors';
+import { profileScreenText } from './helpers';
 import { Avatar, ProfileHeading, ProfileWrapper } from './styled';
 
 export const Profile = () => {
@@ -17,9 +17,9 @@ export const Profile = () => {
   const isLoading = useSelector(getUserIsLoadingFromState);
   const userData = useSelector(getUserDataFromState);
 
-  const fetchData = () => (
-    dispatch(fetchProfileData('taimoormk'))
-  );
+  const fetchData = () => {
+    dispatch(fetchProfileData('taimoormk'));
+  };
 
   useEffect(() => {
     fetchData();

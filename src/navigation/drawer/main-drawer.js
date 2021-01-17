@@ -1,8 +1,11 @@
+// ########## Import Dependencies Here ##########
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import { theme } from '@react-pakistan/util-react-native-functions';
 import React from 'react';
+
+// ########## Import Components Here ##########
 import { DrawerContent } from '../../components/drawer-content';
+import { appTheme } from '../../theme';
 import { NAVIGATION_ROUTES } from '../navigation-routes';
 import { ProfileStack } from '../stacks';
 import { MainTab } from '../tabs';
@@ -29,10 +32,10 @@ export const MainDrawer = () => (
         />
       )}
       drawerContentOptions={{
-        activeTintColor: theme.colors.cherryRed,
-        activeBackgroundColor: theme.colors.cherryRed,
-        inactiveTintColor: theme.colors.cherryRed,
-        inactiveBackgroundColor: theme.colors.cherryRed,
+        activeTintColor: appTheme.colors.cherryRed,
+        activeBackgroundColor: appTheme.colors.cherryRed,
+        inactiveTintColor: appTheme.colors.cherryRed,
+        inactiveBackgroundColor: appTheme.colors.cherryRed,
         itemStyle: {},
         labelStyle: {},
         contentContainerStyle: {},
@@ -40,7 +43,7 @@ export const MainDrawer = () => (
       }}
       drawerPosition='left'
       drawerStyle={{
-        backgroundColor: theme.colors.lightGrey,
+        backgroundColor: appTheme.colors.lightGrey,
         width: 240,
       }}
       drawerType='front'
@@ -52,7 +55,7 @@ export const MainDrawer = () => (
       lazy
       minSwipeDistance={100}
       openByDefault={false}
-      overlayColor={theme.colors.lightBlack}
+      overlayColor={appTheme.colors.lightBlack}
       // sceneContainerStyle={}
       // screenOptions={}
       statusBarAnimation='fade'

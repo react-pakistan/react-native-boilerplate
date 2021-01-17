@@ -1,12 +1,14 @@
-import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
+// ########## Import Dependencies Here ##########
 import { createStackNavigator } from '@react-navigation/stack';
+import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import { shape, func } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import * as actions from '../../redux/actions';
+
+// ########## Import Components Here ##########
+import { hideAppAction } from '../../redux/actions';
 import { DashboardMobile as DashboardMobileScreen } from '../../screens/dashboard';
-import { resolveToSentenceCase } from '../../utils';
-import { NAVIGATION_ROUTES } from '../navigation-routes';
+import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';
 import { HeaderIcon } from '../styled';
 
 const Stack = createStackNavigator();
@@ -14,6 +16,7 @@ const Stack = createStackNavigator();
 export const DashboardMobileStack = ({
   navigation,
 }) => {
+  // dispatch
   const dispatch = useDispatch();
 
   return (
@@ -24,7 +27,7 @@ export const DashboardMobileStack = ({
         options={{
           headerRight: () => (
             <HeaderIcon
-              onPress={() => dispatch(actions.hideAppAction())}
+              onPress={() => dispatch(hideAppAction())}
             >
               <Icon
                 icon='MobileUiGrey9'
@@ -40,7 +43,7 @@ export const DashboardMobileStack = ({
               />
             </HeaderIcon>
           ),
-          headerTitle: resolveToSentenceCase(NAVIGATION_ROUTES.TAB_MOBILE),
+          headerTitle: NAVIGATION_TITLES.TAB_MOBILE,
         }}
       />
     </Stack.Navigator>
