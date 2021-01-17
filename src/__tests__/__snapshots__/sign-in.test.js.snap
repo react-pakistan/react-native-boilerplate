@@ -32,9 +32,96 @@ exports[`renders SignIn component correctly 1`] = `
     }
   }
 >
-  <SignIn
+  <Memo(WithTheme(Component))
     showApp={false}
     showAppAction={[Function]}
+    theme={
+      Object {
+        "breakpoints": Object {
+          "desktop": "(min-width: 2560px)",
+          "laptop": "(min-width: 1024px)",
+          "laptopL": "(min-width: 1440px)",
+          "mobileL": "(min-width: 425px)",
+          "mobileM": "(min-width: 375px)",
+          "mobileS": "(min-width: 320px)",
+          "tablet": "(min-width: 768px)",
+        },
+        "colors": Object {
+          "black": "#2E2E2E",
+          "cherryRed": "#F62F5E",
+          "darkGrey": "#EFEFEF",
+          "inputBorder": "#E1E1E1",
+          "lightBlack": "#6C6C6C",
+          "lightGrey": "#F7F7F7",
+          "lighterBlack": "#B4B4B4",
+          "limeYellow": "#EFFC90",
+          "paleGreen": "#00D3CA",
+          "rustyGold": "#F1AD3D",
+          "skyBlue": "#1E90FF",
+          "white": "#FFFFFF",
+        },
+        "misc": Object {},
+        "radius": Object {
+          "default": 8,
+          "double": 16,
+          "full": 100,
+          "half": 60,
+        },
+        "shadow": Object {
+          "default": "0px 1px 4px #E5E9F2",
+          "medium": "-4px 0 12px rgba(0, 0, 0, 0.3)",
+        },
+        "spacing": Object {
+          "default": 32,
+          "huge": 96,
+          "large": 48,
+          "medium": 24,
+          "small": 16,
+          "xlarge": 64,
+          "xsmall": 8,
+        },
+        "typography": Object {
+          "fontFamily": "Roboto-Regular",
+          "h1": Object {
+            "fontFamily": "Roboto-Bold",
+            "fontSize": 56,
+            "letterSpacing": 0,
+            "lineHeight": 56,
+            "textAlign": "left",
+            "textTransform": "uppercase",
+          },
+          "h2": Object {
+            "fontFamily": "Roboto-Medium",
+            "fontSize": 44,
+            "letterSpacing": 0,
+            "lineHeight": 56,
+            "textAlign": "left",
+            "textTransform": "uppercase",
+          },
+          "h3": Object {
+            "fontFamily": "Roboto-Regular",
+            "fontSize": 32,
+            "letterSpacing": 0,
+            "lineHeight": 56,
+            "textAlign": "left",
+            "textTransform": "uppercase",
+          },
+          "text": Object {
+            "fontFamily": "Roboto-Regular",
+            "fontSize": 24,
+            "letterSpacing": 0.25,
+            "lineHeight": 36,
+            "textAlign": "left",
+            "textTransform": "none",
+          },
+        },
+        "zIndex": Object {
+          "dropdown": 100,
+          "modal": 300,
+          "pageFooter": 200,
+        },
+      }
+    }
   />
 </Context.Provider>
 `;

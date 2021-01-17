@@ -1,1 +1,1 @@
-// export { MainNavigation } from './navigation';
+export { AppNavigation } from './navigation';

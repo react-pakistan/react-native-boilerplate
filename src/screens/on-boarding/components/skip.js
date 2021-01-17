@@ -13,6 +13,7 @@ export const Skip = ({
   ...rest
 }) => (
     <TouchableOpacity
+      testID='onboarding-skip-button'
       title={'Skip'}
       buttonStyle={{
         backgroundColor: backgroundColor(isLight),
