@@ -300,7 +300,7 @@ PODS:
     - React-jsi (= 0.63.4)
   - RNCMaskedView (0.1.10):
     - React
-  - RNDeviceInfo (7.3.1):
+  - RNDeviceInfo (8.0.0):
     - React-Core
   - RNGestureHandler (1.9.0):
     - React-Core
@@ -308,7 +308,7 @@ PODS:
     - React-Core
   - RNScreens (2.16.1):
     - React-Core
-  - RNSVG (12.1.0):
+  - RNSVG (11.0.1):
     - React
   - RNVectorIcons (7.1.0):
     - React
@@ -497,11 +497,11 @@ SPEC CHECKSUMS:
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNDeviceInfo: 6ecb1d1c87d20e4c62354be0348de23362824dcd
+  RNDeviceInfo: 87d2d175c760f6bcf58acd036f887e8b2392802c
   RNGestureHandler: 9b7e605a741412e20e13c512738a31bd1611759b
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
   RNScreens: 45c457af3d2ee9e08fc01e70da87e653d46b1198
-  RNSVG: ce9d996113475209013317e48b05c21ee988d42e
+  RNSVG: 67f1f12dae2cef6ed59a42cae74a6b8f5a9e7b46
   RNVectorIcons: bc69e6a278b14842063605de32bec61f0b251a59
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
