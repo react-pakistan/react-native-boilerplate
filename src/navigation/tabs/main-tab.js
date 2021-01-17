@@ -2,9 +2,9 @@ import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import { theme } from '@react-pakistan/util-react-native-functions';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import { NAVIGATION_ROUTES } from '../navigation-routes';
 
 // ########## Import Screens Here ##########
+import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';
 import { DashboardStack, DashboardMobileStack, DashboardWebStack } from '../stacks';
 
 const Tab = createBottomTabNavigator();
@@ -35,21 +35,21 @@ export const MainTab = () => (
   >
     <Tab.Screen
       component={DashboardStack}
-      name={NAVIGATION_ROUTES.TAB_MAIN}
+      name={NAVIGATION_TITLES.TAB_MAIN}
       options={() => ({
         tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
       })}
     />
     <Tab.Screen
       component={DashboardMobileStack}
-      name={NAVIGATION_ROUTES.TAB_MOBILE}
+      name={NAVIGATION_TITLES.TAB_MOBILE}
       options={() => ({
         tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
       })}
     />
     <Tab.Screen
       component={DashboardWebStack}
-      name={NAVIGATION_ROUTES.TAB_WEB}
+      name={NAVIGATION_TITLES.TAB_WEB}
       options={() => ({
         tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
       })}

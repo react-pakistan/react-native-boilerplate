@@ -5,8 +5,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import * as actions from '../../redux/actions';
 import { Profile as ProfileScreen } from '../../screens/profile';
-import { resolveToSentenceCase } from '../../utils';
-import { NAVIGATION_ROUTES } from '../navigation-routes';
+import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';
 import { HeaderIcon } from '../styled';
 
 const Stack = createStackNavigator();
@@ -14,12 +13,13 @@ const Stack = createStackNavigator();
 export const ProfileStack = ({
   navigation,
 }) => {
+  // dispatch
   const dispatch = useDispatch();
 
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={NAVIGATION_ROUTES.PROFILE}
+        name={NAVIGATION_ROUTES.DRAWER_PROFILE}
         component={ProfileScreen}
         options={{
           headerRight: () => (
@@ -40,7 +40,7 @@ export const ProfileStack = ({
               />
             </HeaderIcon>
           ),
-          headerTitle: resolveToSentenceCase(NAVIGATION_ROUTES.PROFILE),
+          headerTitle: NAVIGATION_TITLES.DRAWER_PROFILE,
         }}
       />
     </Stack.Navigator>
