@@ -1,7 +1,9 @@
 // ########## Import Dependencies Here ##########
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import React from 'react';
+import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
+import { object } from 'prop-types';
+import React, { memo } from 'react';
+import { withTheme } from 'styled-components';
 
 // ########## Import Components Here ##########
 import { DrawerContent } from '../../components/drawer-content';
@@ -12,8 +14,12 @@ import { MainTab } from '../tabs';
 
 const Drawer = createDrawerNavigator();
 
-export const MainDrawer = () => (
-  <NavigationContainer>
+export const MainDrawer = memo(withTheme(({
+  theme,
+}) => (
+  <NavigationContainer
+    theme={theme.misc.darkMode ? DarkTheme : DefaultTheme}
+  >
     <Drawer.Navigator
       backBehavior='initialRoute'
       drawerContent={({
@@ -32,10 +38,10 @@ export const MainDrawer = () => (
         />
       )}
       drawerContentOptions={{
-        activeTintColor: appTheme.colors.cherryRed,
-        activeBackgroundColor: appTheme.colors.cherryRed,
-        inactiveTintColor: appTheme.colors.cherryRed,
-        inactiveBackgroundColor: appTheme.colors.cherryRed,
+        activeTintColor: theme.colors.cherryRed,
+        activeBackgroundColor: theme.colors.cherryRed,
+        inactiveTintColor: theme.colors.cherryRed,
+        inactiveBackgroundColor: theme.colors.cherryRed,
         itemStyle: {},
         labelStyle: {},
         contentContainerStyle: {},
@@ -43,7 +49,7 @@ export const MainDrawer = () => (
       }}
       drawerPosition='left'
       drawerStyle={{
-        backgroundColor: appTheme.colors.lightGrey,
+        backgroundColor: theme.colors.lightGrey,
         width: 240,
       }}
       drawerType='front'
@@ -55,7 +61,7 @@ export const MainDrawer = () => (
       lazy
       minSwipeDistance={100}
       openByDefault={false}
-      overlayColor={appTheme.colors.lightBlack}
+      overlayColor={theme.colors.lightBlack}
       // sceneContainerStyle={}
       // screenOptions={}
       statusBarAnimation='fade'
@@ -70,4 +76,11 @@ export const MainDrawer = () => (
       />
     </Drawer.Navigator>
   </NavigationContainer>
-);
+)));
+
+MainDrawer.propTypes = {
+  theme: object,
+};
+MainDrawer.defaultProps = {
+  theme: appTheme,
+};

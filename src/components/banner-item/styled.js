@@ -1,4 +1,4 @@
-import { View, Image, Text } from '@react-pakistan/react-native-commons-collection';
+import { Image, Text, View } from '@react-pakistan/react-native-commons-collection';
 import { width } from '@react-pakistan/util-react-native-functions';
 import styled from 'styled-components/native';
 

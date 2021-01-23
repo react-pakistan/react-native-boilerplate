@@ -1,7 +1,8 @@
 // ########## Import Dependencies Here ##########
 import { ActivityIndicator, Text } from '@react-pakistan/react-native-commons-collection';
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, memo, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { withTheme } from 'styled-components';
 
 // ########## Import Components Here ##########
 import { fetchProfileData } from '../../redux/actions';
@@ -9,7 +10,9 @@ import { getUserDataFromState, getUserIsLoadingFromState } from '../../redux/sel
 import { profileScreenText } from './helpers';
 import { Avatar, ProfileHeading, ProfileWrapper } from './styled';
 
-export const Profile = () => {
+export const Profile = memo(withTheme(({
+  theme,
+}) => {
   // dispatch
   const dispatch = useDispatch();
 
@@ -27,18 +30,31 @@ export const Profile = () => {
 
   return (
     <ProfileWrapper>
-      <ProfileHeading>
+      <ProfileHeading
+        {...theme.typography.h2}
+      >
         {profileScreenText.mainHeading}
       </ProfileHeading>
       {isLoading && <ActivityIndicator />}
       {userData && (
         <Fragment>
           <Avatar source={{ uri: userData.avatar_url }} />
-          <Text>{userData.name}</Text>
-          <Text>{userData.bio}</Text>
-          <Text>{userData.company}</Text>
+          <Text
+            {...theme.typography.text}
+          >
+            {userData.name}
+          </Text>
+          <Text
+            {...theme.typography.text}
+          >{userData.bio}
+          </Text>
+          <Text
+            {...theme.typography.text}
+          >
+            {userData.company}
+          </Text>
         </Fragment>
       )}
     </ProfileWrapper>
   );
-};
+}));

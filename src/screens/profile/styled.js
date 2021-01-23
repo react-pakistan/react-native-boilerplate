@@ -10,12 +10,7 @@ export const ProfileWrapper = styled(View)`
   justify-content: center;
 `;
 
-export const ProfileHeading = styled(Text)`
-  color: ${({ theme }) => theme.colors.black};
-  font-family: ${({ theme }) => theme.typography.fontFamily};
-  font-size: ${({ theme }) => theme.spacing.default}px;
-  text-transform: uppercase;
-`;
+export const ProfileHeading = styled(Text)``;
 
 export const Avatar = styled(Image)`
   border-radius: 200px;
