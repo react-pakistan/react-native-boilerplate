@@ -1,7 +1,7 @@
 // ########## Import Dependencies Here ##########
+import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
-import { shape, func } from 'prop-types';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -13,11 +13,12 @@ import { HeaderIcon } from '../styled';
 
 const Stack = createStackNavigator();
 
-export const DashboardWebStack = ({
-  navigation,
-}) => {
+export const DashboardWebStack = () => {
   // dispatch
   const dispatch = useDispatch();
+
+  // navigation
+  const navigation = useNavigation();
 
   return (
     <Stack.Navigator>
@@ -48,10 +49,4 @@ export const DashboardWebStack = ({
       />
     </Stack.Navigator>
   );
-};
-
-DashboardWebStack.propTypes = {
-  navigation: shape({
-    toggleDrawer: func.isRequired,
-  }).isRequired,
 };

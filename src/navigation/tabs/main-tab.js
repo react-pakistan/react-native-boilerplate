@@ -1,6 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
-import React from 'react';
+import { object } from 'prop-types';
+import React, { memo } from 'react';
+import { withTheme } from 'styled-components';
 
 // ########## Import Screens Here ##########
 import { appTheme } from '../../theme';
@@ -9,7 +11,9 @@ import { DashboardStack, DashboardMobileStack, DashboardWebStack } from '../stac
 
 const Tab = createBottomTabNavigator();
 
-export const MainTab = () => (
+export const MainTab = memo(withTheme(({
+  theme,
+}) => (
   <Tab.Navigator
     // screenOptions={}
     backBehavior='initialRoute'
@@ -17,12 +21,12 @@ export const MainTab = () => (
     lazy
     // tabBar={}
     tabBarOptions={{
-      activeBackgroundColor: appTheme.colors.lightGrey,
-      activeTintColor: appTheme.colors.cherryRed,
+      activeBackgroundColor: theme.colors.lightGrey,
+      activeTintColor: theme.colors.cherryRed,
       adaptive: true,
       allowFontScaling: true,
-      inactiveBackgroundColor: appTheme.colors.white,
-      inactiveTintColor: appTheme.colors.lightBlack,
+      inactiveBackgroundColor: theme.colors.white,
+      inactiveTintColor: theme.colors.lightBlack,
       keyboardHidesTabBar: false,
       labelPosition: 'below-icon',
       labelStyle: {},
@@ -44,15 +48,22 @@ export const MainTab = () => (
       component={DashboardMobileStack}
       name={NAVIGATION_TITLES.TAB_MOBILE}
       options={() => ({
-        tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
+        tabBarIcon: () => <Icon icon='MobileUiGrey29' />,
       })}
     />
     <Tab.Screen
       component={DashboardWebStack}
       name={NAVIGATION_TITLES.TAB_WEB}
       options={() => ({
-        tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
+        tabBarIcon: () => <Icon icon='MobileUiGrey18' />,
       })}
     />
   </Tab.Navigator>
-);
+)));
+
+MainTab.propTypes = {
+  theme: object,
+};
+MainTab.defaultProps = {
+  theme: appTheme,
+};

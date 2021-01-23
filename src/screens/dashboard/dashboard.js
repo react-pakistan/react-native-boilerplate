@@ -1,10 +1,12 @@
 // ########## Import Dependencies Here ##########
 import { FlatList } from '@react-pakistan/react-native-commons-collection';
+import { object } from 'prop-types';
 import React, { memo } from 'react';
 import { withTheme } from 'styled-components';
 
 // ########## Import Components Here ##########
 import { BannerItem } from '../../components/banner-item';
+import { appTheme } from '../../theme';
 import { dashboardScreenText, openSourceMainProjects } from './helpers';
 import {
   DashboardHeading,
@@ -12,7 +14,9 @@ import {
   ListHeadingWrapper,
 } from './styled';
 
-export const Dashboard = memo(withTheme(() => {
+export const Dashboard = memo(withTheme(({
+  theme,
+}) => {
   const renderItem = ({ item: { banner, description, label } }) => (
     <BannerItem
       banner={banner}
@@ -28,7 +32,9 @@ export const Dashboard = memo(withTheme(() => {
         keyExtractor={({ id }) => id}
         ListHeaderComponent={
           <ListHeadingWrapper>
-            <DashboardHeading>
+            <DashboardHeading
+              {...theme.typography.h1}
+            >
               {dashboardScreenText.mainHeading}
             </DashboardHeading>
           </ListHeadingWrapper>
@@ -39,5 +45,9 @@ export const Dashboard = memo(withTheme(() => {
   );
 }));
 
-Dashboard.propType = {};
-Dashboard.defaultProps = {};
+Dashboard.propType = {
+  theme: object.isRequired,
+};
+Dashboard.defaultProps = {
+  theme: appTheme,
+};
