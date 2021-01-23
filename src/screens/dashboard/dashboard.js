@@ -1,7 +1,6 @@
 // ########## Import Dependencies Here ##########
 import { FlatList } from '@react-pakistan/react-native-commons-collection';
 import React, { memo } from 'react';
-import { withTheme } from 'styled-components';
 
 // ########## Import Components Here ##########
 import { BannerItem } from '../../components/banner-item';
@@ -12,7 +11,7 @@ import {
   ListHeadingWrapper,
 } from './styled';
 
-export const Dashboard = memo(withTheme(() => {
+export const Dashboard = memo(() => {
   const renderItem = ({ item: { banner, description, label } }) => (
     <BannerItem
       banner={banner}
@@ -37,7 +36,7 @@ export const Dashboard = memo(withTheme(() => {
       />
     </DashboardWrapper>
   );
-}));
+});
 
 Dashboard.propType = {};
 Dashboard.defaultProps = {};

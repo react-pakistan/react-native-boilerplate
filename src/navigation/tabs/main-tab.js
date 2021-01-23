@@ -44,14 +44,14 @@ export const MainTab = () => (
       component={DashboardMobileStack}
       name={NAVIGATION_TITLES.TAB_MOBILE}
       options={() => ({
-        tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
+        tabBarIcon: () => <Icon icon='MobileUiGrey29' />,
       })}
     />
     <Tab.Screen
       component={DashboardWebStack}
       name={NAVIGATION_TITLES.TAB_WEB}
       options={() => ({
-        tabBarIcon: () => <Icon icon='MobileUiGrey19' />,
+        tabBarIcon: () => <Icon icon='MobileUiGrey18' />,
       })}
     />
   </Tab.Navigator>
