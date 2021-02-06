@@ -4,11 +4,9 @@ import { useSelector } from 'react-redux';
 
 // ########## Import Components Here ##########
 import { AppNavigation } from '../../navigation';
-import { SignIn } from '../sign-in';
 import { showAppAction } from '../../redux/actions';
-import {
-  getShowApp,
-} from '../../redux/selectors';
+import { getShowApp } from '../../redux/selectors';
+import { SignIn } from '../sign-in';
 
 export const MainScreen = () => {
   // selector
