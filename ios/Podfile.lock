@@ -313,13 +313,13 @@ PODS:
     - React-jsi (= 0.63.4)
   - RNCMaskedView (0.1.10):
     - React
-  - RNDeviceInfo (8.0.1):
+  - RNDeviceInfo (8.0.2):
     - React-Core
-  - RNGestureHandler (1.9.0):
+  - RNGestureHandler (1.10.3):
     - React-Core
   - RNReanimated (1.13.2):
     - React-Core
-  - RNScreens (2.16.1):
+  - RNScreens (2.18.0):
     - React-Core
   - RNSVG (11.0.1):
     - React
@@ -577,10 +577,10 @@ SPEC CHECKSUMS:
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNDeviceInfo: 921a809eaf9de79645a24de1c6ca90db6cb91786
-  RNGestureHandler: 9b7e605a741412e20e13c512738a31bd1611759b
+  RNDeviceInfo: a9601119924a67d2479d3facf04cec7b658f44ed
+  RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
-  RNScreens: 45c457af3d2ee9e08fc01e70da87e653d46b1198
+  RNScreens: f0d7a2a440a8ba9f4574ca1ddb3368f473891be4
   RNSVG: 67f1f12dae2cef6ed59a42cae74a6b8f5a9e7b46
   UMAppLoader: 92d044af52626af3d81a69796ad666fc7a9a7d78
   UMBarCodeScannerInterface: 3f6c1b09ef4b867ce752b8c0b3893bcf9cd85f32
@@ -600,4 +600,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 8a6d7cc8c39fb6c25c70d175bd60a8c94f937463
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0

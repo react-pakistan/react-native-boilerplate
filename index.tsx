@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 // ########## Import Components Here ##########
 import { App } from './App';
 import { name as appName } from './app.json';
-import configureStore from './src/globals/store';
+import { configureStore } from './src/globals/store';
 import { appTheme } from './src/theme';
 
 // get store and middleware configured
