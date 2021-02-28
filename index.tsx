@@ -1,5 +1,5 @@
 // ########## Import Dependencies Here ##########
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
@@ -13,7 +13,7 @@ import { appTheme } from './src/theme';
 // get store and middleware configured
 const store = configureStore();
 
-const RN01 = () => (
+const RN01 = () : ReactElement => (
   <ThemeProvider theme={appTheme}>
     <Provider store={store}>
       <App />

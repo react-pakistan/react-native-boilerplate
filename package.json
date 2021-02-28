@@ -51,7 +51,16 @@
     "@babel/core": "^7.12.13",
     "@babel/runtime": "^7.12.13",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@react-pakistan/eslint-config-shared": "^1.2.6",
+    "@react-pakistan/eslint-config-shared": "^1.2.11",
+    "@types/i18n-js": "^3.8.0",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.2",
+    "@types/react-native": "^0.63.50",
+    "@types/react-redux": "^7.1.16",
+    "@types/react-test-renderer": "^17.0.1",
+    "@types/redux-logger": "^3.0.8",
+    "@types/styled-components": "^5.1.7",
+    "@types/styled-components-react-native": "^5.1.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "detox": "^18.2.2",
@@ -65,6 +74,7 @@
     "jest-circus": "^26.6.3",
     "lint-staged": "^10.5.4",
     "metro-react-native-babel-preset": "^0.65.0",
+    "react-native-typescript-transformer": "^1.2.13",
     "react-test-renderer": "17.0.1",
     "redux-mock-store": "^1.5.4",
     "stylelint": "^13.9.0",
@@ -72,7 +82,9 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
-    "stylelint-react-native": "^2.2.0"
+    "stylelint-react-native": "^2.2.0",
+    "ts-jest": "^26.5.2",
+    "typescript": "^4.2.2"
   },
   "jest": {
     "preset": "react-native"
