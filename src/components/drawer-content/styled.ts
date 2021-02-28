@@ -9,7 +9,4 @@ export const DrawerContentHeader = styled(View)`
   align-items: center;
 `;
 
-export const DrawerBanner = styled(Image)`
-  height: 150px;
-  width: 100%;
-`;
+export const DrawerBanner = styled(Image)``;

@@ -1,16 +1,7 @@
-// ########## Import Dependencies Here ##########
 import { FlatList, Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
-import {
-  func,
-  object,
-  shape,
-  string,
-} from 'prop-types';
-import React, { memo } from 'react';
+import { IRNTheme, width } from '@react-pakistan/util-react-native-functions';
+import React, { ReactElement, memo } from 'react';
 import { withTheme } from 'styled-components';
-
-// ########## Import Components Here ##########
-import { appTheme } from '../../theme';
 import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './styled';
 
 export const DrawerContent = memo(withTheme(({
@@ -18,10 +9,10 @@ export const DrawerContent = memo(withTheme(({
   descriptors,
   navigation,
   theme,
-}) => {
-  const renderItem = ({ item, index }) => (
+} : IDrawerContentProps) : ReactElement => {
+  const renderItem = ({ item, index } : any) : ReactElement => (
     <TouchableOpacity
-      onPress={() => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
+      onPress={() : void => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
     >
       <Text {...theme.typography.text}>
         {item.split('_')[1].charAt(0).toUpperCase() + item.split('_')[1].slice(1).toLowerCase().split('-')[0]}
@@ -33,10 +24,12 @@ export const DrawerContent = memo(withTheme(({
     <DrawerContentWrapper>
       <DrawerContentHeader>
         <DrawerBanner
+          height={150}
           resizeMode='contain'
           source={{
             uri: banner,
           }}
+          width={width}
         />
       </DrawerContentHeader>
       <FlatList
@@ -48,14 +41,26 @@ export const DrawerContent = memo(withTheme(({
   );
 }));
 
-DrawerContent.propTypes = {
-  banner: string.isRequired,
-  descriptors: object.isRequired,
-  navigation: shape({
-    navigate: func.isRequired,
-  }).isRequired,
-  theme: object,
-};
-DrawerContent.defaultProps = {
-  theme: appTheme,
-};
+export interface IDrawerContentProps {
+  /**
+   *
+   */
+  banner : string;
+  /**
+   *
+   */
+  descriptors : Object;
+  /**
+   *
+   */
+  navigation : {
+    /**
+     *
+     */
+    navigate : (s : string) => void;
+  };
+  /**
+   *
+   */
+  theme : IRNTheme;
+}

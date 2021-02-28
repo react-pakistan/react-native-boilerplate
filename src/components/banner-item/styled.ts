@@ -6,10 +6,7 @@ export const ListItemWrapper = styled(View)`
   width: ${width}px;
 `;
 
-export const ListItemBanner = styled(Image)`
-  height: ${({ theme }) => theme.spacing.huge * 4}px;
-  width: ${width}px;
-`;
+export const ListItemBanner = styled(Image)``;
 
 export const ListHeadingWrapper = styled(View)`
   align-items: center;

@@ -1,10 +1,6 @@
-// ########## Import Dependencies Here ##########
-import React, { memo } from 'react';
-import { object, string } from 'prop-types';
+import React, { ReactElement, memo } from 'react';
+import { IRNTheme, width } from '@react-pakistan/util-react-native-functions';
 import { withTheme } from 'styled-components';
-
-// ########## Import Components Here ##########
-import { appTheme } from '../../theme';
 import {
   LabelHeading,
   LabelText,
@@ -18,10 +14,12 @@ export const BannerItem = memo(withTheme(({
   description,
   label,
   theme,
-}) => (
+} : IBannerItemProps) : ReactElement => (
   <ListItemWrapper>
     <ListItemBanner
+      height={theme.spacing.huge * 4}
       source={{ uri: banner }}
+      width={width}
     />
     <TextWrapper>
       <LabelHeading
@@ -40,12 +38,21 @@ export const BannerItem = memo(withTheme(({
   </ListItemWrapper>
 )));
 
-BannerItem.propTypes = {
-  banner: string.isRequired,
-  description: string.isRequired,
-  label: string.isRequired,
-  theme: object,
-};
-BannerItem.defaultProps = {
-  theme: appTheme,
-};
+export interface IBannerItemProps {
+  /**
+   *
+   */
+  banner : string;
+  /**
+   *
+   */
+  description : string;
+  /**
+   *
+   */
+  label : string;
+  /**
+   *
+   */
+  theme : IRNTheme;
+}
