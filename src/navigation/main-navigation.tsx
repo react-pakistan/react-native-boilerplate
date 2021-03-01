@@ -5,6 +5,7 @@ import { MainScreen } from '../screens/main-screen';
 import { OnBoarding } from '../screens/on-boarding';
 
 export const MainNavigation = () : ReactElement => {
+  // selectors
   const hideIntro = useSelector(getHideIntro);
 
   return (
