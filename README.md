@@ -111,6 +111,7 @@ We aim to achieve 100% coverage and we shall...
 [![Forks](https://img.shields.io/github/forks/react-pakistan/react-native-boilerplate.svg?style=social)](https://github.com/react-pakistan/react-native-boilerplate)
 [![Stars](https://img.shields.io/github/stars/react-pakistan/react-native-boilerplate.svg?style=social)](https://github.com/react-pakistan/react-native-boilerplate)
 
+<<<<<<< HEAD
 Should you like this project and would like to see more coming in future, please consider giving a ⭐ on Github project repo.
 
 ### 📌 Contributors 🚀
