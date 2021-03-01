@@ -448,3 +448,7 @@ build/Build
 ### Test coverage folder
 __coverage__/
 cache/
+website/
+
+Pods/
+lib/

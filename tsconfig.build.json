@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "target": "es5",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "rootDir": "./src",
+    "declaration": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./images.d.ts",
+    "./node_modules/@types"
+  ],
+  "exclude": [
+    "./jest",
+    "./src/**/__tests__",
+    "./.storybook",
+    "./src/**/__stories__",
+    "./src/**/*.story.tsx",
+    "./src/**/props.ts",
+    "./src/colors",
+    "./src/typography"
+  ]
+}
