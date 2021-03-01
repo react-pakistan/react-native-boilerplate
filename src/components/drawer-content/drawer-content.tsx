@@ -24,7 +24,7 @@ export const DrawerContent = memo(withTheme(({
     <DrawerContentWrapper>
       <DrawerContentHeader>
         <DrawerBanner
-          height={150}
+          height={80}
           resizeMode='contain'
           source={{
             uri: banner,
