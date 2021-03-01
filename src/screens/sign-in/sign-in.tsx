@@ -26,12 +26,12 @@ export const SignIn = memo(withTheme(({
       <OAuthHeading>
         {loginScreenText.oAuthHeading}
       </OAuthHeading>
-      <Spacer marginVertical={theme.spacing.default} />
+      <Spacer marginVertical={theme.spacing.xsmall} />
       <Button
         onPress={onPressHandler}
         title={loginScreenText.facebookButton}
       />
-      <Spacer marginVertical={theme.spacing.default} />
+      <Spacer marginVertical={theme.spacing.xsmall} />
       <Button
         onPress={onPressHandler}
         title={loginScreenText.googleButton}

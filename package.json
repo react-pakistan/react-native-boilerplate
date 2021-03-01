@@ -36,7 +36,6 @@
     "@react-pakistan/react-native-ui-collection": "^2.1.2",
     "@react-pakistan/util-react-native-functions": "^1.4.9",
     "axios": "^0.21.1",
-    "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-native": "0.63.4",
     "react-native-device-info": "^8.0.2",
