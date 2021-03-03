@@ -1,5 +1,5 @@
 import { Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { SkipButtonProps } from 'react-native-onboarding-swiper';
 
 const backgroundColor = (isLight : boolean) : string => (isLight ? 'black' : 'white');
@@ -9,7 +9,7 @@ export const Skip = ({
   isLight,
   skipLabel,
   ...rest
-} : SkipButtonProps) : any => (
+} : SkipButtonProps) : ReactElement => (
     <TouchableOpacity
       testID='onboarding-skip-button'
       // title={'Skip'}

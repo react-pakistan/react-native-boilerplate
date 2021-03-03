@@ -1,5 +1,5 @@
 import { Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { NextButtonProps } from 'react-native-onboarding-swiper';
 
 const backgroundColor = (isLight : boolean) : string => (isLight ? 'black' : 'white');
@@ -9,7 +9,7 @@ export const Next = ({
   isLight,
   nextLabel,
   ...rest
-} : NextButtonProps) : any => (
+} : NextButtonProps) : ReactElement => (
   <TouchableOpacity
     testID='onboarding-next-button'
     // title={'Next'}
