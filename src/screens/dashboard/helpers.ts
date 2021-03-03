@@ -2,7 +2,7 @@ export const dashboardScreenText = {
   mainHeading: 'React Pakistan Open Source Projects',
 };
 
-export const openSourceMainProjects = [
+export const openSourceMainProjects : Array<IProject> = [
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1565548545/GitHub/React_Pakistan_Storybook_Logo.jpg',
     description: `React Pakistan is an OpenSource & Free Software (FOSS) platform,
@@ -12,7 +12,7 @@ export const openSourceMainProjects = [
   },
 ];
 
-export const openSourceMobileProjects = [
+export const openSourceMobileProjects : Array<IProject> = [
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1548862588/react-native-boilerplate.jpg',
     description: `A collection of curated and well maintained React Native
@@ -57,7 +57,7 @@ export const openSourceMobileProjects = [
   },
 ];
 
-export const openSourceWebProjects = [
+export const openSourceWebProjects : Array<IProject> = [
   {
     banner: 'https://res.cloudinary.com/dq6hflqwx/image/upload/v1566355017/GitHub/react-commons-collection.jpg',
     description: `A generic, Commons library for React web apps, following modern approach by building your
@@ -101,3 +101,10 @@ export const openSourceWebProjects = [
     label: 'React Design Collection',
   },
 ];
+
+export interface IProject {
+  banner : string;
+  description : string;
+  id : string;
+  label : string;
+}
