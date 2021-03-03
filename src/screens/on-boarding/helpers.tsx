@@ -1,7 +1,8 @@
 import React from 'react';
 import { Image } from 'react-native';
+import { Page } from 'react-native-onboarding-swiper';
 
-export const onBoardingData = [
+export const onBoardingData : Array<Page> = [
   {
     backgroundColor: '#00FFF2',
     image: <Image source={require('../../assets/images/illustration.png')} />,
