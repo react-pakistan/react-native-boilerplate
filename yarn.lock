@@ -2026,6 +2026,13 @@
     react-native-svg "^11.0.1"
     styled-components "^5.2.1"
 
+"@react-pakistan/util-functions@^1.5.2":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@react-pakistan/util-functions/-/util-functions-1.5.2.tgz#90a15537c190442cce3b6a9db6f9b291aa5854f5"
+  integrity sha512-xLwPNyZ9+9IUsyHEnc4kuSi+cfVbRV7SxZgaLPAbaDAsV4mupV4MznzvsQotn8YVWL44ne+QEerCEMZ85mrwFg==
+  dependencies:
+    "@microsoft/tsdoc" "^0.13.0"
+
 "@react-pakistan/util-react-native-functions@^1.4.11":
   version "1.4.11"
   resolved "https://registry.yarnpkg.com/@react-pakistan/util-react-native-functions/-/util-react-native-functions-1.4.11.tgz#592835a1e10fe08f8642f707a003a06b86160ef2"

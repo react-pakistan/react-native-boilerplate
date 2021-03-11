@@ -1,4 +1,4 @@
-import { emptyActionCreator } from './action-creator-factories';
+import { emptyActionCreator } from '@react-pakistan/util-functions';
 import { TYPES } from '../constants';
 
 export const hideIntroAction = emptyActionCreator<
