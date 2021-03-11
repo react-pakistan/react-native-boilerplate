@@ -1,7 +1,4 @@
-// ########## Import Dependencies Here ##########
-
-// ########## Import Components Here ##########
-import { IAction } from '../actions/action-creator-factories';
+import { IAction } from '@react-pakistan/util-functions';
 import { TYPES } from '../constants';
 
 const initial = {

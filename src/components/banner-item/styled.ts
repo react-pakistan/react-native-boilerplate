@@ -1,5 +1,6 @@
 import { Image, Text, View } from '@react-pakistan/react-native-commons-collection';
-import { width } from '@react-pakistan/util-react-native-functions';
+import { IRNTheme, width } from '@react-pakistan/util-react-native-functions';
+import { ThemedStyledProps } from 'styled-components';
 import styled from 'styled-components/native';
 
 export const ListItemWrapper = styled(View)`
@@ -11,11 +12,11 @@ export const ListItemBanner = styled(Image)``;
 export const ListHeadingWrapper = styled(View)`
   align-items: center;
   justify-content: center;
-  padding: ${({ theme }) => theme.spacing.default}px;
+  padding: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.default}px;
 `;
 
 export const TextWrapper = styled(View)`
-  padding: ${({ theme }) => theme.spacing.default}px;
+  padding: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.default}px;
 `;
 
 export const LabelHeading = styled(Text)``;

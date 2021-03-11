@@ -34,6 +34,7 @@
     "@react-pakistan/react-native-commons-collection": "^2.3.1",
     "@react-pakistan/react-native-icon-collection": "^2.3.1",
     "@react-pakistan/react-native-ui-collection": "^2.1.3",
+    "@react-pakistan/util-functions": "^1.5.2",
     "@react-pakistan/util-react-native-functions": "^1.4.11",
     "axios": "^0.21.1",
     "react": "17.0.1",

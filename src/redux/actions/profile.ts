@@ -1,4 +1,4 @@
-import { emptyActionCreator, payloadActionCreator } from './action-creator-factories';
+import { emptyActionCreator, payloadActionCreator } from '@react-pakistan/util-functions';
 
 import apiCaller from '../../globals/api-caller';
 import { ENDPOINTS, REQUEST_TYPES, BASE_URL } from '../../globals/endpoints';
