@@ -1,10 +1,10 @@
+import { IEmptyAction } from '@react-pakistan/util-functions/action-creator-factories';
 import { DrawerActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import React, { ReactElement, ReactNode } from 'react';
 import { useDispatch } from 'react-redux';
 import { hideAppAction } from '../../redux/actions';
-import { IEmptyAction } from '../../redux/actions/action-creator-factories';
 import { TYPES } from '../../redux/constants';
 import { Dashboard as DashboardScreen } from '../../screens/dashboard';
 import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';

@@ -2,7 +2,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { IRNTheme } from '@react-pakistan/util-react-native-functions';
 import React, { ReactElement, ReactNode, memo } from 'react';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components/native';
 import { DrawerContent } from '../../components/drawer-content';
 import { NAVIGATION_ROUTES } from '../navigation-routes';
 import { ProfileStack } from '../stacks';

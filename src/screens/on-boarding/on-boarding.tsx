@@ -1,9 +1,9 @@
+import { IEmptyAction } from '@react-pakistan/util-functions/action-creator-factories';
 import React, { ReactElement } from 'react';
 import Onboarding from 'react-native-onboarding-swiper';
 import { useDispatch } from 'react-redux';
 import { hideIntroAction } from '../../redux/actions';
 import { TYPES } from '../../redux/constants';
-import { IEmptyAction } from '../../redux/actions/action-creator-factories';
 import { Next, Skip } from './components';
 import { onBoardingData } from './helpers';
 

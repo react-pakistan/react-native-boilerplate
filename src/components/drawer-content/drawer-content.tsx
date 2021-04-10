@@ -1,7 +1,7 @@
 import { FlatList, Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
 import { IRNTheme, width } from '@react-pakistan/util-react-native-functions';
 import React, { ReactElement, memo } from 'react';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components/native';
 import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './styled';
 
 export const DrawerContent = memo(withTheme(({
@@ -34,7 +34,6 @@ export const DrawerContent = memo(withTheme(({
       </DrawerContentHeader>
       <FlatList
         data={Object.keys(descriptors)}
-        keyExtractor={(item) => item}
         renderItem={renderItem}
       />
     </DrawerContentWrapper>

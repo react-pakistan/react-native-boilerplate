@@ -2,7 +2,7 @@ import { Button, Spacer } from '@react-pakistan/react-native-commons-collection'
 import { IRNTheme } from '@react-pakistan/util-react-native-functions';
 import React, { ReactElement, memo, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components/native';
 import { showAppAction } from '../../redux/actions';
 import { loginScreenText } from './helpers';
 import {

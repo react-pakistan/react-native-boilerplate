@@ -2,7 +2,7 @@ import { ActivityIndicator, Text } from '@react-pakistan/react-native-commons-co
 import { IRNTheme } from '@react-pakistan/util-react-native-functions';
 import React, { Fragment, ReactElement, memo, useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components/native';
 import { fetchProfileData } from '../../redux/actions';
 import { getUserDataFromState, getUserIsLoadingFromState } from '../../redux/selectors';
 import { profileScreenText } from './helpers';
