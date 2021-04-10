@@ -30,6 +30,7 @@ appTheme.typography.h2 = {
 };
 appTheme.typography.h3 = {
   ...appTheme.typography.h3,
+  color: theme.misc.isDarkMode ? theme.colors.white : theme.colors.black,
   fontFamily: 'Roboto-Regular',
   fontSize: isTablet() ? scale(16) : scale(16),
   letterSpacing: 0,
