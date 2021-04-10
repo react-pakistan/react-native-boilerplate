@@ -1,3 +1,4 @@
+import { IEmptyAction } from '@react-pakistan/util-functions/action-creator-factories';
 import { DrawerActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
@@ -5,7 +6,6 @@ import React, { ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
 import { hideAppAction } from '../../redux/actions';
 import { TYPES } from '../../redux/constants';
-import { IEmptyAction } from '../../redux/actions/action-creator-factories';
 import { DashboardMobile as DashboardMobileScreen } from '../../screens/dashboard';
 import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';
 import { HeaderIcon } from '../styled';

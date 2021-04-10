@@ -1,6 +1,6 @@
 import React, { ReactElement, memo } from 'react';
 import { IRNTheme, width } from '@react-pakistan/util-react-native-functions';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components/native';
 import {
   LabelHeading,
   LabelText,

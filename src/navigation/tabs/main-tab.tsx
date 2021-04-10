@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import { IRNTheme } from '@react-pakistan/util-react-native-functions';
 import React, { ReactElement, memo } from 'react';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components/native';
 import { NAVIGATION_ROUTES, NAVIGATION_TITLES } from '../navigation-routes';
 import { DashboardStack, DashboardMobileStack, DashboardWebStack } from '../stacks';
 

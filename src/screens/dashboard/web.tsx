@@ -1,7 +1,7 @@
 import { IRNTheme } from '@react-pakistan/util-react-native-functions';
 import React, { ReactElement, memo } from 'react';
 import { FlatList } from 'react-native';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'styled-components/native';
 import { BannerItem } from '../../components/banner-item';
 import { dashboardScreenText, openSourceWebProjects } from './helpers';
 import {
