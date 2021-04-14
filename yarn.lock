@@ -1954,25 +1954,25 @@
     eslint-plugin-react-hooks "^4.2.0"
     typescript "^4.2.4"
 
-"@react-pakistan/react-native-commons-collection@^2.6.4":
-  version "2.6.4"
-  resolved "https://registry.yarnpkg.com/@react-pakistan/react-native-commons-collection/-/react-native-commons-collection-2.6.4.tgz#2af86195a0a8171a0fac2086804ee86050f0d983"
-  integrity sha512-dXjeg9+tQhO/Td+ieNBZWRIRaRC9i9kzR82Pmp4ErFpCuMINNnb8W1SihasN332t7LNemiF+4keUmj3IpoJ/7Q==
+"@react-pakistan/react-native-commons-collection@^2.6.5":
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/@react-pakistan/react-native-commons-collection/-/react-native-commons-collection-2.6.5.tgz#cc71715f37de7b4da5af71266372605fa067ca7b"
+  integrity sha512-NtKowVOhSu4itL8cWLOzSp+o+V+J1o3y7io4lEgNYjDveBMmnm3MzbfrgFZ28NpGzFmTuQHtDO/U/KEc9uduAA==
 
-"@react-pakistan/react-native-icon-collection@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@react-pakistan/react-native-icon-collection/-/react-native-icon-collection-2.4.0.tgz#e52894e0410186baf8be4d65a2579824594ba1da"
-  integrity sha512-9zq4GsLOK5RKhusPWL+lZnorp6yA/Ka5561PT3yk6EDElojMzIUNwcCC4h8gGgl9g4H3U8pCztbysO5DuVVyxg==
+"@react-pakistan/react-native-icon-collection@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@react-pakistan/react-native-icon-collection/-/react-native-icon-collection-2.4.2.tgz#a56bb4224ea5beccfcd8da6ba6255139514c291e"
+  integrity sha512-PxktjpBR3+RyBapuRV+yF9CLpeUOWW41LiesGeknBZLQVV4wd6DUBBvqQf4GJn19DMTdAbnfhFykNJDBL+pORQ==
 
-"@react-pakistan/react-native-ui-collection@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@react-pakistan/react-native-ui-collection/-/react-native-ui-collection-2.4.1.tgz#076d5527a5816839f0cf7d702459669e4037c264"
-  integrity sha512-4vjKhtKa5StYtFr/dMWZdTyMOXEDpCk5Adp/ZeFYv/iLgAI0XiHta4tZMUwwq9trVVgc6HXI73ULu9UhLzrIdg==
+"@react-pakistan/react-native-ui-collection@^2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@react-pakistan/react-native-ui-collection/-/react-native-ui-collection-2.4.3.tgz#edd2c79a66ae372fcc131fbe607a9f04f55600dc"
+  integrity sha512-Eq2voT0k5XEX0Z3s/DdWma4TbsgeDIsSawp5Ad6qdf+m4iVIHKviSG0ZrmoCamASoGyKOVyuEkycn9fUWu3V0w==
 
-"@react-pakistan/util-functions@^1.6.2":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@react-pakistan/util-functions/-/util-functions-1.6.2.tgz#2adf65fb4ca106aeec2052e0ab848b3a4feb6a35"
-  integrity sha512-kbSfHV3YMPVhC/cQjMnXbCEB8YvZ94+I5mwxhTS44OQF9WHY46KRpatvEX/pctyeVIbt7oBuKWBUIeDyDVmIyg==
+"@react-pakistan/util-functions@^1.6.3":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@react-pakistan/util-functions/-/util-functions-1.6.3.tgz#b42195cae5e4bd18cbee3633a321ed36d85e0156"
+  integrity sha512-txPb20Ihkl44FEmBRC6394WWHQfNHN1KCuRO1ZBJ+KmBuaRCs2gIIVXPOQP74Ui7ZRbGqmGrtOMT4df8RNfjAA==
   dependencies:
     "@microsoft/tsdoc" "^0.13.0"
 
@@ -3937,10 +3937,10 @@ detect-newline@^3.0.0:
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
   integrity sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==
 
-detox@^18.11.0:
-  version "18.11.0"
-  resolved "https://registry.yarnpkg.com/detox/-/detox-18.11.0.tgz#6ed65020dc5e6201d64406f4ae0805706600290a"
-  integrity sha512-DcEdXPIeQbxtw3fzHyM1TNvIuWlvwfCr4NnRQ8hLpy/uEUG+e0sYtQka+YJ6BoJM8OqAxZhHVwA++kaaiv3iHQ==
+detox@^18.12.0:
+  version "18.12.0"
+  resolved "https://registry.yarnpkg.com/detox/-/detox-18.12.0.tgz#2fd2c6f35b961b462c5f68dd4243a6cb3611ef0f"
+  integrity sha512-AZLbI1TInfK1/aQjqIDDGYtgdlaocexnC40wN9NIa3rEwUjh21UyasYeYjG9RmHGVz3QQjVdmp2cDx+rKduDfg==
   dependencies:
     bunyan "^1.8.12"
     bunyan-debug-stream "^1.1.0"
@@ -3963,7 +3963,7 @@ detox@^18.11.0:
     telnet-client "1.2.8"
     tempfile "^2.0.0"
     which "^1.3.1"
-    ws "^7.4.3"
+    ws "^7.0.0"
     yargs "^16.0.3"
     yargs-unparser "^2.0.0"
 
@@ -8312,10 +8312,10 @@ react-native-codegen@^0.0.6:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
-react-native-device-info@^8.0.8:
-  version "8.0.8"
-  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-8.0.8.tgz#53f14cb6a7d2fa80863df32e4de388a76fbb3f42"
-  integrity sha512-ljtm48riQeZgf2epIq8TvyxiXZW6vstIX7JDlr89HtrYLUvlX3dmOmxtwZshMuAdk0VpGz/72zvpTDZMSQcKig==
+react-native-device-info@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-8.1.0.tgz#7d0ecf65cb26dbdbcdd555fc7bce2d9750b8b3d9"
+  integrity sha512-szEbRRFQ1NYPOjGWyIMsZGk5W2eU4JTiFLaNVXTbK4u/BS/Z5moVJKcoJgYR6Fxiu6qPAY/ofJySJoSdhSeOnw==
 
 react-native-elements@^3.3.2:
   version "3.3.2"
@@ -8387,10 +8387,10 @@ react-native-safe-area-context@^3.2.0:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.2.0.tgz#06113c6b208f982d68ab5c3cebd199ca93db6941"
   integrity sha512-k2Nty4PwSnrg9HwrYeeE+EYqViYJoOFwEy9LxL5RIRfoqxAq/uQXNGwpUg2/u4gnKpBbEPa9eRh15KKMe/VHkA==
 
-react-native-screens@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-3.1.0.tgz#3b516528b54ab8108bf230197fa6e65c7c4a062a"
-  integrity sha512-2nCwfminzGfM61Py4PID5hJVV4zGhbYD6TIv16Xj6M0MMNWr9esqIlI94NymY7B12SToXMb5duKU/IR5iBCykg==
+react-native-screens@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-3.1.1.tgz#2cd4496c5e3ed1ffbaf77962b8fcc10be3af2158"
+  integrity sha512-cjhK85T8LQ7uqqmwvLb8FKNk1RfgJd1jtbUm1lOxUmJreFki5Wh2SUlx0DAvNG35U6quGD15KPYRducGa+M04g==
 
 react-native-size-matters@^0.3.1:
   version "0.3.1"
@@ -10532,7 +10532,7 @@ ws@^6.1.4:
   dependencies:
     async-limiter "~1.0.0"
 
-ws@^7, ws@^7.4.3, ws@^7.4.4:
+ws@^7, ws@^7.0.0, ws@^7.4.4:
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.4.tgz#383bc9742cb202292c9077ceab6f6047b17f2d59"
   integrity sha512-Qm8k8ojNQIMx7S+Zp8u/uHOx7Qazv3Yv4q68MiWWWOJhiwG5W3x7iqmRtJo8xxrciZUY4vRxUTJCKuRnF28ZZw==

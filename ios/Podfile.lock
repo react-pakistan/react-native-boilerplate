@@ -339,7 +339,7 @@ PODS:
     - React-perflogger (= 0.64.0)
   - RNCMaskedView (0.1.10):
     - React
-  - RNDeviceInfo (8.0.8):
+  - RNDeviceInfo (8.1.0):
     - React-Core
   - RNGestureHandler (1.10.3):
     - React-Core
@@ -372,7 +372,7 @@ PODS:
     - React-RCTVibration
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.1.0):
+  - RNScreens (3.1.1):
     - React-Core
   - RNSVG (11.0.1):
     - React
@@ -650,10 +650,10 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: cad74a1eaa53ee6e7a3620231939d8fe2c6afcf0
   ReactCommon: cfe2b7fd20e0dbd2d1185cd7d8f99633fbc5ff05
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNDeviceInfo: 41a8c8a41ae0e70d85cbe652cd5318150cb2cc40
+  RNDeviceInfo: 677a08eaafcfac4e85d2d2aab68a3708ff261c04
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: b8c8004b43446e3c2709fe64b2b41072f87428ad
-  RNScreens: 3ba2198ca3179f77f6158425fc31ba3c90a0d49f
+  RNScreens: bd1523c3bde7069b8e958e5a16e1fc7722ad0bdd
   RNSVG: 67f1f12dae2cef6ed59a42cae74a6b8f5a9e7b46
   UMAppLoader: 92d044af52626af3d81a69796ad666fc7a9a7d78
   UMBarCodeScannerInterface: 3f6c1b09ef4b867ce752b8c0b3893bcf9cd85f32
