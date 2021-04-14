@@ -25,6 +25,13 @@
 
 React Pakistan is an OpenSource & Free Software (FOSS) platform, creating React software solutions for the global community. ⭐⭐⭐
 
+[![License](https://img.shields.io/github/license/react-pakistan/react-native-boilerplate.svg)](https://github.com/react-pakistan/react-native-boilerplate/blob/master/LICENSE)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b40bb064f95f4077ba0fbf7fcb91ab55)](https://www.codacy.com/app/Taimoormk/react-native-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=react-pakistan/react-native-boilerplate&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://app.bitrise.io/app/6ffe266405736e5a/status.svg?token=_giyzRcYfh65hOw2Pv01Ug&branch=RN01)](https://app.bitrise.io/app/6ffe266405736e5a)
+[![Followers](https://img.shields.io/github/followers/taimoormk.svg?style=social)](https://github.com/taimoormk)
+[![Forks](https://img.shields.io/github/forks/react-pakistan/react-native-boilerplate.svg?style=social)](https://github.com/react-pakistan/react-native-boilerplate)
+[![Stars](https://img.shields.io/github/stars/react-pakistan/react-native-boilerplate.svg?style=social)](https://github.com/react-pakistan/react-native-boilerplate)
+
 ## 📌 React Native Boilerplate ✌
 
 <div>
@@ -104,14 +111,6 @@ Refer to [React Pakistan Docs](https://react-pakistan.github.io/react-pakistan-d
 
 We aim to achieve 100% coverage and we shall...
 
-[![License](https://img.shields.io/github/license/react-pakistan/react-native-boilerplate.svg)](https://github.com/react-pakistan/react-native-boilerplate/blob/master/LICENSE)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b40bb064f95f4077ba0fbf7fcb91ab55)](https://www.codacy.com/app/Taimoormk/react-native-boilerplate?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=react-pakistan/react-native-boilerplate&amp;utm_campaign=Badge_Grade)
-[![Build Status](https://app.bitrise.io/app/6ffe266405736e5a/status.svg?token=_giyzRcYfh65hOw2Pv01Ug&branch=RN01)](https://app.bitrise.io/app/6ffe266405736e5a)
-[![Followers](https://img.shields.io/github/followers/taimoormk.svg?style=social)](https://github.com/taimoormk)
-[![Forks](https://img.shields.io/github/forks/react-pakistan/react-native-boilerplate.svg?style=social)](https://github.com/react-pakistan/react-native-boilerplate)
-[![Stars](https://img.shields.io/github/stars/react-pakistan/react-native-boilerplate.svg?style=social)](https://github.com/react-pakistan/react-native-boilerplate)
-
-<<<<<<< HEAD
 Should you like this project and would like to see more coming in future, please consider giving a ⭐ on Github project repo.
 
 ### 📌 Contributors 🚀
