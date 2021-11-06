@@ -33,6 +33,9 @@ export const MainTab = memo(withTheme(({
       style: {},
       tabStyle: {},
     }}
+    screenOptions={{
+      headerShown: false,
+    }}
   >
     <Tab.Screen
       component={DashboardStack}

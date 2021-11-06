@@ -17,7 +17,11 @@ export const DashboardStack = () : ReactElement => {
   const dispatch = useDispatch();
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen
         component={DashboardScreen}
         name={NAVIGATION_ROUTES.TAB_MAIN}

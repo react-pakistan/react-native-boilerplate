@@ -15,7 +15,11 @@ export const ProfileStack = () => {
   const dispatch = useDispatch();
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen
         name={NAVIGATION_ROUTES.DRAWER_PROFILE}
         component={ProfileScreen}

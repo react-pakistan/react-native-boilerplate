@@ -17,7 +17,11 @@ export const DashboardMobileStack = () : ReactElement => {
   const dispatch = useDispatch();
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen
         name={NAVIGATION_ROUTES.TAB_MOBILE}
         component={DashboardMobileScreen}
