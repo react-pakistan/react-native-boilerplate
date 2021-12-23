@@ -4,7 +4,9 @@ import { ThemedStyledProps } from 'styled-components';
 import styled from 'styled-components/native';
 
 export const DrawerContentWrapper = styled(View)`
-  padding: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.default}px;
+  padding: ${({
+    theme,
+  } : ThemedStyledProps<unknown, IRNTheme>) : number => theme.spacing.default}px;
 `;
 
 export const DrawerContentHeader = styled(View)`

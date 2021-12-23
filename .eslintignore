@@ -1,3 +1,10 @@
+.github/
+.husky/
+__tests__/
+android/
+assets/
+coverage/
 e2e/
+ios/
 node_modules/
 stylelint.config.js

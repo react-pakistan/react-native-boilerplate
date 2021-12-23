@@ -10,27 +10,27 @@ export const Skip = ({
   skipLabel,
   ...rest
 } : SkipButtonProps) : ReactElement => (
-    <TouchableOpacity
-      testID='onboarding-skip-button'
-      // title={'Skip'}
-      // buttonStyle={{
-      //   backgroundColor: backgroundColor(isLight),
-      // }}
-      // containerViewStyle={{
-      //   marginVertical: 10,
-      //   width: 70,
-      // }}
-      // textStyle={{ color: color(isLight) }}
-      {...rest}
+  <TouchableOpacity
+    testID='onboarding-skip-button'
+    // title={'Skip'}
+    // buttonStyle={{
+    //   backgroundColor: backgroundColor(isLight),
+    // }}
+    // containerViewStyle={{
+    //   marginVertical: 10,
+    //   width: 70,
+    // }}
+    // textStyle={{ color: color(isLight) }}
+    {...rest}
+  >
+    <Text
+      style={{
+        color: color(isLight),
+        fontSize: 16,
+        padding: 16,
+      }}
     >
-      <Text
-        style={{
-          color: color(isLight),
-          fontSize: 16,
-          padding: 16,
-        }}
-      >
-        {skipLabel}
-      </Text>
-    </TouchableOpacity>
+      {skipLabel}
+    </Text>
+  </TouchableOpacity>
 );

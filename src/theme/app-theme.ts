@@ -1,4 +1,6 @@
-import { IRNTheme, isTablet, scale, theme } from '@react-pakistan/util-react-native-functions';
+import {
+  IRNTheme, isTablet, scale, theme,
+} from '@react-pakistan/util-react-native-functions';
 import { Appearance } from 'react-native';
 
 const isDarkMode = Appearance.getColorScheme() === 'dark';

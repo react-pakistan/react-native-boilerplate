@@ -1,8 +1,10 @@
-import { emptyActionCreator, payloadActionCreator } from '@react-pakistan/util-functions';
+/* eslint-disable */
 
+import { emptyActionCreator, payloadActionCreator } from '@react-pakistan/util-functions';
 import apiCaller from '../../globals/api-caller';
 import { ENDPOINTS, REQUEST_TYPES, BASE_URL } from '../../globals/endpoints';
 import { TYPES } from '../constants';
+import { IProfile } from '../type';
 
 export const fetchProfileDataAttempt = emptyActionCreator<
   TYPES.FETCH_DATA_PROFILE_ATTEMPT
@@ -10,15 +12,15 @@ export const fetchProfileDataAttempt = emptyActionCreator<
 
 export const fetchProfileDataSuccess = payloadActionCreator<
   TYPES.FETCH_DATA_PROFILE_SUCCESS,
-  any
+  IProfile
 >(TYPES.FETCH_DATA_PROFILE_SUCCESS);
 
 export const fetchProfileDataFail = payloadActionCreator<
   TYPES.FETCH_DATA_PROFILE_FAIL,
-  any
+  Error
 >(TYPES.FETCH_DATA_PROFILE_FAIL);
 
-export const fetchProfileData = (username : string) : any => {
+export const fetchProfileData = (username: string) : any => {
   const thunk = async (dispatch : any) : Promise<any> => {
     dispatch(fetchProfileDataAttempt());
     try {
@@ -28,5 +30,6 @@ export const fetchProfileData = (username : string) : any => {
       dispatch(fetchProfileDataFail(err));
     }
   };
+
   return thunk;
 };

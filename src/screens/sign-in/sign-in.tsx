@@ -10,7 +10,7 @@ import {
   SignInWrapper,
 } from './styled';
 
-export const SignIn = memo(withTheme(({
+const SignInComp = ({
   theme,
 } : ISignInProps) : ReactElement => {
   // dispatch
@@ -19,7 +19,7 @@ export const SignIn = memo(withTheme(({
   // callbacks
   const onPressHandler = useCallback(() : void => {
     dispatch(showAppAction());
-  }, []);
+  }, [dispatch]);
 
   return (
     <SignInWrapper>
@@ -38,7 +38,9 @@ export const SignIn = memo(withTheme(({
       />
     </SignInWrapper>
   );
-}));
+};
+
+export const SignIn = memo(withTheme(SignInComp));
 
 export interface ISignInProps {
   /**

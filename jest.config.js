@@ -7,7 +7,8 @@ module.exports = {
     '<rootDir>/__tests__/jest.setup.js',
   ],
   transformIgnorePatterns: [
-    "node_modules/(?!react-native|@react-native|react-native-onboarding-swiper|react-navigation|react-native-fabric|@ptomasroos/react-native-multi-slider|@react-native-community/segmented-control|@react-native-community/viewpager|@react-native-community|react-native-paper|@react-native-firebase/database|@react-native-firebase/app)"
+    // eslint-disable-next-line
+    'node_modules/(?!react-native|@react-native|react-native-onboarding-swiper|react-navigation|react-native-fabric|@ptomasroos/react-native-multi-slider|@react-native-community/segmented-control|@react-native-community/viewpager|@react-native-community|react-native-paper|@react-native-firebase/database|@react-native-firebase/app)',
   ],
   testPathIgnorePatterns: [
     '<rootDir>/__tests__/jest.setup.js',

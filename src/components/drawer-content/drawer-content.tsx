@@ -1,6 +1,7 @@
 import { FlatList, Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
 import { IRNTheme, width } from '@react-pakistan/util-react-native-functions';
 import React, { ReactElement, memo } from 'react';
+import { ListRenderItem } from 'react-native';
 import { withTheme } from 'styled-components/native';
 import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './styled';
 
@@ -10,7 +11,7 @@ export const DrawerContent = memo(withTheme(({
   navigation,
   theme,
 } : IDrawerContentProps) : ReactElement => {
-  const renderItem = ({ item, index } : any) : ReactElement => (
+  const renderItem : ListRenderItem<string> = ({ item, index }) : ReactElement => (
     <TouchableOpacity
       onPress={() : void => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
     >
@@ -48,7 +49,7 @@ export interface IDrawerContentProps {
   /**
    *
    */
-  descriptors : Object;
+  descriptors : Record<string, unknown>;
   /**
    *
    */

@@ -1,7 +1,9 @@
+/* eslint-disable */
+
 import axios from 'axios';
 import { BASE_URL as baseURL, REQUEST_TYPES } from './endpoints';
 
-export default (method = REQUEST_TYPES.GET, url : string) : Promise<any> => axios({
+export default (method = REQUEST_TYPES.GET, url : string) : Promise<void> => axios({
   method,
   baseURL,
   url,

@@ -7,7 +7,7 @@ export enum NAVIGATION_ROUTES {
   TAB_MAIN = 'TAB_MAIN',
   TAB_MOBILE ='TAB_MOBILE',
   TAB_WEB = 'TAB_WEB',
-};
+}
 
 export enum NAVIGATION_TITLES {
   DRAWER_DASHBOARD = 'Dashboard',
@@ -15,4 +15,4 @@ export enum NAVIGATION_TITLES {
   TAB_MAIN = 'Main',
   TAB_MOBILE = 'Mobile',
   TAB_WEB = 'Web',
-};
+}
