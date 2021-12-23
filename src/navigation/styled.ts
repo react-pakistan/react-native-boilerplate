@@ -4,7 +4,13 @@ import { ThemedStyledProps } from 'styled-components';
 import styled from 'styled-components/native';
 
 export const HeaderIcon = styled(TouchableOpacity)`
-  height: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.xlarge}px;
-  margin-horizontal: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.small}px;
-  width: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.xlarge}px;
+  height: ${({
+    theme,
+  } : ThemedStyledProps<unknown, IRNTheme>) : number => theme.spacing.xlarge}px;
+  margin-horizontal: ${({
+    theme,
+  } : ThemedStyledProps<unknown, IRNTheme>) : number => theme.spacing.small}px;
+  width: ${({
+    theme,
+  } : ThemedStyledProps<unknown, IRNTheme>) : number => theme.spacing.xlarge}px;
 `;

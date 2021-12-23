@@ -12,11 +12,15 @@ export const ListItemBanner = styled(Image)``;
 export const ListHeadingWrapper = styled(View)`
   align-items: center;
   justify-content: center;
-  padding: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.default}px;
+  padding: ${({
+    theme,
+  } : ThemedStyledProps<unknown, IRNTheme>) : number => theme.spacing.default}px;
 `;
 
 export const TextWrapper = styled(View)`
-  padding: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.default}px;
+  padding: ${({
+    theme,
+  } : ThemedStyledProps<unknown, IRNTheme>) : number => theme.spacing.default}px;
 `;
 
 export const LabelHeading = styled(Text)``;

@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+
 import React from 'react';
 import { Image } from 'react-native';
 import { Page } from 'react-native-onboarding-swiper';

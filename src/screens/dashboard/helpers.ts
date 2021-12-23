@@ -1,3 +1,5 @@
+import { IProject } from './type';
+
 export const dashboardScreenText = {
   mainHeading: 'React Pakistan Open Source Projects',
 };
@@ -101,10 +103,3 @@ export const openSourceWebProjects : Array<IProject> = [
     label: 'React Design Collection',
   },
 ];
-
-export interface IProject {
-  banner : string;
-  description : string;
-  id : string;
-  label : string;
-}

@@ -12,27 +12,20 @@ exports[`renders SignIn component correctly 1`] = `
         "replaceReducer": [Function],
         "subscribe": [Function],
       },
-      "subscription": Subscription {
+      "subscription": Object {
+        "addNestedSub": [Function],
+        "getListeners": [Function],
         "handleChangeWrapper": [Function],
-        "listeners": Object {
-          "notify": [Function],
-        },
+        "isSubscribed": [Function],
+        "notifyNestedSubs": [Function],
         "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "unsubscribe": null,
+        "trySubscribe": [Function],
+        "tryUnsubscribe": [Function],
       },
     }
   }
 >
-  <Memo(WithTheme(Component))
+  <Memo(WithTheme(SignInComp))
     showApp={false}
     showAppAction={[Function]}
   />

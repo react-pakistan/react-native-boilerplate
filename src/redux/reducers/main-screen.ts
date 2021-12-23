@@ -1,22 +1,25 @@
+/* eslint-disable */
+
 import { IAction } from '@react-pakistan/util-functions';
 import { TYPES } from '../constants';
+import { IMainScreen } from '../type';
 
 const initial = {
-  hideIntro: true,
   showApp: false,
+  showOnboarding: true,
 };
 
 export const mainScreen = (
   state = initial,
-  action : IAction
-) : any => {
+  action : IAction,
+) : IMainScreen => {
   switch (action.type) {
-    case TYPES.HIDE_INTRO:
-      return { ...state, hideIntro: false };
+    case TYPES.SHOW_ONBOARDING:
+      return { ...state, showOnboarding: false };
     case TYPES.SHOW_APP:
-      return { ...state, hideIntro: false, showApp: true };
+      return { ...state, showOnboarding: false, showApp: true };
     case TYPES.HIDE_APP:
-      return { ...state, hideIntro: false, showApp: false };
+      return { ...state, showOnboarding: false, showApp: false };
     default:
       return state;
   }

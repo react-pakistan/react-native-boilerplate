@@ -1,16 +1,18 @@
-import React, { Fragment, ReactElement } from 'react';
+/* eslint-disable */
+
+import React, { ReactElement } from 'react';
 import { useSelector } from 'react-redux';
-import { getHideIntro } from '../redux/selectors';
+import { getShowOnboarding } from '../redux/selectors';
 import { MainScreen } from '../screens/main-screen';
 import { OnBoarding } from '../screens/on-boarding';
 
 export const MainNavigation = () : ReactElement => {
   // selectors
-  const hideIntro = useSelector(getHideIntro);
+  const showOnboarding = useSelector(getShowOnboarding);
 
   return (
-    <Fragment>
-      {hideIntro ? <OnBoarding /> : <MainScreen />}
-    </Fragment>
+    <>
+      {showOnboarding ? <OnBoarding /> : <MainScreen />}
+    </>
   );
 };

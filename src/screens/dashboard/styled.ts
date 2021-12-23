@@ -13,6 +13,10 @@ export const DashboardHeading = styled(Text)``;
 export const ListHeadingWrapper = styled(View)`
   align-items: center;
   justify-content: center;
-  padding-horizontal: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.default}px;
-  padding-vertical: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.spacing.default}px;
+  padding-horizontal: ${({
+    theme,
+  } : ThemedStyledProps<unknown, IRNTheme>) : number => theme.spacing.default}px;
+  padding-vertical: ${({
+    theme,
+  } : ThemedStyledProps<unknown, IRNTheme>) : number => theme.spacing.default}px;
 `;

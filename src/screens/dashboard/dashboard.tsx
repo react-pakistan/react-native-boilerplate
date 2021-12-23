@@ -1,6 +1,6 @@
 import { IRNTheme } from '@react-pakistan/util-react-native-functions';
 import React, { ReactElement, memo } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, ListRenderItem } from 'react-native';
 import { withTheme } from 'styled-components/native';
 import { BannerItem } from '../../components/banner-item';
 import { dashboardScreenText, openSourceMainProjects } from './helpers';
@@ -9,11 +9,12 @@ import {
   DashboardWrapper,
   ListHeadingWrapper,
 } from './styled';
+import { IProject } from './type';
 
 export const Dashboard = memo(withTheme(({
   theme,
 } : IDashboardProps) : ReactElement => {
-  const renderItem = ({ item: { banner, description, label } } : any) : ReactElement => (
+  const renderItem : ListRenderItem<IProject> = ({ item: { banner, description, label } }) : ReactElement => (
     <BannerItem
       banner={banner}
       description={description}
@@ -25,8 +26,8 @@ export const Dashboard = memo(withTheme(({
     <DashboardWrapper>
       <FlatList
         data={openSourceMainProjects}
-        keyExtractor={({ id } : any) : string => id}
-        ListHeaderComponent={
+        keyExtractor={({ id } : IProject) : string => id}
+        ListHeaderComponent={(
           <ListHeadingWrapper>
             <DashboardHeading
               {...theme.typography.h1}
@@ -34,7 +35,7 @@ export const Dashboard = memo(withTheme(({
               {dashboardScreenText.mainHeading}
             </DashboardHeading>
           </ListHeadingWrapper>
-        }
+        )}
         renderItem={renderItem}
       />
     </DashboardWrapper>

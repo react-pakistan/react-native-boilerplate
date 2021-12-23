@@ -12,5 +12,7 @@ export const ProfileWrapper = styled(View)`
 export const ProfileHeading = styled(Text)``;
 
 export const Avatar = styled(Image)`
-  border-radius: ${({ theme } : ThemedStyledProps<{}, IRNTheme>) : number => theme.radius.full}px;
+  border-radius: ${({
+    theme,
+  } : ThemedStyledProps<unknown, IRNTheme>) : number => theme.radius.full}px;
 `;

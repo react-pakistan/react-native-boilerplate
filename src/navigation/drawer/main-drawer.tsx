@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { DarkTheme, DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { IRNTheme } from '@react-pakistan/util-react-native-functions';
@@ -21,8 +23,8 @@ export const MainDrawer = memo(withTheme(({
       drawerContent={({
         descriptors,
         navigation,
-        progress,
-        state,
+        // progress,
+        // state,
       }) : ReactNode => (
         <DrawerContent
           banner=
@@ -33,38 +35,46 @@ export const MainDrawer = memo(withTheme(({
           // state={state}
         />
       )}
-      drawerContentOptions={{
-        activeTintColor: theme.colors.cherryRed,
-        activeBackgroundColor: theme.colors.cherryRed,
-        inactiveTintColor: theme.colors.cherryRed,
-        inactiveBackgroundColor: theme.colors.cherryRed,
-        itemStyle: {},
-        labelStyle: {},
-        contentContainerStyle: {},
-        style: {},
-      }}
-      drawerPosition='left'
-      drawerStyle={{
-        backgroundColor: theme.colors.lightGrey,
-        width: 240,
-      }}
-      drawerType='front'
-      edgeWidth={20}
+      // drawerContentOptions={{
+      //   activeTintColor: theme.colors.cherryRed,
+      //   activeBackgroundColor: theme.colors.cherryRed,
+      //   inactiveTintColor: theme.colors.cherryRed,
+      //   inactiveBackgroundColor: theme.colors.cherryRed,
+      //   itemStyle: {},
+      //   labelStyle: {},
+      //   contentContainerStyle: {},
+      //   style: {},
+      // }}
+      // drawerPosition='left'
+      // drawerStyle={{
+      //   backgroundColor: theme.colors.lightGrey,
+      //   width: 240,
+      // }}
+      // drawerType='front'
+      // edgeWidth={20}
       // gestureHandlerProps={}
-      hideStatusBar
+      // hideStatusBar
       initialRouteName='Dashboard'
-      keyboardDismissMode='on-drag'
-      lazy
-      minSwipeDistance={100}
-      openByDefault={false}
-      overlayColor={theme.colors.lightBlack}
+      // keyboardDismissMode='on-drag'
+      // lazy
+      // minSwipeDistance={100}
+      // openByDefault={false}
+      // overlayColor={theme.colors.lightBlack}
       // sceneContainerStyle={}
       // screenOptions={}
-      statusBarAnimation='fade'
+      // statusBarAnimation='fade'
+      screenOptions={{
+        lazy: true,
+        headerShown: false,
+      }}
+      defaultStatus='closed'
     >
       <Drawer.Screen
         component={MainTab}
         name={NAVIGATION_ROUTES.DRAWER_DASHBOARD}
+        options={{
+          // title:'Dashboard'
+        }}
       />
       <Drawer.Screen
         component={ProfileStack}

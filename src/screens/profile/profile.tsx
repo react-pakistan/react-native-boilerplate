@@ -1,6 +1,11 @@
 import { ActivityIndicator, Text } from '@react-pakistan/react-native-commons-collection';
 import { IRNTheme } from '@react-pakistan/util-react-native-functions';
-import React, { Fragment, ReactElement, memo, useCallback, useEffect } from 'react';
+import React, {
+  ReactElement,
+  memo,
+  useCallback,
+  useEffect,
+} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { withTheme } from 'styled-components/native';
 import { fetchProfileData } from '../../redux/actions';
@@ -8,7 +13,7 @@ import { getUserDataFromState, getUserIsLoadingFromState } from '../../redux/sel
 import { profileScreenText } from './helpers';
 import { Avatar, ProfileHeading, ProfileWrapper } from './styled';
 
-export const Profile = memo(withTheme(({
+const ProfileComp = ({
   theme,
 } : IProfileProps) : ReactElement => {
   // dispatch
@@ -17,7 +22,7 @@ export const Profile = memo(withTheme(({
   // callbacks
   const fetchData = useCallback(() : void => {
     dispatch(fetchProfileData('taimoormk'));
-  }, []);
+  }, [dispatch]);
 
   // selectors
   const isLoading = useSelector(getUserIsLoadingFromState);
@@ -26,7 +31,7 @@ export const Profile = memo(withTheme(({
   // effect
   useEffect(() : void => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return (
     <ProfileWrapper>
@@ -37,7 +42,7 @@ export const Profile = memo(withTheme(({
       </ProfileHeading>
       {isLoading && <ActivityIndicator />}
       {userData && (
-        <Fragment>
+        <>
           <Avatar
             source={{ uri: userData.avatar_url }}
             height={theme.spacing.default*3}
@@ -50,18 +55,21 @@ export const Profile = memo(withTheme(({
           </Text>
           <Text
             {...theme.typography.text}
-          >{userData.bio}
+          >
+            {userData.bio}
           </Text>
           <Text
             {...theme.typography.text}
           >
             {userData.company}
           </Text>
-        </Fragment>
+        </>
       )}
     </ProfileWrapper>
   );
-}));
+};
+
+export const Profile = memo(withTheme(ProfileComp));
 
 export interface IProfileProps {
   /**
