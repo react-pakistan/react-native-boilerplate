@@ -1,79 +1,47 @@
-import { ActivityIndicator, Text } from '@react-pakistan/react-native-commons-collection';
-import { IRNTheme } from '@react-pakistan/util-react-native-functions';
-import React, {
-  ReactElement,
-  memo,
-  useCallback,
-  useEffect,
-} from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { withTheme } from 'styled-components/native';
-import { fetchProfileData } from '../../redux/actions';
-import { getUserDataFromState, getUserIsLoadingFromState } from '../../redux/selectors';
+/* eslint-disable camelcase */
+
+import { useQuery } from '@apollo/client';
+import { ActivityIndicator, Text, FlatList } from '@react-pakistan/react-native-commons-collection';
+import { ListRenderItem, SafeAreaView } from 'react-native';
+import React, { ReactElement, memo } from 'react';
+import { useTheme } from 'styled-components/native';
+import { GET_USER_BY_USERNAME } from '../../graphql/query';
 import { profileScreenText } from './helpers';
-import { Avatar, ProfileHeading, ProfileWrapper } from './styled';
+import { ProfileHeading, ProfileWrapper } from './styled';
+import { IMission } from './type';
 
-const ProfileComp = ({
-  theme,
-} : IProfileProps) : ReactElement => {
+const renderItem : ListRenderItem<IMission> = ({ item: { mission_name } }) : ReactElement => (
+  <Text>
+    {mission_name}
+  </Text>
+);
+
+export const Profile = memo(() : ReactElement => {
   // dispatch
-  const dispatch = useDispatch();
+  const { data, loading } = useQuery(GET_USER_BY_USERNAME, {
+    variables: {
+      limit: 5,
+    },
+  });
 
-  // callbacks
-  const fetchData = useCallback(() : void => {
-    dispatch(fetchProfileData('taimoormk'));
-  }, [dispatch]);
-
-  // selectors
-  const isLoading = useSelector(getUserIsLoadingFromState);
-  const userData = useSelector(getUserDataFromState);
-
-  // effect
-  useEffect(() : void => {
-    fetchData();
-  }, [fetchData]);
+  // theme
+  const theme = useTheme();
 
   return (
-    <ProfileWrapper>
-      <ProfileHeading
-        {...theme.typography.h2}
-      >
-        {profileScreenText.mainHeading}
-      </ProfileHeading>
-      {isLoading && <ActivityIndicator />}
-      {userData && (
-        <>
-          <Avatar
-            source={{ uri: userData.avatar_url }}
-            height={theme.spacing.default*3}
-            width={theme.spacing.default*3}
-          />
-          <Text
-            {...theme.typography.text}
-          >
-            {userData.name}
-          </Text>
-          <Text
-            {...theme.typography.text}
-          >
-            {userData.bio}
-          </Text>
-          <Text
-            {...theme.typography.text}
-          >
-            {userData.company}
-          </Text>
-        </>
-      )}
-    </ProfileWrapper>
+    <SafeAreaView>
+      <ProfileWrapper>
+        <ProfileHeading
+          {...theme.typography.h2}
+        >
+          {profileScreenText.mainHeading}
+        </ProfileHeading>
+        {loading && <ActivityIndicator />}
+        <FlatList
+          data={data?.launchesPast}
+          keyExtractor={({ mission_name }) => mission_name}
+          renderItem={renderItem}
+        />
+      </ProfileWrapper>
+    </SafeAreaView>
   );
-};
-
-export const Profile = memo(withTheme(ProfileComp));
-
-export interface IProfileProps {
-  /**
-   *
-   */
-  theme : IRNTheme;
-}
+});

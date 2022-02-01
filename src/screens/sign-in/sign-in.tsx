@@ -3,7 +3,7 @@ import { IRNTheme } from '@react-pakistan/util-react-native-functions';
 import React, { ReactElement, memo, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { withTheme } from 'styled-components/native';
-import { showAppAction } from '../../redux/actions';
+import { showApp } from '../../redux/slices/main-slice';
 import { loginScreenText } from './helpers';
 import {
   OAuthHeading,
@@ -18,7 +18,7 @@ const SignInComp = ({
 
   // callbacks
   const onPressHandler = useCallback(() : void => {
-    dispatch(showAppAction());
+    dispatch(showApp());
   }, [dispatch]);
 
   return (
