@@ -25,7 +25,7 @@ exports[`renders SignIn component correctly 1`] = `
     }
   }
 >
-  <Memo(WithTheme(SignInComp))
+  <SignIn
     showApp={false}
     showAppAction={[Function]}
   />
