@@ -10,11 +10,15 @@ import {
 } from './styled';
 import { IProject } from './type';
 
-const renderItem : ListRenderItem<IProject> = ({ item: {
-  banner,
-  description,
-  label
-} }) : ReactElement => (
+const renderItem : ListRenderItem<IProject> = (
+  {
+    item: {
+      banner,
+      description,
+      label,
+    },
+  },
+) : ReactElement => (
   <BannerItem
     banner={banner}
     description={description}
