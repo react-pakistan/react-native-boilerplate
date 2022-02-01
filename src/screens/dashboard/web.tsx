@@ -1,7 +1,6 @@
-import { IRNTheme } from '@react-pakistan/util-react-native-functions';
-import React, { ReactElement, memo } from 'react';
+import React, { ReactElement } from 'react';
 import { FlatList, ListRenderItem } from 'react-native';
-import { withTheme } from 'styled-components/native';
+import { useTheme } from 'styled-components/native';
 import { BannerItem } from '../../components/banner-item';
 import { dashboardScreenText, openSourceWebProjects } from './helpers';
 import {
@@ -11,16 +10,21 @@ import {
 } from './styled';
 import { IProject } from './type';
 
-export const DashboardWeb = memo(withTheme(({
-  theme,
-} : IDashboardWebProps) : ReactElement => {
-  const renderItem : ListRenderItem<IProject> = ({ item: { banner, description, label } }) : ReactElement => (
-    <BannerItem
-      banner={banner}
-      description={description}
-      label={label}
-    />
-  );
+const renderItem : ListRenderItem<IProject> = ({ item: {
+  banner,
+  description,
+  label
+} }) : ReactElement => (
+  <BannerItem
+    banner={banner}
+    description={description}
+    label={label}
+  />
+);
+
+export const DashboardWeb = () : ReactElement => {
+  // theme
+  const theme = useTheme();
 
   return (
     <DashboardWrapper>
@@ -40,11 +44,4 @@ export const DashboardWeb = memo(withTheme(({
       />
     </DashboardWrapper>
   );
-}));
-
-export interface IDashboardWebProps {
-  /**
-   *
-   */
-  theme : IRNTheme;
-}
+};
