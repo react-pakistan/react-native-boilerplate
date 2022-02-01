@@ -10,7 +10,13 @@ import { profileScreenText } from './helpers';
 import { ProfileHeading, ProfileWrapper } from './styled';
 import { IMission } from './type';
 
-const renderItem : ListRenderItem<IMission> = ({ item: { mission_name } }) : ReactElement => (
+const renderItem : ListRenderItem<IMission> = (
+  {
+    item: {
+      mission_name,
+    },
+  },
+) : ReactElement => (
   <Text>
     {mission_name}
   </Text>
