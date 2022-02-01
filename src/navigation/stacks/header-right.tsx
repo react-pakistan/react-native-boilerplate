@@ -3,7 +3,7 @@
 import { Icon } from '@react-pakistan/react-native-icon-collection/icon';
 import React, { ReactElement } from 'react';
 import { useDispatch } from 'react-redux';
-import { hideAppAction } from '../../redux/actions';
+import { hideApp } from '../../redux/slices/main-slice';
 import { HeaderIcon } from '../styled';
 
 export const headerRight = () : ReactElement => {
@@ -12,7 +12,7 @@ export const headerRight = () : ReactElement => {
 
   return (
     <HeaderIcon
-      onPress={() : void => dispatch(hideAppAction())}
+      onPress={() : void => dispatch(hideApp())}
     >
       <Icon
         icon='MobileUiGrey9'

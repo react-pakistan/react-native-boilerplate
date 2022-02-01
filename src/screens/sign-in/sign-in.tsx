@@ -1,25 +1,25 @@
 import { Button, Spacer } from '@react-pakistan/react-native-commons-collection';
-import { IRNTheme } from '@react-pakistan/util-react-native-functions';
-import React, { ReactElement, memo, useCallback } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { withTheme } from 'styled-components/native';
-import { showAppAction } from '../../redux/actions';
+import { useTheme } from 'styled-components/native';
+import { showApp } from '../../redux/slices/main-slice';
 import { loginScreenText } from './helpers';
 import {
   OAuthHeading,
   SignInWrapper,
 } from './styled';
 
-const SignInComp = ({
-  theme,
-} : ISignInProps) : ReactElement => {
+export const SignIn = () : ReactElement => {
   // dispatch
   const dispatch = useDispatch();
 
   // callbacks
   const onPressHandler = useCallback(() : void => {
-    dispatch(showAppAction());
+    dispatch(showApp());
   }, [dispatch]);
+
+  // theme
+  const theme = useTheme();
 
   return (
     <SignInWrapper>
@@ -39,12 +39,3 @@ const SignInComp = ({
     </SignInWrapper>
   );
 };
-
-export const SignIn = memo(withTheme(SignInComp));
-
-export interface ISignInProps {
-  /**
-   *
-   */
-  theme : IRNTheme;
-}

@@ -41,7 +41,7 @@ appTheme.typography.h3 = {
   textTransform: 'none',
 };
 appTheme.typography.text = {
-  ...appTheme.typography.text,
+  ...appTheme.typography.p1,
   color: theme.misc.isDarkMode ? theme.colors.white : theme.colors.black,
   fontFamily: 'Roboto-Regular',
   fontSize: isTablet() ? scale(14) : scale(14),

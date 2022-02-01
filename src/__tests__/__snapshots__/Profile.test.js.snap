@@ -25,6 +25,6 @@ exports[`renders Profile component correctly 1`] = `
     }
   }
 >
-  <Memo(WithTheme(ProfileComp)) />
+  <Memo />
 </Context.Provider>
 `;
