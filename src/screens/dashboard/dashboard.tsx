@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { FlatList, ListRenderItem } from 'react-native';
-import { useTheme } from 'styled-components/native';
+import { useTheme } from 'styled-components';
 import { BannerItem } from '../../components/banner-item';
 import { dashboardScreenText, openSourceMainProjects } from './helpers';
 import {

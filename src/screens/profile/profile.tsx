@@ -4,7 +4,7 @@ import { useQuery } from '@apollo/client';
 import { ActivityIndicator, Text, FlatList } from '@react-pakistan/react-native-commons-collection';
 import { ListRenderItem, SafeAreaView } from 'react-native';
 import React, { ReactElement, memo } from 'react';
-import { useTheme } from 'styled-components/native';
+import { useTheme } from 'styled-components';
 import { GET_USER_BY_USERNAME } from '../../graphql/query';
 import { profileScreenText } from './helpers';
 import { ProfileHeading, ProfileWrapper } from './styled';

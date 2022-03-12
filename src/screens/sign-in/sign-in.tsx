@@ -1,7 +1,7 @@
 import { Button, Spacer } from '@react-pakistan/react-native-commons-collection';
 import React, { ReactElement, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { useTheme } from 'styled-components/native';
+import { useTheme } from 'styled-components';
 import { showApp } from '../../redux/slices/main-slice';
 import { loginScreenText } from './helpers';
 import {
@@ -13,13 +13,13 @@ export const SignIn = () : ReactElement => {
   // dispatch
   const dispatch = useDispatch();
 
+  // theme
+  const theme = useTheme();
+
   // callbacks
   const onPressHandler = useCallback(() : void => {
     dispatch(showApp());
   }, [dispatch]);
-
-  // theme
-  const theme = useTheme();
 
   return (
     <SignInWrapper>
