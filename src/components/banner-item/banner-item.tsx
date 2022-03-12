@@ -1,6 +1,6 @@
 import React, { ReactElement, memo } from 'react';
-import { IRNTheme, width } from '@react-pakistan/util-react-native-functions';
-import { withTheme } from 'styled-components/native';
+import { width } from '@react-pakistan/util-react-native-functions';
+import { useTheme } from 'styled-components/native';
 import {
   LabelHeading,
   LabelText,
@@ -8,51 +8,37 @@ import {
   ListItemWrapper,
   TextWrapper,
 } from './styled';
+import { IBannerItemProps } from './type';
 
-export const BannerItem = memo(withTheme(({
+export const BannerItem = memo(({
   banner,
   description,
   label,
-  theme,
-} : IBannerItemProps) : ReactElement => (
-  <ListItemWrapper>
-    <ListItemBanner
-      height={theme.spacing.huge * 4}
-      source={{ uri: banner }}
-      width={width}
-    />
-    <TextWrapper>
-      <LabelHeading
-        {...theme.typography.h2}
-        color={theme.misc.darkMode ? theme.colors.white : theme.colors.black}
-      >
-        {label}
-      </LabelHeading>
-      <LabelText
-        {...theme.typography.text}
-        color={theme.misc.darkMode ? theme.colors.white : theme.colors.black}
-      >
-        {description}
-      </LabelText>
-    </TextWrapper>
-  </ListItemWrapper>
-)));
+} : IBannerItemProps) : ReactElement => {
+  // theme
+  const theme = useTheme();
 
-export interface IBannerItemProps {
-  /**
-   *
-   */
-  banner : string;
-  /**
-   *
-   */
-  description : string;
-  /**
-   *
-   */
-  label : string;
-  /**
-   *
-   */
-  theme : IRNTheme;
-}
+  return (
+    <ListItemWrapper>
+      <ListItemBanner
+        height={theme.spacing.huge * 4}
+        source={{ uri: banner }}
+        width={width}
+      />
+      <TextWrapper>
+        <LabelHeading
+          {...theme.typography.h2}
+          color={theme.misc.darkMode ? theme.colors.white : theme.colors.black}
+        >
+          {label}
+        </LabelHeading>
+        <LabelText
+          {...theme.typography.text}
+          color={theme.misc.darkMode ? theme.colors.white : theme.colors.black}
+        >
+          {description}
+        </LabelText>
+      </TextWrapper>
+    </ListItemWrapper>
+  );
+});
