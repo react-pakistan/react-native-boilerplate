@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Profile component correctly 1`] = `
+exports[`renders Spacex component correctly 1`] = `
 <Context.Provider
   value={
     Object {
@@ -25,6 +25,6 @@ exports[`renders Profile component correctly 1`] = `
     }
   }
 >
-  <Memo />
+  <Spacex />
 </Context.Provider>
 `;

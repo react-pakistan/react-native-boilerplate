@@ -3,7 +3,7 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import { Profile } from '../screens/profile';
+import { Spacex } from '../screens/spacex';
 
 const fakeInitialState = {
   showAppReducer: {
@@ -13,12 +13,12 @@ const fakeInitialState = {
 
 const mockStore = configureStore();
 
-test('renders Profile component correctly', () => {
+test('renders Spacex component correctly', () => {
   const renderer = new ShallowRenderer();
   const store = mockStore(fakeInitialState);
   renderer.render(
     <Provider store={store}>
-      <Profile />
+      <Spacex />
     </Provider>,
   );
   const wrapper = renderer.getRenderOutput();

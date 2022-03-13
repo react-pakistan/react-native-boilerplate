@@ -1,16 +1,20 @@
 import { FlatList, Text, TouchableOpacity } from '@react-pakistan/react-native-commons-collection';
-import { IRNTheme, width } from '@react-pakistan/util-react-native-functions';
+import { width } from '@react-pakistan/util-react-native-functions';
 import React, { ReactElement, memo } from 'react';
 import { ListRenderItem } from 'react-native';
-import { withTheme } from 'styled-components/native';
+import { useTheme } from 'styled-components/native';
 import { DrawerContentWrapper, DrawerContentHeader, DrawerBanner } from './styled';
+import { IDrawerContentProps } from './type';
 
-export const DrawerContent = memo(withTheme(({
+export const DrawerContent = memo(({
   banner,
   descriptors,
   navigation,
-  theme,
 } : IDrawerContentProps) : ReactElement => {
+  // theme
+  const theme = useTheme();
+
+  // callback
   const renderItem : ListRenderItem<string> = ({ item, index }) : ReactElement => (
     <TouchableOpacity
       onPress={() : void => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
@@ -39,28 +43,4 @@ export const DrawerContent = memo(withTheme(({
       />
     </DrawerContentWrapper>
   );
-}));
-
-export interface IDrawerContentProps {
-  /**
-   *
-   */
-  banner : string;
-  /**
-   *
-   */
-  descriptors : Record<string, unknown>;
-  /**
-   *
-   */
-  navigation : {
-    /**
-     *
-     */
-    navigate : (s : string) => void;
-  };
-  /**
-   *
-   */
-  theme : IRNTheme;
-}
+});
