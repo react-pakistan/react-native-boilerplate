@@ -78,7 +78,7 @@ export const MainDrawer = memo(withTheme(({
       />
       <Drawer.Screen
         component={ProfileStack}
-        name={NAVIGATION_ROUTES.DRAWER_PROFILE}
+        name={NAVIGATION_ROUTES.DRAWER_SPACE_X}
       />
     </Drawer.Navigator>
   </NavigationContainer>

@@ -1,13 +1,18 @@
 /* eslint-disable camelcase */
 
 import { useQuery } from '@apollo/client';
-import { ActivityIndicator, Text, FlatList } from '@react-pakistan/react-native-commons-collection';
+import {
+  ActivityIndicator,
+  FlatList,
+  Spacer,
+  Text,
+} from '@react-pakistan/react-native-commons-collection';
 import { ListRenderItem, SafeAreaView } from 'react-native';
-import React, { ReactElement, memo, useCallback } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import { useTheme } from 'styled-components';
 import { GET_LAUNCHES_PAST } from '../../graphql/query';
-import { profileScreenText } from './helpers';
-import { ProfileHeading, ProfileWrapper } from './styled';
+import { spaceXScreenText } from './helpers';
+import { SpacexHeading, SpacexWrapper } from './styled';
 import { IMission } from './type';
 
 const renderItem : ListRenderItem<IMission> = (
@@ -22,7 +27,7 @@ const renderItem : ListRenderItem<IMission> = (
   </Text>
 );
 
-export const Profile = () : ReactElement => {
+export const Spacex = () : ReactElement => {
   // theme
   const theme = useTheme();
 
@@ -40,12 +45,13 @@ export const Profile = () : ReactElement => {
 
   return (
     <SafeAreaView>
-      <ProfileWrapper>
-        <ProfileHeading
+      <SpacexWrapper>
+        <SpacexHeading
           {...theme.typography.h2}
         >
-          {profileScreenText.mainHeading}
-        </ProfileHeading>
+          {spaceXScreenText.mainHeading}
+        </SpacexHeading>
+        <Spacer marginVertical={theme.spacing.small} />
         {loading && <ActivityIndicator />}
         <FlatList
           data={data?.launchesPast}
@@ -54,7 +60,7 @@ export const Profile = () : ReactElement => {
           refreshing={loading}
           renderItem={renderItem}
         />
-      </ProfileWrapper>
+      </SpacexWrapper>
     </SafeAreaView>
   );
 };
