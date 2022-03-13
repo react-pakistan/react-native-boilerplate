@@ -3,9 +3,9 @@
 import { useQuery } from '@apollo/client';
 import { ActivityIndicator, Text, FlatList } from '@react-pakistan/react-native-commons-collection';
 import { ListRenderItem, SafeAreaView } from 'react-native';
-import React, { ReactElement, memo } from 'react';
+import React, { ReactElement, memo, useCallback } from 'react';
 import { useTheme } from 'styled-components';
-import { GET_USER_BY_USERNAME } from '../../graphql/query';
+import { GET_LAUNCHES_PAST } from '../../graphql/query';
 import { profileScreenText } from './helpers';
 import { ProfileHeading, ProfileWrapper } from './styled';
 import { IMission } from './type';
@@ -22,16 +22,21 @@ const renderItem : ListRenderItem<IMission> = (
   </Text>
 );
 
-export const Profile = memo(() : ReactElement => {
-  // dispatch
-  const { data, loading } = useQuery(GET_USER_BY_USERNAME, {
+export const Profile = () : ReactElement => {
+  // theme
+  const theme = useTheme();
+
+  // query
+  const { data, loading, refetch } = useQuery(GET_LAUNCHES_PAST, {
     variables: {
       limit: 5,
     },
   });
 
-  // theme
-  const theme = useTheme();
+  // callback
+  const onRefresh = useCallback(() : void => {
+    refetch();
+  }, [refetch]);
 
   return (
     <SafeAreaView>
@@ -45,9 +50,11 @@ export const Profile = memo(() : ReactElement => {
         <FlatList
           data={data?.launchesPast}
           keyExtractor={({ mission_name }) => mission_name}
+          onRefresh={onRefresh}
+          refreshing={loading}
           renderItem={renderItem}
         />
       </ProfileWrapper>
     </SafeAreaView>
   );
-});
+};
