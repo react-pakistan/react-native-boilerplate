@@ -16,7 +16,7 @@ export const SpacexItem = ({
   return (
     <SpacexItemWrapper>
       <Text
-        {...theme.typography.p5}
+        {...theme.typography.p3}
       >
         {index + 1}
         -

@@ -2,11 +2,10 @@
 
 import { useQuery } from '@apollo/client';
 import {
-  ActivityIndicator,
   FlatList,
   Spacer,
-  Text,
 } from '@react-pakistan/react-native-commons-collection';
+import { IRNTheme } from '@react-pakistan/util-react-native-functions';
 import { ListRenderItem, SafeAreaView } from 'react-native';
 import React, { ReactElement, useCallback, useState } from 'react';
 import { useTheme } from 'styled-components';
@@ -35,6 +34,8 @@ const renderItem : ListRenderItem<IMission> = (
     videoLink={video_link}
   />
 );
+
+const itemSeparator = (theme : IRNTheme) : ReactElement => <Spacer marginVertical={theme.spacing.small} />;
 
 export const Spacex = () : ReactElement => {
   // theme
@@ -71,6 +72,7 @@ export const Spacex = () : ReactElement => {
         </SpacexHeading>
         <Spacer marginVertical={theme.spacing.small} />
         <FlatList
+          ItemSeparatorComponent={() : ReactElement => itemSeparator(theme)}
           data={data?.launchesPast}
           contentContainerStyle={{
             paddingHorizontal: theme.spacing.default,
@@ -78,7 +80,7 @@ export const Spacex = () : ReactElement => {
           }}
           keyExtractor={({ mission_name } : IMission) : string => mission_name}
           onEndReached={onEndReached}
-          onEndReachedThreshold={20}
+          onEndReachedThreshold={2}
           onRefresh={onRefresh}
           refreshing={loading}
           renderItem={renderItem}
