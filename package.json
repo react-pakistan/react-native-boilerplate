@@ -55,6 +55,7 @@
     "react-native-screens": "^3.13.1",
     "react-native-svg": "^11.0.1",
     "react-native-unimodules": "^0.14.10",
+    "react-native-youtube": "^2.0.2",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2",
     "redux-logger": "^3.0.6",
