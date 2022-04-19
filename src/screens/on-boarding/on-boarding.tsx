@@ -1,4 +1,4 @@
-import React, { Dispatch, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import Onboarding from 'react-native-onboarding-swiper';
 import { useDispatch } from 'react-redux';
 import { showOnboarding } from '../../redux/slices/main-slice';
