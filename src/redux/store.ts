@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { IState } from './type';
 import { main } from './slices/main-slice';
+import { IState } from './type';
 
 export const store = configureStore<IState>({
   reducer: {
