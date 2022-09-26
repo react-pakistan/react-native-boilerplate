@@ -39,6 +39,7 @@ export const Dashboard = () : ReactElement => {
           <ListHeadingWrapper>
             <DashboardHeading
               {...theme.typography.h1}
+              textAlign='center'
             >
               {dashboardScreenText.mainHeading}
             </DashboardHeading>

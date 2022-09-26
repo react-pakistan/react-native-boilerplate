@@ -33,7 +33,7 @@ export const BannerItem = memo(({
           {label}
         </LabelHeading>
         <LabelText
-          {...theme.typography.p2}
+          {...theme.typography.p4}
           color={theme.misc.darkMode ? theme.colors.white : theme.colors.black}
         >
           {description}
