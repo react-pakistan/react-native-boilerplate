@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { FlatList, ListRenderItem } from 'react-native';
-import { useTheme } from 'styled-components';
+import { useTheme } from 'styled-components/native';
 import { BannerItem } from '../../components/banner-item';
 import { dashboardScreenText, openSourceMainProjects } from './helpers';
 import {
@@ -39,6 +39,7 @@ export const Dashboard = () : ReactElement => {
           <ListHeadingWrapper>
             <DashboardHeading
               {...theme.typography.h1}
+              textAlign='center'
             >
               {dashboardScreenText.mainHeading}
             </DashboardHeading>

@@ -42,7 +42,7 @@ export const Spacex = () : ReactElement => {
   const theme = useTheme();
 
   // state
-  const [offset, setOffset] = useState(10);
+  const [offset] = useState(10);
 
   // query
   const { data, loading, refetch } = useQuery(GET_LAUNCHES_PAST, {
@@ -57,9 +57,9 @@ export const Spacex = () : ReactElement => {
     refetch();
   }, [refetch]);
 
-  const onEndReached = useCallback((info) : void => {
-    setOffset(offset + 10);
-  }, [offset, setOffset]);
+  // const onEndReached = useCallback(() : void => {
+  //   setOffset(offset + 10);
+  // }, [offset, setOffset]);
 
   return (
     <SafeAreaView>
@@ -79,7 +79,7 @@ export const Spacex = () : ReactElement => {
             paddingVertical: theme.spacing.default,
           }}
           keyExtractor={({ mission_name } : IMission) : string => mission_name}
-          onEndReached={onEndReached}
+          // onEndReached={onEndReached}
           onEndReachedThreshold={2}
           onRefresh={onRefresh}
           refreshing={loading}

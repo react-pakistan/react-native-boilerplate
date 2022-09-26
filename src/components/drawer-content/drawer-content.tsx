@@ -19,7 +19,7 @@ export const DrawerContent = memo(({
     <TouchableOpacity
       onPress={() : void => navigation.navigate(Object.keys(descriptors)[index].split('-')[0])}
     >
-      <Text {...theme.typography.text}>
+      <Text {...theme.typography.p5}>
         {item.split('_')[1].charAt(0).toUpperCase() + item.split('_')[1].slice(1).toLowerCase().split('-')[0]}
       </Text>
     </TouchableOpacity>
