@@ -27,7 +27,7 @@ jobs:
       run: |
         yarn
         yarn lint
-        yarn test -u
+        yarn test
       env:
         CI: true
         NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
