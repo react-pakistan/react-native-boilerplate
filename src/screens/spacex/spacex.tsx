@@ -42,7 +42,7 @@ export const Spacex = () : ReactElement => {
   const theme = useTheme();
 
   // state
-  const [offset, setOffset] = useState(10);
+  const [offset] = useState(10);
 
   // query
   const { data, loading, refetch } = useQuery(GET_LAUNCHES_PAST, {
