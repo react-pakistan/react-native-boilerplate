@@ -20,7 +20,7 @@ exports[`renders Dashboard component correctly 1`] = `
           fontSize={56}
           letterSpacing={0}
           lineHeight={56}
-          textAlign="left"
+          textAlign="center"
           textTransform="uppercase"
         >
           React Pakistan Open Source Projects
@@ -83,12 +83,12 @@ exports[`renders Dashboard component correctly 1`] = `
                   "fontSize": 56,
                   "letterSpacing": 0,
                   "lineHeight": 56,
-                  "textAlign": "left",
+                  "textAlign": "center",
                   "textTransform": "uppercase",
                 },
               ]
             }
-            textAlign="left"
+            textAlign="center"
             textTransform="uppercase"
           >
             React Pakistan Open Source Projects
@@ -164,17 +164,17 @@ exports[`renders Dashboard component correctly 1`] = `
             <Text
               color="#2E2E2E"
               fontFamily="Roboto-Regular"
-              fontSize={52}
+              fontSize={40}
               letterSpacing={0}
-              lineHeight={56}
+              lineHeight={44}
               style={
                 [
                   {
                     "color": "#2E2E2E",
                     "fontFamily": "Roboto-Regular",
-                    "fontSize": 52,
+                    "fontSize": 40,
                     "letterSpacing": 0,
-                    "lineHeight": 56,
+                    "lineHeight": 44,
                     "textAlign": "left",
                     "textTransform": "none",
                   },
