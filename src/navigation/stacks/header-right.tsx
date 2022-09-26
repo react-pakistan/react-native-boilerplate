@@ -12,7 +12,7 @@ export const headerRight = () : ReactElement => {
 
   return (
     <HeaderIcon
-      onPress={() : void => dispatch(hideApp())}
+      onPress={() => dispatch(hideApp())}
     >
       <Icon
         icon='MobileUiGrey9'
