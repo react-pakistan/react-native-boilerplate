@@ -57,7 +57,7 @@ export const Spacex = () : ReactElement => {
     refetch();
   }, [refetch]);
 
-  const onEndReached = useCallback((info) : void => {
+  const onEndReached = useCallback(() : void => {
     setOffset(offset + 10);
   }, [offset, setOffset]);
 

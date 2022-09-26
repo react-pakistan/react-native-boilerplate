@@ -3,8 +3,9 @@
 exports[`renders Spacex component correctly 1`] = `
 <Context.Provider
   value={
-    Object {
-      "store": Object {
+    {
+      "getServerState": undefined,
+      "store": {
         "clearActions": [Function],
         "dispatch": [Function],
         "getActions": [Function],
@@ -12,7 +13,7 @@ exports[`renders Spacex component correctly 1`] = `
         "replaceReducer": [Function],
         "subscribe": [Function],
       },
-      "subscription": Object {
+      "subscription": {
         "addNestedSub": [Function],
         "getListeners": [Function],
         "handleChangeWrapper": [Function],
